@@ -1,0 +1,8 @@
+node_modules/
+dist/
+web/dist/
+# Os dados coletados vivem no branch "data" (ver docs/GUIA.md); localmente ficam aqui.
+data/
+*.log
+.env
+.DS_Store

@@ -1,0 +1,103 @@
+name: Coletar ofertas
+
+# Roda a cada 10 minutos (o GitHub pode atrasar em horários de pico),
+# quando o código muda e sob demanda pela aba Actions.
+on:
+  schedule:
+    - cron: '4,14,24,34,44,54 * * * *'
+  workflow_dispatch:
+    inputs:
+      forcar:
+        description: 'Consultar todas as fontes agora (ignora os intervalos)'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths-ignore: ['**.md', 'docs/**']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: coleta
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      APP_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      # Os dados (ofertas, histórico, cupons) ficam no branch "data".
+      - name: Baixar dados anteriores
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git ls-remote --exit-code --heads origin data > /dev/null; then
+            git clone --quiet --depth 1 --branch data \
+              "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
+            rm -rf data/.git
+          else
+            echo "Primeira execução: começando sem histórico."
+            mkdir -p data
+          fi
+
+      - name: Coletar, pontuar e alertar
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
+          WATCHDEAL_APP_URL: ${{ env.APP_URL }}
+        run: |
+          if [ "${{ inputs.forcar }}" = "true" ] || [ "${{ github.event_name }}" = "push" ]; then
+            npm run coletar -- --forcar
+          else
+            npm run coletar
+          fi
+
+      # Um único commit sempre (force push): o histórico de preços vive nos
+      # próprios arquivos, então o branch não cresce para sempre.
+      - name: Salvar dados no branch data
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -f data/ofertas.json ] || { echo "Nada para salvar."; exit 0; }
+          cd data
+          git init --quiet -b data
+          git config user.name "watchdeal-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit --quiet -m "dados $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push --quiet --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
+
+      - name: Montar o app
+        env:
+          VITE_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+        run: |
+          npm run build
+          mkdir -p web/dist/data
+          rsync -a --exclude 'estado.json' --exclude '*.tmp' data/ web/dist/data/
+
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: web/dist
+      - id: deploy
+        uses: actions/deploy-pages@v5

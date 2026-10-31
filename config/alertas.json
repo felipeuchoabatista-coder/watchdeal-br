@@ -1,0 +1,16 @@
+{
+  "alvos": {
+    "galaxy-watch8": null,
+    "galaxy-watch-fe": null,
+    "galaxy-watch4": null,
+    "xiaomi-watch2": null
+  },
+  "alertarNovoMinimo": true,
+  "indiceMinimo": 85,
+  "incluirUsados": false,
+  "incluirVariantesOcultas": false,
+  "canais": {
+    "telegram": true,
+    "ntfy": true
+  }
+}

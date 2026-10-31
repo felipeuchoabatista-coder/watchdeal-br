@@ -1,0 +1,477 @@
+[
+ {
+  "productId": "8402",
+  "productName": "Samsung Galaxy Watch8 Smartwatch 40mm BT, Galaxy AI, Tela em Cristal de Safira",
+  "link": "https://shop.samsung.com.br/galaxy-watch8-bt-40mm/p",
+  "items": [
+   {
+    "itemId": "10639",
+    "name": "Prata",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258631/watch8_1-1.jpg?v=638888660390370000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 2499.0,
+       "ListPrice": 2499.0,
+       "AvailableQuantity": 100,
+       "Installments": [
+        {
+         "Value": 2499.0,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 2499.0,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa à vista"
+        },
+        {
+         "Value": 249.9,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 2499.0,
+         "NumberOfInstallments": 10,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa 10 vezes sem juros"
+        },
+        {
+         "Value": 2249.1,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 2249.1,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Pix",
+         "PaymentSystemGroupName": "instantPaymentPaymentGroup",
+         "Name": "Pix à vista"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10640",
+    "name": "Grafite",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258632/watch8_1-2.jpg?v=638888660393170000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 2499.0,
+       "ListPrice": 2499.0,
+       "AvailableQuantity": 99999,
+       "Installments": [
+        {
+         "Value": 2499.0,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 2499.0,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa à vista"
+        },
+        {
+         "Value": 249.9,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 2499.0,
+         "NumberOfInstallments": 10,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa 10 vezes sem juros"
+        },
+        {
+         "Value": 2249.1,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 2249.1,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Pix",
+         "PaymentSystemGroupName": "instantPaymentPaymentGroup",
+         "Name": "Pix à vista"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "productId": "12350",
+  "productName": "Galaxy A57 5G (128GB) - Cinza + Galaxy Watch8 BT 40mm - Grafite",
+  "link": "https://shop.samsung.com.br/galaxy-a57-5g-128gb-cinza-galaxy-watch8-bt-40mm-grafite/p",
+  "items": [
+   {
+    "itemId": "14983",
+    "name": "Combo",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/288036/F-A576BZAEL320.jpg?v=639153992882000000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 6298.0,
+       "ListPrice": 6298.0,
+       "AvailableQuantity": 99999,
+       "Installments": [
+        {
+         "Value": 6298.0,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 6298.0,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa à vista"
+        },
+        {
+         "Value": 629.8,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 6298.0,
+         "NumberOfInstallments": 10,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa 10 vezes sem juros"
+        },
+        {
+         "Value": 6298.0,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 6298.0,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Pix",
+         "PaymentSystemGroupName": "instantPaymentPaymentGroup",
+         "Name": "Pix à vista"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "productId": "8405",
+  "productName": "Samsung Galaxy Watch8 Classic Smartwatch 46mm LTE, Galaxy AI, Tela em Cristal de Safira",
+  "link": "https://shop.samsung.com.br/galaxy-watch8-classic/p",
+  "items": [
+   {
+    "itemId": "10645",
+    "name": "Preto",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258570/_0005_SM-L505_001_Front_Black.jpg?v=638888115887030000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 4499.0,
+       "ListPrice": 4499.0,
+       "AvailableQuantity": 99999,
+       "Installments": [
+        {
+         "Value": 4499.0,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 4499.0,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa à vista"
+        },
+        {
+         "Value": 449.9,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 4499.0,
+         "NumberOfInstallments": 10,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa 10 vezes sem juros"
+        },
+        {
+         "Value": 4049.1,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 4049.1,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Pix",
+         "PaymentSystemGroupName": "instantPaymentPaymentGroup",
+         "Name": "Pix à vista"
+        }
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10646",
+    "name": "Branco",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258580/_0000s_0005_SM-L505_001_Front_White.jpg?v=638888115888530000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 4499.0,
+       "ListPrice": 4499.0,
+       "AvailableQuantity": 100,
+       "Installments": [
+        {
+         "Value": 4499.0,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 4499.0,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa à vista"
+        },
+        {
+         "Value": 449.9,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 4499.0,
+         "NumberOfInstallments": 10,
+         "PaymentSystemName": "Visa",
+         "PaymentSystemGroupName": "creditCardPaymentGroup",
+         "Name": "Visa 10 vezes sem juros"
+        },
+        {
+         "Value": 4049.1,
+         "InterestRate": 0.0,
+         "TotalValuePlusInterestRate": 4049.1,
+         "NumberOfInstallments": 1,
+         "PaymentSystemName": "Pix",
+         "PaymentSystemGroupName": "instantPaymentPaymentGroup",
+         "Name": "Pix à vista"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "productId": "8452",
+  "productName": "Pulseira Sport Galaxy Watch8 (P/M)",
+  "link": "https://shop.samsung.com.br/pulseira-sport-galaxy-watch8-p-m/p",
+  "items": [
+   {
+    "itemId": "10766",
+    "name": "Grafite",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258543/ET-SNL32S_001_Front_Graphite.jpg?v=638888097935300000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10767",
+    "name": "Branco",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258546/ET-SNL32S_001_Front_White.jpg?v=638888097936100000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10768",
+    "name": "Azul Marinho",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258702/ET-SNL32S_001_Front_Blue-18.02.34.jpg?v=638889536535170000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10769",
+    "name": "Menta",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258549/ET-SNL32S_001_Front_Mint.jpg?v=638888097936700000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10770",
+    "name": "Rosa",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258552/ET-SNL32S_001_Front_Pink.jpg?v=638888097937330000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "productId": "8453",
+  "productName": "Pulseira Sport Galaxy Watch8 (M/G)",
+  "link": "https://shop.samsung.com.br/pulseira-sport-galaxy-watch8-m-g/p",
+  "items": [
+   {
+    "itemId": "10771",
+    "name": "Grafite",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258555/ET-SNL33L_001_Front_Graphite.jpg?v=638888109139170000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10772",
+    "name": "Branco",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258840/ET-SNL33L_002_Back_White.jpg?v=638888990616870000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10773",
+    "name": "Azul Marinho",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258561/ET-SNL33L_001_Front_Blue.jpg?v=638888109140730000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10774",
+    "name": "Menta",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258564/ET-SNL33L_001_Front_Mint.jpg?v=638888109141230000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   },
+   {
+    "itemId": "10775",
+    "name": "Rosa",
+    "images": [
+     {
+      "imageUrl": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258567/ET-SNL33L_001_Front_Pink.jpg?v=638888109141530000"
+     }
+    ],
+    "sellers": [
+     {
+      "sellerName": "SAMSUNG ELETRÔNICA DA AMAZÔNIA LTDA.",
+      "commertialOffer": {
+       "Price": 349.0,
+       "ListPrice": 349.0,
+       "AvailableQuantity": 0,
+       "Installments": []
+      }
+     }
+    ]
+   }
+  ]
+ }
+]

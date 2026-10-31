@@ -1,0 +1,33 @@
+{
+  "name": "watchdeal-br",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rastreador 24h de promoções e cupons para Galaxy Watch 4, Galaxy Watch FE, Xiaomi Watch 2 e Galaxy Watch 8.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "coletar": "node --disable-warning=ExperimentalWarning src/run.ts",
+    "coletar:tudo": "node --disable-warning=ExperimentalWarning src/run.ts --forcar",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p web/tsconfig.json",
+    "dev": "vite --config web/vite.config.ts",
+    "build": "vite build --config web/vite.config.ts",
+    "preview": "vite preview --config web/vite.config.ts",
+    "icones": "node --disable-warning=ExperimentalWarning scripts/gerar-icones.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}
