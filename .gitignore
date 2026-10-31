@@ -6,3 +6,7 @@ data/
 *.log
 .env
 .DS_Store
+# Configuração local desta máquina (tudo no D:, nada no C:).
+CLAUDE.md
+.local/
+.tmp/

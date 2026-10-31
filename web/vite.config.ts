@@ -1,4 +1,4 @@
-import { createReadStream, existsSync, statSync } from 'node:fs';
+import { createReadStream, existsSync, mkdirSync, statSync } from 'node:fs';
 import { join, normalize, resolve } from 'node:path';
 import react from '@vitejs/plugin-react';
 import { defineConfig, type Connect, type Plugin } from 'vite';
@@ -6,6 +6,12 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 const root = import.meta.dirname;
 const dataDir = resolve(root, '..', process.env.WATCHDEAL_DATA_DIR ?? 'data');
+
+// Temporários do build (o service worker é montado numa pasta temporária)
+// ficam dentro do projeto, não na pasta temporária do sistema.
+const projectTmp = resolve(root, '..', '.tmp');
+mkdirSync(projectTmp, { recursive: true });
+process.env.TMP = process.env.TEMP = process.env.TMPDIR = projectTmp;
 
 /** Em desenvolvimento, serve a pasta data/ (gerada pelo coletor) em /data. */
 function serveData(): Plugin {

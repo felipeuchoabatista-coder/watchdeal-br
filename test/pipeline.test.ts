@@ -1,7 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { BlockedError, type Fetcher } from '../src/core/http.ts';
 import type { Health, Snapshot } from '../src/core/types.ts';
@@ -48,7 +47,10 @@ function readJson<T>(dir: string, name: string): T {
 }
 
 test('ciclo completo: coleta, classifica, pontua, guarda histórico e respeita intervalos', async () => {
-  const dir = mkdtempSync(join(tmpdir(), 'watchdeal-'));
+  // Temporário dentro do projeto (.tmp/), nunca na pasta temporária do sistema.
+  const tmpRoot = join(import.meta.dirname, '..', '.tmp');
+  mkdirSync(tmpRoot, { recursive: true });
+  const dir = mkdtempSync(join(tmpRoot, 'watchdeal-'));
   const base = { dataDir: dir, configPath: join(dir, 'nao-existe.json'), force: false, alerts: false, log: () => {} };
   try {
     // 1ª rodada: todas as fontes.
