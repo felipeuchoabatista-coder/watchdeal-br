@@ -1,7 +1,6 @@
-import { useMemo } from 'react';
 import { getModel } from '../../../src/core/catalog.ts';
 import type { DealEvent } from '../../../src/core/types.ts';
-import { CopyButton, Empty } from '../components/bits.tsx';
+import { Empty } from '../components/bits.tsx';
 import { Icon } from '../components/Icon.tsx';
 import { ago, brl, REPO_URL, type AppData } from '../data.ts';
 
@@ -11,25 +10,13 @@ const TYPE_LABEL: Record<DealEvent['type'], string> = {
   imperdivel: 'Imperdível',
   'queda-preco': 'Queda de preço',
   'cupom-novo': 'Cupom novo',
+  teste: 'Teste',
 };
 
-function suggestedTopic(): string {
-  const KEY = 'wd:ntfy';
-  try {
-    const saved = localStorage.getItem(KEY);
-    if (saved) return saved;
-    const topic = `watchdeal-${crypto.getRandomValues(new Uint32Array(2)).join('').slice(0, 12)}`;
-    localStorage.setItem(KEY, topic);
-    return topic;
-  } catch {
-    return 'watchdeal-seu-codigo-secreto';
-  }
-}
-
 export function Alerts({ data, now }: { data: AppData; now: number }) {
-  const topic = useMemo(suggestedTopic, []);
   const secretsUrl = REPO_URL ? `${REPO_URL}/settings/secrets/actions` : undefined;
   const configUrl = REPO_URL ? `${REPO_URL}/edit/main/config/alertas.json` : undefined;
+  const workflowUrl = REPO_URL ? `${REPO_URL}/actions/workflows/coletar.yml` : undefined;
 
   return (
     <div className="page">
@@ -45,29 +32,32 @@ export function Alerts({ data, now }: { data: AppData; now: number }) {
         <li><b>🎟️ Cupom novo</b> que cita um dos relógios.</li>
       </ul>
 
+      <p className="small">Dá para usar os dois canais ao mesmo tempo: cada alerta chega no ntfy e no Telegram.</p>
+
       <section className="card">
-        <h2 className="section-title">Receber no celular — opção 1: app ntfy (mais fácil)</h2>
+        <h2 className="section-title">ntfy — notificação no celular</h2>
         <ol className="steps">
           <li>Instale o app <b>ntfy</b> (<a href="https://play.google.com/store/apps/details?id=io.heckel.ntfy" target="_blank" rel="noopener noreferrer">Android</a> · <a href="https://apps.apple.com/app/ntfy/id1625396347" target="_blank" rel="noopener noreferrer">iPhone</a>).</li>
-          <li>
-            No app, toque em <b>+</b> e inscreva-se neste tópico (é como uma senha — não compartilhe):
-            <div className="code-line"><code>{topic}</code><CopyButton text={topic} /></div>
-          </li>
-          <li>
-            No GitHub, crie o segredo <code>NTFY_TOPIC</code> com esse valor
-            {secretsUrl ? <> em <a href={secretsUrl} target="_blank" rel="noopener noreferrer">Settings → Secrets → Actions</a></> : ' (Settings → Secrets and variables → Actions)'}.
-          </li>
+          <li>Toque em <b>+</b> e inscreva-se no seu tópico secreto — o mesmo valor guardado no segredo <code>NTFY_TOPIC</code> do GitHub. Ele funciona como uma senha: não compartilhe.</li>
+          <li>Para tocar mesmo no silencioso: nas configurações do tópico, permita <b>alertas de prioridade máxima</b>.</li>
         </ol>
       </section>
 
       <section className="card">
-        <h2 className="section-title">Opção 2: Telegram</h2>
+        <h2 className="section-title">Telegram — mensagem de um robô</h2>
         <ol className="steps">
-          <li>No Telegram, fale com <a href="https://t.me/BotFather" target="_blank" rel="noopener noreferrer">@BotFather</a>, envie <code>/newbot</code> e copie o <b>token</b>.</li>
-          <li>Abra o seu bot e envie qualquer mensagem (ex.: “oi”).</li>
-          <li>Abra <code>https://api.telegram.org/bot&lt;TOKEN&gt;/getUpdates</code> e copie o número em <code>"chat":{'{'}"id": …</code>.</li>
-          <li>Crie os segredos <code>TELEGRAM_BOT_TOKEN</code> e <code>TELEGRAM_CHAT_ID</code> no GitHub{secretsUrl ? <> (<a href={secretsUrl} target="_blank" rel="noopener noreferrer">abrir</a>)</> : ''}.</li>
+          <li>Fale com <a href="https://t.me/BotFather" target="_blank" rel="noopener noreferrer">@BotFather</a>, envie <code>/newbot</code>, escolha um nome e copie o <b>token</b>.</li>
+          <li>Abra o seu robô e toque em <b>Iniciar</b> (sem isso ele não pode te escrever).</li>
+          <li>Fale com <a href="https://t.me/userinfobot" target="_blank" rel="noopener noreferrer">@userinfobot</a>: ele responde com o seu <b>Id</b> (um número).</li>
+          <li>Crie os segredos <code>TELEGRAM_BOT_TOKEN</code> (o token) e <code>TELEGRAM_CHAT_ID</code> (o Id) no GitHub{secretsUrl ? <> — <a href={secretsUrl} target="_blank" rel="noopener noreferrer">abrir segredos <Icon name="external" size={12} /></a></> : ''}.</li>
         </ol>
+      </section>
+
+      <section className="card">
+        <h2 className="section-title">Testar os alertas</h2>
+        <p className="small">
+          Em {workflowUrl ? <a href={workflowUrl} target="_blank" rel="noopener noreferrer">Actions → Coletar ofertas</a> : 'Actions → Coletar ofertas'}, toque em <b>Run workflow</b>, marque <b>Enviar um alerta de teste</b> e confirme. Em cerca de 1 minuto chega um “✅ Teste de alerta” em cada canal configurado.
+        </p>
       </section>
 
       <section className="card">

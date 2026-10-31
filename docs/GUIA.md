@@ -20,22 +20,28 @@ O app abre em tela cheia, atualiza sozinho e mostra a última coleta mesmo sem i
 
 ## 3. Receber alertas no celular
 
-Escolha um canal (ou os dois). Sem nenhum configurado, os alertas aparecem só na aba **Alertas** do app.
+Os dois canais podem ficar ativos ao mesmo tempo: cada alerta chega no ntfy e no Telegram. Sem nenhum configurado, os alertas aparecem só na aba **Alertas** do app.
 
-### Opção A — ntfy (mais simples)
+### ntfy — notificação no celular
 
 1. Instale o app **ntfy** ([Android](https://play.google.com/store/apps/details?id=io.heckel.ntfy) · [iPhone](https://apps.apple.com/app/ntfy/id1625396347)).
-2. Escolha um nome de tópico difícil de adivinhar. A aba **Alertas** do WatchDeal sugere um. No ntfy, toque em **+** e inscreva-se nele.
-3. No GitHub: **Settings → Secrets and variables → Actions → New repository secret**:
-   - Nome: `NTFY_TOPIC`
-   - Valor: o tópico
+2. Toque em **+** e inscreva-se no seu tópico secreto. Ele é o valor do segredo `NTFY_TOPIC` no GitHub.
+3. Para tocar mesmo no silencioso: nas configurações do tópico, permita alertas de prioridade máxima. São usados para "abaixo do alvo" e "imperdível".
 
-### Opção B — Telegram
+Para trocar o tópico, crie outro nome difícil de adivinhar e atualize o segredo `NTFY_TOPIC` em **Settings → Secrets and variables → Actions**.
 
-1. Fale com [@BotFather](https://t.me/BotFather), envie `/newbot` e guarde o **token**.
-2. Abra o seu bot e mande qualquer mensagem.
-3. Acesse `https://api.telegram.org/bot<TOKEN>/getUpdates` e copie o número em `"chat":{"id": …}`.
-4. Crie os secrets `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID`.
+### Telegram — mensagem de um robô
+
+1. Fale com [@BotFather](https://t.me/BotFather), envie `/newbot`, escolha um nome e guarde o **token**.
+2. Abra o seu robô e toque em **Iniciar**. Sem isso, ele não consegue te enviar mensagens.
+3. Fale com [@userinfobot](https://t.me/userinfobot): ele responde com o seu **Id** (um número).
+4. No GitHub, em **Settings → Secrets and variables → Actions → New repository secret**, crie:
+   - `TELEGRAM_BOT_TOKEN` = o token
+   - `TELEGRAM_CHAT_ID` = o Id
+
+### Testar
+
+Em **Actions → Coletar ofertas → Run workflow**, marque **Enviar um alerta de teste (ntfy/Telegram)** e confirme. Em cerca de 1 minuto chega um "✅ Teste de alerta" em cada canal configurado. O log da execução mostra quais canais estão configurados, sem expor os segredos.
 
 Na primeira coleta não é enviado nenhum alerta, para evitar uma enxurrada. Depois, cada alerta é enviado no máximo uma vez por semana.
 

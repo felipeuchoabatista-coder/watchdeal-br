@@ -11,6 +11,10 @@ on:
         description: 'Consultar todas as fontes agora (ignora os intervalos)'
         type: boolean
         default: false
+      testar_alertas:
+        description: 'Enviar um alerta de teste (ntfy/Telegram)'
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths-ignore: ['**.md', 'docs/**']
@@ -56,6 +60,17 @@ jobs:
             echo "Primeira execução: começando sem histórico."
             mkdir -p data
           fi
+
+      - name: Enviar alerta de teste
+        if: inputs.testar_alertas
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
+          WATCHDEAL_APP_URL: ${{ env.APP_URL }}
+        run: npm run testar-alertas
 
       - name: Coletar, pontuar e alertar
         env:

@@ -196,7 +196,7 @@ export interface Health {
   sources: SourceHealth[];
 }
 
-export type DealEventType = 'novo-minimo' | 'abaixo-alvo' | 'imperdivel' | 'queda-preco' | 'cupom-novo';
+export type DealEventType = 'novo-minimo' | 'abaixo-alvo' | 'imperdivel' | 'queda-preco' | 'cupom-novo' | 'teste';
 
 export interface DealEvent {
   id: string;

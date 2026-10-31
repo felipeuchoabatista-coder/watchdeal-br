@@ -14,6 +14,7 @@ const ICON: Record<DealEventType, string> = {
   imperdivel: '🔥',
   'queda-preco': '⬇️',
   'cupom-novo': '🎟️',
+  teste: '✅',
 };
 
 const TITLE: Record<DealEventType, string> = {
@@ -22,7 +23,10 @@ const TITLE: Record<DealEventType, string> = {
   imperdivel: 'Oferta imperdível',
   'queda-preco': 'Preço caiu',
   'cupom-novo': 'Cupom novo',
+  teste: 'Teste de alerta',
 };
+
+const URGENT = new Set<DealEventType>(['abaixo-alvo', 'imperdivel']);
 
 export interface Channel {
   name: string;
@@ -70,20 +74,22 @@ export function ntfyChannel(topic: string, server = 'https://ntfy.sh'): Channel 
     async send(event, appUrl) {
       const model = event.model ? getModel(event.model).shortName : 'WatchDeal';
       const actions = [
-        event.url ? `view, Abrir oferta, ${event.url}` : '',
-        appUrl ? `view, WatchDeal, ${appUrl}` : '',
-      ].filter(Boolean).join('; ');
-      const res = await fetch(`${server.replace(/\/$/, '')}/${encodeURIComponent(topic)}`, {
+        event.url ? { action: 'view', label: 'Abrir oferta', url: event.url, clear: true } : null,
+        appUrl ? { action: 'view', label: 'WatchDeal', url: appUrl } : null,
+      ].filter(Boolean);
+      // Publicação em JSON: aceita acentos e emojis no título sem codificação de cabeçalho.
+      const res = await fetch(server.replace(/\/$/, ''), {
         method: 'POST',
-        headers: {
-          // Cabeçalhos HTTP só aceitam ASCII; o título vai codificado (RFC 2047).
-          Title: `=?UTF-8?B?${Buffer.from(`${TITLE[event.type]} · ${model}`).toString('base64')}?=`,
-          Tags: event.type === 'imperdivel' || event.type === 'abaixo-alvo' ? 'fire,watch' : 'watch',
-          Priority: event.type === 'abaixo-alvo' || event.type === 'imperdivel' ? '5' : '3',
-          ...(event.url ? { Click: event.url } : {}),
-          ...(actions ? { Actions: actions } : {}),
-        },
-        body: `${ICON[event.type]} ${event.message}`,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topic,
+          title: `${TITLE[event.type]} · ${model}`,
+          message: `${ICON[event.type]} ${event.message}`,
+          tags: URGENT.has(event.type) ? ['fire', 'watch'] : ['watch'],
+          priority: URGENT.has(event.type) ? 5 : 3,
+          click: event.url ?? appUrl,
+          actions,
+        }),
         signal: AbortSignal.timeout(15_000),
       });
       if (!res.ok) throw new Error(`ntfy respondeu ${res.status}`);
