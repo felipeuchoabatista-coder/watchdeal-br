@@ -63,7 +63,17 @@ export function telegramChannel(token: string, chatId: string): Channel {
         }),
         signal: AbortSignal.timeout(15_000),
       });
-      if (!res.ok) throw new Error(`Telegram respondeu ${res.status}: ${(await res.text()).slice(0, 200)}`);
+      if (!res.ok) {
+        const body = (await res.text()).slice(0, 200);
+        const hint = res.status === 401 || res.status === 404
+          ? ' (token do robô inválido ou revogado: confira o segredo TELEGRAM_BOT_TOKEN)'
+          : res.status === 403
+            ? ' (o robô não pode te escrever: abra a conversa com ele e toque em Iniciar)'
+            : /chat not found/i.test(body)
+              ? ' (TELEGRAM_CHAT_ID errado, ou você ainda não tocou em Iniciar no robô)'
+              : '';
+        throw new Error(`Telegram respondeu ${res.status}${hint}: ${body}`);
+      }
     },
   };
 }
@@ -99,11 +109,15 @@ export function ntfyChannel(topic: string, server = 'https://ntfy.sh'): Channel 
 
 export function channelsFromEnv(config: AlertConfig, env: NodeJS.ProcessEnv = process.env): Channel[] {
   const channels: Channel[] = [];
-  if (config.canais.telegram && env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) {
-    channels.push(telegramChannel(env.TELEGRAM_BOT_TOKEN, env.TELEGRAM_CHAT_ID));
+  // Segredos colados pelo celular costumam vir com espaço ou quebra de linha nas pontas.
+  const token = env.TELEGRAM_BOT_TOKEN?.trim();
+  const chatId = env.TELEGRAM_CHAT_ID?.trim();
+  const topic = env.NTFY_TOPIC?.trim();
+  if (config.canais.telegram && token && chatId) {
+    channels.push(telegramChannel(token, chatId));
   }
-  if (config.canais.ntfy && env.NTFY_TOPIC) {
-    channels.push(ntfyChannel(env.NTFY_TOPIC, env.NTFY_SERVER || undefined));
+  if (config.canais.ntfy && topic) {
+    channels.push(ntfyChannel(topic, env.NTFY_SERVER?.trim() || undefined));
   }
   return channels;
 }

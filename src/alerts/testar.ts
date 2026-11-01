@@ -13,6 +13,15 @@ const channels = channelsFromEnv(config);
 const appUrl = process.env.WATCHDEAL_APP_URL;
 
 console.log(`Telegram: ${process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID ? 'configurado' : 'não configurado'}${config.canais.telegram ? '' : ' (desligado em config/alertas.json)'}`);
+// Diagnóstico sem expor os segredos: só diz se o formato parece certo.
+const rawToken = process.env.TELEGRAM_BOT_TOKEN ?? '';
+const rawChat = process.env.TELEGRAM_CHAT_ID ?? '';
+if (rawToken) {
+  console.log(`  token: ${/^\d+:[\w-]{30,}$/.test(rawToken.trim()) ? 'formato válido' : 'formato inesperado (esperado número:letras, sem outros textos)'}${rawToken !== rawToken.trim() ? ', tinha espaços nas pontas (removidos)' : ''}`);
+}
+if (rawChat) {
+  console.log(`  chat id: ${/^-?\d+$/.test(rawChat.trim()) ? 'formato válido' : 'formato inesperado (esperado só números)'}`);
+}
 console.log(`ntfy: ${process.env.NTFY_TOPIC ? 'configurado' : 'não configurado'}${config.canais.ntfy ? '' : ' (desligado em config/alertas.json)'}`);
 
 if (channels.length === 0) {
