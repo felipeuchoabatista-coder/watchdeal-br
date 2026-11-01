@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { MODELS, PRIMARY_MODELS, getModel } from '../../../src/core/catalog.ts';
+import { MODELS, PRIMARY_MODELS, familiesOf, getModel } from '../../../src/core/catalog.ts';
 import type { ModelId, Offer } from '../../../src/core/types.ts';
 import { Chip, Empty, Toggle } from '../components/bits.tsx';
 import { ModelCard, OfferCard } from '../components/cards.tsx';
@@ -8,7 +8,8 @@ import type { AppData } from '../data.ts';
 import type { Prefs } from '../prefs.ts';
 
 const FRESH_MS = 72 * 3_600_000;
-const HIDDEN = MODELS.filter((m) => !m.primary).map((m) => m.shortName);
+const shortLabel = (id: ModelId) => getModel(id).shortName.replace('Galaxy ', '');
+const HIDDEN = MODELS.filter((m) => !m.primary).map((m) => shortLabel(m.id));
 const HIDDEN_HINT = `${HIDDEN.slice(0, -1).join(', ')} e ${HIDDEN.at(-1)}`;
 
 export function visibleOffers(offers: Offer[], prefs: Prefs): Offer[] {
@@ -16,8 +17,14 @@ export function visibleOffers(offers: Offer[], prefs: Prefs): Offer[] {
     if (!prefs.showHidden && !getModel(o.model).primary) return false;
     if (!prefs.includeUsed && o.condition !== 'novo') return false;
     if (prefs.onlyCoupon && !o.coupon?.code) return false;
+    if (prefs.onlyNational && o.origin === 'importado') return false;
     return o.available;
   });
+}
+
+/** Oferta de comunidade com mais de 72h não conta como "preço de agora". */
+export function isCurrent(o: Offer, now: number): boolean {
+  return o.available && (!o.postedAt || now - new Date(o.postedAt).getTime() <= FRESH_MS);
 }
 
 export function sortOffers(offers: Offer[], sort: Prefs['sort']): Offer[] {
@@ -29,16 +36,34 @@ export function sortOffers(offers: Offer[], sort: Prefs['sort']): Offer[] {
 }
 
 export function Home({ data, prefs, setPrefs, now }: { data: AppData; prefs: Prefs; setPrefs: (p: Partial<Prefs>) => void; now: number }) {
-  const [model, setModel] = useState<ModelId | 'todos'>('todos');
+  const [picked, setModel] = useState<ModelId | 'todos'>('todos');
   const [showFilters, setShowFilters] = useState(false);
   const { snapshot } = data;
 
-  const byId = useMemo(() => new Map(snapshot.offers.map((o) => [o.id, o])), [snapshot]);
+  const shownModels = prefs.showHidden ? MODELS : PRIMARY_MODELS;
+  const families = familiesOf(shownModels);
+  // Ao esconder os demais modelos, um filtro de linha que sumiu volta para "Todos".
+  const model = picked !== 'todos' && families.includes(picked) ? picked : 'todos';
+  const activeFilters = [prefs.onlyCoupon, prefs.includeUsed, prefs.onlyNational, prefs.showHidden].filter(Boolean).length;
+
   const visible = useMemo(() => visibleOffers(snapshot.offers, prefs), [snapshot, prefs]);
   const filtered = useMemo(
     () => sortOffers(model === 'todos' ? visible : visible.filter((o) => getModel(o.model).family === model), prefs.sort),
     [visible, model, prefs.sort],
   );
+  // Melhor preço por modelo calculado aqui para respeitar o filtro "só nacionais".
+  const bestByModel = useMemo(() => {
+    const best = new Map<ModelId, Offer>();
+    const count = new Map<ModelId, number>();
+    for (const o of snapshot.offers) {
+      if (!o.available || (prefs.onlyNational && o.origin === 'importado')) continue;
+      count.set(o.model, (count.get(o.model) ?? 0) + 1);
+      if (o.condition !== 'novo' || !isCurrent(o, now)) continue;
+      const current = best.get(o.model);
+      if (!current || o.price < current.price) best.set(o.model, o);
+    }
+    return { best, count };
+  }, [snapshot, prefs.onlyNational, now]);
   const counts = useMemo(() => {
     const c: Record<string, number> = {};
     for (const o of visible) c[getModel(o.model).family] = (c[getModel(o.model).family] ?? 0) + 1;
@@ -49,13 +74,14 @@ export function Home({ data, prefs, setPrefs, now }: { data: AppData; prefs: Pre
   const older = filtered.filter((o) => o.postedAt && now - new Date(o.postedAt).getTime() > FRESH_MS);
   const recentEvents = data.events.filter((e) => now - new Date(e.at).getTime() < 48 * 3_600_000).slice(0, 3);
 
-  const cards = (prefs.showHidden ? MODELS : PRIMARY_MODELS).map((m) => {
+  const cards = shownModels.map((m) => {
     const summary = snapshot.summary.find((s) => s.model === m.id);
     return summary ? (
       <ModelCard
         key={m.id}
         summary={summary}
-        best={summary.bestOfferId ? byId.get(summary.bestOfferId) : undefined}
+        best={bestByModel.best.get(m.id)}
+        count={bestByModel.count.get(m.id) ?? 0}
         version={snapshot.generatedAt}
       />
     ) : null;
@@ -84,13 +110,14 @@ export function Home({ data, prefs, setPrefs, now }: { data: AppData; prefs: Pre
           <h2 id="h-offers" className="section-title">Ofertas</h2>
           <button type="button" className={`icon-btn${showFilters ? ' is-on' : ''}`} onClick={() => setShowFilters((v) => !v)} aria-expanded={showFilters}>
             <Icon name="filter" size={16} /> Filtros
+            {activeFilters > 0 && <span className="icon-btn__badge" aria-label={`${activeFilters} ativos`}>{activeFilters}</span>}
           </button>
         </div>
         <div className="chips" role="group" aria-label="Filtrar por modelo">
           <Chip active={model === 'todos'} onClick={() => setModel('todos')} count={visible.length}>Todos</Chip>
-          {PRIMARY_MODELS.map((m) => (
-            <Chip key={m.id} active={model === m.id} onClick={() => setModel(m.id)} count={counts[m.id] ?? 0}>
-              {m.shortName.replace('Galaxy ', '')}
+          {families.map((f) => (
+            <Chip key={f} active={model === f} onClick={() => setModel(f)} count={counts[f] ?? 0}>
+              {shortLabel(f)}
             </Chip>
           ))}
         </div>
@@ -107,11 +134,12 @@ export function Home({ data, prefs, setPrefs, now }: { data: AppData; prefs: Pre
             <Toggle checked={prefs.onlyCoupon} onChange={(v) => setPrefs({ onlyCoupon: v })} label="Só ofertas com cupom" />
             <Toggle checked={prefs.includeUsed} onChange={(v) => setPrefs({ includeUsed: v })} label="Incluir usados e recondicionados" />
             <Toggle
-              checked={prefs.showHidden}
-              onChange={(v) => setPrefs({ showHidden: v })}
-              label="Mostrar Classic, Pro e Enduro"
-              hint={HIDDEN_HINT}
+              checked={prefs.onlyNational}
+              onChange={(v) => setPrefs({ onlyNational: v })}
+              label="Só ofertas nacionais"
+              hint="Esconde importados: AliExpress, versão global, modelo de outro país, envio do exterior. O TicWatch e o Xiaomi quase só aparecem importados."
             />
+            <Toggle checked={prefs.showHidden} onChange={(v) => setPrefs({ showHidden: v })} label="Mostrar demais modelos" hint={HIDDEN_HINT} />
           </div>
         )}
 

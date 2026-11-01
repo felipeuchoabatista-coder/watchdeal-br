@@ -83,8 +83,10 @@ function detectModelsByName(t: string): ModelHit[] {
   };
 
   // Samsung — exige "galaxy watch" para evitar clones "Watch 8 Ultra".
-  // "Ultra 2" seria outra geração; "Ultra 2025" é a mesma, com cor e memória novas.
+  // "Ultra 2" é a geração de 2026; "Ultra 2025" é a primeira, com cor e memória novas.
+  push('galaxy-watch-ultra2', /\bgalaxy watch ultra\s?2\b/);
   push('galaxy-watch-ultra', /\bgalaxy watch ultra\b(?!\s*2\b)/);
+  push('galaxy-watch9', /\bgalaxy watch 9\b(?![\d.,]|\s*g\b|\s*(ultra|pro|classic)\b)/);
   push('galaxy-watch8-classic', /\bgalaxy watch 8 classic\b/);
   if (!/\bgalaxy watch 8 classic\b/.test(t)) push('galaxy-watch8', /\bgalaxy watch 8\b(?!\s*(ultra|pro\b))/);
   push('galaxy-watch7', /\bgalaxy watch 7\b(?![\d.,]|\s*g\b|\s*(ultra|pro|classic)\b)/);
@@ -117,7 +119,8 @@ function galaxyGenerationsMentioned(t: string): Set<string> {
     for (const n of m[1].match(/\d{1,2}/g) ?? []) gens.add(n);
   }
   if (/\bwatch\s+(fe)\b/.test(t)) gens.add('fe');
-  if (/\bwatch\s+ultra\b/.test(t)) gens.add('ultra');
+  if (/\bwatch\s+ultra\s?2\b/.test(t)) gens.add('ultra2');
+  else if (/\bwatch\s+ultra\b/.test(t)) gens.add('ultra');
   if (/\bwatch\s+active\b/.test(t)) gens.add('active');
   return gens;
 }
@@ -160,7 +163,7 @@ export function classify(input: ClassifyInput): Classification {
   const models = new Set<ModelId>([...codeHits.map((h) => h.model), ...nameHits.map((h) => h.model)]);
 
   if (models.size === 0) {
-    if (CLONE_WORDS.test(t) && /\bwatch\s+(8|7|6|5|4|fe|ultra|2)\b/.test(t)) {
+    if (CLONE_WORDS.test(t) && /\bwatch\s+(9|8|7|6|5|4|fe|ultra|2)\b/.test(t)) {
       return { ...base, kind: 'clone', reason: 'Relógio genérico usando o nome do modelo' };
     }
     return { ...base, kind: 'other', reason: 'Nenhum modelo rastreado no título' };

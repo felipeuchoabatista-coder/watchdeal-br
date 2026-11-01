@@ -10,7 +10,7 @@ import { fetchAllTolerant, type Source } from './source.ts';
  */
 
 const QUERIES = [
-  'galaxy watch ultra', 'galaxy watch8', 'galaxy watch7', 'galaxy watch fe', 'galaxy watch6', 'galaxy watch5', 'galaxy watch4',
+  'galaxy watch ultra', 'galaxy watch ultra 2', 'galaxy watch9', 'galaxy watch8', 'galaxy watch7', 'galaxy watch fe', 'galaxy watch6', 'galaxy watch5', 'galaxy watch4',
   'xiaomi watch 2', 'ticwatch',
 ];
 const BLOCK_MARKERS = ['validateCaptcha', 'api-services-support@amazon.com', 'Insira os caracteres que você vê'];

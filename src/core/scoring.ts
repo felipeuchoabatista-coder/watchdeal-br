@@ -9,6 +9,8 @@ export interface ScoreInput {
   listPrice?: number;
   store: string;
   marketplace?: boolean;
+  /** Oferta importada: garantia e taxas podem ser diferentes. */
+  imported?: boolean;
   community?: { temperature?: number; likes?: number };
 }
 
@@ -70,7 +72,12 @@ export function scoreOffer(input: ScoreInput, ref: ScoreRef): Score {
   if (input.marketplace) {
     value -= 5;
     reasons.push('Vendido por terceiro (marketplace)');
-  } else if (TRUSTED_STORES.test(input.store)) {
+  }
+  if (input.imported) {
+    value -= 5;
+    reasons.push('Importado: garantia e taxas podem ser diferentes');
+  }
+  if (!input.marketplace && !input.imported && TRUSTED_STORES.test(input.store)) {
     value += 3;
   }
 

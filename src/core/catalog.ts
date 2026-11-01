@@ -12,9 +12,11 @@ export interface ModelSpec {
   name: string;
   shortName: string;
   brand: 'Samsung' | 'Xiaomi' | 'Mobvoi';
-  /** Modelo principal; as variantes (Classic/Pro/Enduro) ficam ocultas por padrão. */
+  /** Termo de busca nas lojas (atalhos "buscar em outras lojas"). */
+  query: string;
+  /** Modelo configurado (principal); os demais ficam ocultos no app e não alertam por padrão. */
   primary: boolean;
-  /** Modelo principal ao qual esta variante pertence (Classic -> base). */
+  /** Linha do produto (Classic -> base), usada para agrupar filtros e "Veja também". */
   family: ModelId;
   sizes: number[];
   /** Conectividades vendidas. Com uma só (ex.: Watch Ultra só LTE), ela vale mesmo sem aparecer no título. */
@@ -33,11 +35,12 @@ export interface ModelSpec {
 const BT_LTE: Connectivity[] = ['bt', 'lte'];
 
 export const MODELS: ModelSpec[] = [
-  // --- Principais ---
+  // --- Principais (configurados): aparecem no app e geram alerta ---
   {
     id: 'galaxy-watch-ultra',
     name: 'Samsung Galaxy Watch Ultra',
     shortName: 'Galaxy Watch Ultra',
+    query: 'Galaxy Watch Ultra',
     brand: 'Samsung',
     primary: true,
     family: 'galaxy-watch-ultra',
@@ -53,6 +56,7 @@ export const MODELS: ModelSpec[] = [
     id: 'galaxy-watch8',
     name: 'Samsung Galaxy Watch8',
     shortName: 'Galaxy Watch8',
+    query: 'Galaxy Watch8',
     brand: 'Samsung',
     primary: true,
     family: 'galaxy-watch8',
@@ -72,6 +76,7 @@ export const MODELS: ModelSpec[] = [
     id: 'galaxy-watch7',
     name: 'Samsung Galaxy Watch7',
     shortName: 'Galaxy Watch7',
+    query: 'Galaxy Watch7',
     brand: 'Samsung',
     primary: true,
     family: 'galaxy-watch7',
@@ -91,6 +96,7 @@ export const MODELS: ModelSpec[] = [
     id: 'galaxy-watch-fe',
     name: 'Samsung Galaxy Watch FE',
     shortName: 'Galaxy Watch FE',
+    query: 'Galaxy Watch FE',
     brand: 'Samsung',
     primary: true,
     family: 'galaxy-watch-fe',
@@ -105,47 +111,10 @@ export const MODELS: ModelSpec[] = [
     color: '#0e9f6e',
   },
   {
-    id: 'galaxy-watch6',
-    name: 'Samsung Galaxy Watch6',
-    shortName: 'Galaxy Watch6',
-    brand: 'Samsung',
-    primary: true,
-    family: 'galaxy-watch6',
-    sizes: [40, 44],
-    connectivities: BT_LTE,
-    codes: [
-      { code: 'SM-R930', size: 40, connectivity: 'bt' },
-      { code: 'SM-R935', size: 40, connectivity: 'lte' },
-      { code: 'SM-R940', size: 44, connectivity: 'bt' },
-      { code: 'SM-R945', size: 44, connectivity: 'lte' },
-    ],
-    plausible: { min: 500, max: 4000 },
-    launchYear: 2023,
-    color: '#db2777',
-  },
-  {
-    id: 'galaxy-watch5',
-    name: 'Samsung Galaxy Watch5',
-    shortName: 'Galaxy Watch5',
-    brand: 'Samsung',
-    primary: true,
-    family: 'galaxy-watch5',
-    sizes: [40, 44],
-    connectivities: BT_LTE,
-    codes: [
-      { code: 'SM-R900', size: 40, connectivity: 'bt' },
-      { code: 'SM-R905', size: 40, connectivity: 'lte' },
-      { code: 'SM-R910', size: 44, connectivity: 'bt' },
-      { code: 'SM-R915', size: 44, connectivity: 'lte' },
-    ],
-    plausible: { min: 450, max: 3500 },
-    launchYear: 2022,
-    color: '#a16207',
-  },
-  {
     id: 'galaxy-watch4',
     name: 'Samsung Galaxy Watch4',
     shortName: 'Galaxy Watch4',
+    query: 'Galaxy Watch4',
     brand: 'Samsung',
     primary: true,
     family: 'galaxy-watch4',
@@ -165,6 +134,7 @@ export const MODELS: ModelSpec[] = [
     id: 'xiaomi-watch2',
     name: 'Xiaomi Watch 2',
     shortName: 'Xiaomi Watch 2',
+    query: 'Xiaomi Watch 2',
     brand: 'Xiaomi',
     primary: true,
     family: 'xiaomi-watch2',
@@ -176,9 +146,28 @@ export const MODELS: ModelSpec[] = [
     color: '#f97316',
   },
   {
+    id: 'xiaomi-watch2-pro',
+    name: 'Xiaomi Watch 2 Pro',
+    shortName: 'Watch 2 Pro',
+    query: 'Xiaomi Watch 2 Pro',
+    brand: 'Xiaomi',
+    primary: true,
+    family: 'xiaomi-watch2',
+    sizes: [],
+    connectivities: BT_LTE,
+    codes: [
+      { code: 'M2234W1', connectivity: 'bt' },
+      { code: 'M2233W1', connectivity: 'lte' },
+    ],
+    plausible: { min: 600, max: 3500 },
+    launchYear: 2023,
+    color: '#c2410c',
+  },
+  {
     id: 'ticwatch-pro5',
     name: 'Mobvoi TicWatch Pro 5',
     shortName: 'TicWatch Pro 5',
+    query: 'TicWatch Pro 5',
     brand: 'Mobvoi',
     primary: true,
     family: 'ticwatch-pro5',
@@ -190,25 +179,47 @@ export const MODELS: ModelSpec[] = [
     launchYear: 2023,
     color: '#dc2626',
   },
+  // --- Demais modelos Wear OS vendidos no Brasil: rastreados, ocultos por padrão ---
   {
-    id: 'ticwatch-atlas',
-    name: 'Mobvoi TicWatch Atlas',
-    shortName: 'TicWatch Atlas',
-    brand: 'Mobvoi',
-    primary: true,
-    family: 'ticwatch-atlas',
-    sizes: [],
-    connectivities: ['bt'],
-    codes: [],
-    plausible: { min: 700, max: 4500 },
-    launchYear: 2024,
-    color: '#65a30d',
+    id: 'galaxy-watch-ultra2',
+    name: 'Samsung Galaxy Watch Ultra 2',
+    shortName: 'Galaxy Watch Ultra 2',
+    query: 'Galaxy Watch Ultra 2',
+    brand: 'Samsung',
+    primary: false,
+    family: 'galaxy-watch-ultra2',
+    sizes: [47],
+    connectivities: ['lte'],
+    codes: [{ code: 'SM-L715', size: 47, connectivity: 'lte' }],
+    plausible: { min: 1500, max: 8000 },
+    launchYear: 2026,
+    color: '#334155',
   },
-  // --- Variantes ocultas por padrão ---
+  {
+    id: 'galaxy-watch9',
+    name: 'Samsung Galaxy Watch9',
+    shortName: 'Galaxy Watch9',
+    query: 'Galaxy Watch9',
+    brand: 'Samsung',
+    primary: false,
+    family: 'galaxy-watch9',
+    sizes: [40, 44],
+    connectivities: BT_LTE,
+    codes: [
+      { code: 'SM-L340', size: 40, connectivity: 'bt' },
+      { code: 'SM-L345', size: 40, connectivity: 'lte' },
+      { code: 'SM-L350', size: 44, connectivity: 'bt' },
+      { code: 'SM-L355', size: 44, connectivity: 'lte' },
+    ],
+    plausible: { min: 1000, max: 6000 },
+    launchYear: 2026,
+    color: '#4338ca',
+  },
   {
     id: 'galaxy-watch8-classic',
     name: 'Samsung Galaxy Watch8 Classic',
     shortName: 'Watch8 Classic',
+    query: 'Galaxy Watch8 Classic',
     brand: 'Samsung',
     primary: false,
     family: 'galaxy-watch8',
@@ -223,9 +234,30 @@ export const MODELS: ModelSpec[] = [
     color: '#1e40af',
   },
   {
+    id: 'galaxy-watch6',
+    name: 'Samsung Galaxy Watch6',
+    shortName: 'Galaxy Watch6',
+    query: 'Galaxy Watch6',
+    brand: 'Samsung',
+    primary: false,
+    family: 'galaxy-watch6',
+    sizes: [40, 44],
+    connectivities: BT_LTE,
+    codes: [
+      { code: 'SM-R930', size: 40, connectivity: 'bt' },
+      { code: 'SM-R935', size: 40, connectivity: 'lte' },
+      { code: 'SM-R940', size: 44, connectivity: 'bt' },
+      { code: 'SM-R945', size: 44, connectivity: 'lte' },
+    ],
+    plausible: { min: 500, max: 4000 },
+    launchYear: 2023,
+    color: '#db2777',
+  },
+  {
     id: 'galaxy-watch6-classic',
     name: 'Samsung Galaxy Watch6 Classic',
     shortName: 'Watch6 Classic',
+    query: 'Galaxy Watch6 Classic',
     brand: 'Samsung',
     primary: false,
     family: 'galaxy-watch6',
@@ -242,9 +274,30 @@ export const MODELS: ModelSpec[] = [
     color: '#9d174d',
   },
   {
+    id: 'galaxy-watch5',
+    name: 'Samsung Galaxy Watch5',
+    shortName: 'Galaxy Watch5',
+    query: 'Galaxy Watch5',
+    brand: 'Samsung',
+    primary: false,
+    family: 'galaxy-watch5',
+    sizes: [40, 44],
+    connectivities: BT_LTE,
+    codes: [
+      { code: 'SM-R900', size: 40, connectivity: 'bt' },
+      { code: 'SM-R905', size: 40, connectivity: 'lte' },
+      { code: 'SM-R910', size: 44, connectivity: 'bt' },
+      { code: 'SM-R915', size: 44, connectivity: 'lte' },
+    ],
+    plausible: { min: 450, max: 3500 },
+    launchYear: 2022,
+    color: '#a16207',
+  },
+  {
     id: 'galaxy-watch5-pro',
     name: 'Samsung Galaxy Watch5 Pro',
     shortName: 'Watch5 Pro',
+    query: 'Galaxy Watch5 Pro',
     brand: 'Samsung',
     primary: false,
     family: 'galaxy-watch5',
@@ -262,6 +315,7 @@ export const MODELS: ModelSpec[] = [
     id: 'galaxy-watch4-classic',
     name: 'Samsung Galaxy Watch4 Classic',
     shortName: 'Watch4 Classic',
+    query: 'Galaxy Watch4 Classic',
     brand: 'Samsung',
     primary: false,
     family: 'galaxy-watch4',
@@ -278,26 +332,10 @@ export const MODELS: ModelSpec[] = [
     color: '#5b21b6',
   },
   {
-    id: 'xiaomi-watch2-pro',
-    name: 'Xiaomi Watch 2 Pro',
-    shortName: 'Watch 2 Pro',
-    brand: 'Xiaomi',
-    primary: false,
-    family: 'xiaomi-watch2',
-    sizes: [],
-    connectivities: BT_LTE,
-    codes: [
-      { code: 'M2234W1', connectivity: 'bt' },
-      { code: 'M2233W1', connectivity: 'lte' },
-    ],
-    plausible: { min: 600, max: 3500 },
-    launchYear: 2023,
-    color: '#c2410c',
-  },
-  {
     id: 'ticwatch-pro5-enduro',
     name: 'Mobvoi TicWatch Pro 5 Enduro',
     shortName: 'TicWatch Pro 5 Enduro',
+    query: 'TicWatch Pro 5 Enduro',
     brand: 'Mobvoi',
     primary: false,
     family: 'ticwatch-pro5',
@@ -307,6 +345,21 @@ export const MODELS: ModelSpec[] = [
     plausible: { min: 700, max: 4500 },
     launchYear: 2024,
     color: '#991b1b',
+  },
+  {
+    id: 'ticwatch-atlas',
+    name: 'Mobvoi TicWatch Atlas',
+    shortName: 'TicWatch Atlas',
+    query: 'TicWatch Atlas',
+    brand: 'Mobvoi',
+    primary: false,
+    family: 'ticwatch-atlas',
+    sizes: [],
+    connectivities: ['bt'],
+    codes: [],
+    plausible: { min: 700, max: 4500 },
+    launchYear: 2024,
+    color: '#65a30d',
   },
 ];
 
@@ -319,6 +372,11 @@ export function getModel(id: ModelId): ModelSpec {
 }
 
 export const PRIMARY_MODELS = MODELS.filter((m) => m.primary);
+
+/** Linhas de produto (Watch8 + Watch8 Classic…) dos modelos informados, na ordem do catálogo. */
+export function familiesOf(models: ModelSpec[]): ModelId[] {
+  return [...new Set(models.map((m) => m.family))];
+}
 
 export function variantOf(model: ModelId, size: number | undefined, connectivity: Connectivity): string {
   const spec = getModel(model);

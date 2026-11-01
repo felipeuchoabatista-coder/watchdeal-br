@@ -39,6 +39,11 @@ export function OfferCard({ offer, now, target, showModel = true }: { offer: Off
           <span className="store">{offer.store}</span>
           {offer.marketplace && <span className="tag tag--warn">Marketplace{offer.seller ? `: ${offer.seller}` : ''}</span>}
           {offer.condition !== 'novo' && <span className="tag tag--info">{CONDITION[offer.condition]}</span>}
+          {offer.origin === 'importado' && (
+            <span className="tag tag--import" title="Garantia, prazo e taxas podem ser diferentes de um produto nacional">
+              Importado{offer.originReason ? `: ${offer.originReason}` : ''}
+            </span>
+          )}
           {belowTarget && <span className="tag tag--ok">Abaixo do seu alvo</span>}
         </div>
 
@@ -101,7 +106,7 @@ export function OfferCard({ offer, now, target, showModel = true }: { offer: Off
   );
 }
 
-export function ModelCard({ summary, best, version }: { summary: ModelSummary; best?: Offer; version?: string }) {
+export function ModelCard({ summary, best, count, version }: { summary: ModelSummary; best?: Offer; count?: number; version?: string }) {
   const spec = getModel(summary.model);
   const history = useHistory(summary.model, version);
   const variant = best?.variant ?? summary.variants.find((v) => v.current)?.variant;
@@ -114,7 +119,7 @@ export function ModelCard({ summary, best, version }: { summary: ModelSummary; b
     <a className="mcard" href={`#/modelo/${summary.model}`} style={{ '--accent': spec.color } as CSSProperties}>
       <div className="mcard__head">
         <span className="mcard__name">{spec.shortName}</span>
-        <span className="mcard__count">{summary.offersCount} ofertas</span>
+        <span className="mcard__count">{count ?? summary.offersCount} {(count ?? summary.offersCount) === 1 ? 'oferta' : 'ofertas'}</span>
       </div>
       {best ? (
         <>

@@ -1,13 +1,14 @@
 import { useMemo, useState, type CSSProperties } from 'react';
 import { MODELS, getModel, variantLabel } from '../../../src/core/catalog.ts';
+import { cheapestByStore, storeSearchLinks } from '../../../src/core/links.ts';
 import type { ModelId, Offer } from '../../../src/core/types.ts';
 import { Chip, Empty, ScoreBadge } from '../components/bits.tsx';
 import { OfferCard } from '../components/cards.tsx';
 import { Icon } from '../components/Icon.tsx';
 import { PriceChart } from '../components/PriceChart.tsx';
-import { brl, dateBR, pct, useHistory, type AppData } from '../data.ts';
+import { brl, brl0, dateBR, pct, useHistory, type AppData } from '../data.ts';
 import type { Prefs } from '../prefs.ts';
-import { sortOffers } from './Home.tsx';
+import { isCurrent, sortOffers } from './Home.tsx';
 
 const RANGES = [
   { id: '30', label: '30 dias', days: 30 },
@@ -20,8 +21,18 @@ export function ModelPage({ model, data, prefs, setPrefs, now }: { model: ModelI
   const summary = data.snapshot.summary.find((s) => s.model === model);
   const history = useHistory(model, data.snapshot.generatedAt);
   const offers = useMemo(
-    () => sortOffers(data.snapshot.offers.filter((o) => o.model === model && o.available && (prefs.includeUsed || o.condition === 'novo')), 'preco'),
-    [data.snapshot, model, prefs.includeUsed],
+    () =>
+      sortOffers(
+        data.snapshot.offers.filter(
+          (o) =>
+            o.model === model &&
+            o.available &&
+            (prefs.includeUsed || o.condition === 'novo') &&
+            !(prefs.onlyNational && o.origin === 'importado'),
+        ),
+        'preco',
+      ),
+    [data.snapshot, model, prefs.includeUsed, prefs.onlyNational],
   );
 
   const variants = useMemo(() => {
@@ -39,7 +50,11 @@ export function ModelPage({ model, data, prefs, setPrefs, now }: { model: ModelI
   const cutoff = Number.isFinite(days) ? new Date(now - days * 86_400_000).toISOString().slice(0, 10) : '';
   const shown = series.filter((p) => p.d >= cutoff);
   const variantOffers = offers.filter((o) => o.variant === variant);
-  const best: Offer | undefined = variantOffers.find((o) => o.condition === 'novo');
+  const currentNew = variantOffers.filter((o) => o.condition === 'novo' && isCurrent(o, now));
+  const best: Offer | undefined = currentNew[0];
+  const stores = cheapestByStore(currentNew);
+  const links = storeSearchLinks(spec, variant);
+  const floor = links.find((l) => l.floor)?.floor;
   const target = prefs.targets[model];
   const siblings = MODELS.filter((m) => m.family === spec.family && m.id !== model);
 
@@ -71,7 +86,7 @@ export function ModelPage({ model, data, prefs, setPrefs, now }: { model: ModelI
       <section className="stat-row" aria-label="Resumo de preços">
         <div className="stat stat--hero">
           <span className="stat__label">Melhor preço agora</span>
-          <span className="stat__value">{stats?.current ? brl(stats.current) : '—'}</span>
+          <span className="stat__value">{best ? brl(best.price) : '—'}</span>
           <span className="stat__sub">{best ? <>{best.store} <ScoreBadge score={best.score} /></> : 'sem oferta nova no momento'}</span>
         </div>
         <div className="stat">
@@ -92,6 +107,51 @@ export function ModelPage({ model, data, prefs, setPrefs, now }: { model: ModelI
             <span className="stat__label">Últimos 7 dias</span>
             <span className={`stat__value ${stats.trend7d < 0 ? 'is-down' : stats.trend7d > 0 ? 'is-up' : ''}`}>{pct(stats.trend7d)}</span>
           </div>
+        )}
+      </section>
+
+      <section className="card where" aria-labelledby="h-where">
+        <h2 id="h-where" className="section-title">Onde comprar</h2>
+        <p className="muted small">
+          {variantLabel(variant ?? '') || 'Padrão'} · produto novo · a oferta mais barata de cada loja agora
+          {prefs.onlyNational ? ' · só nacionais' : ''}.
+        </p>
+        {stores.length > 0 ? (
+          <ol className="where__list">
+            {stores.map((o, i) => (
+              <li key={o.id}>
+                <a className="where__row" href={o.url} target="_blank" rel="noopener noreferrer">
+                  <span className="where__rank" aria-hidden>{i + 1}</span>
+                  <span className="where__store">
+                    {o.store}
+                    {(o.marketplace || o.origin === 'importado') && (
+                      <small>{[o.marketplace && 'marketplace', o.origin === 'importado' && 'importado'].filter(Boolean).join(' · ')}</small>
+                    )}
+                  </span>
+                  <span className="where__price">{brl(o.price)}</span>
+                  <Icon name="external" size={14} />
+                </a>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p className="where__none small">Nenhuma loja com esta variante nova agora. Use as buscas abaixo.</p>
+        )}
+        <h3 className="where__sub">Buscar em outras lojas</h3>
+        <div className="shortcuts">
+          {links.map((l) => (
+            <a key={l.store} className="shortcut" href={l.url} target="_blank" rel="noopener noreferrer">
+              <span className="shortcut__store">
+                {l.store} <Icon name="external" size={12} />
+              </span>
+              <small>{l.sortedByPrice ? `menor preço primeiro` : 'busca da loja'}</small>
+            </a>
+          ))}
+        </div>
+        {floor !== undefined && (
+          <p className="muted small">
+            Nas buscas por menor preço, só entram anúncios a partir de {brl0(floor)}, para pulseiras e películas não aparecerem no topo.
+          </p>
         )}
       </section>
 
@@ -138,6 +198,7 @@ export function ModelPage({ model, data, prefs, setPrefs, now }: { model: ModelI
 
       <section aria-labelledby="h-moffers">
         <h2 id="h-moffers" className="section-title">Ofertas de {spec.shortName} ({offers.length})</h2>
+        {prefs.onlyNational && <p className="muted small">Mostrando só ofertas nacionais (mude em Ofertas → Filtros).</p>}
         {offers.length === 0 ? (
           <Empty title="Nenhuma oferta encontrada agora">O histórico continua sendo registrado a cada coleta.</Empty>
         ) : (

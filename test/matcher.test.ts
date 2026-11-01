@@ -28,6 +28,16 @@ const CASES: Expect[] = [
   // --- Watch8 Classic (oculto por padrão, mas identificado) ---
   { title: 'Samsung Galaxy Watch8 Classic Smartwatch 46mm LTE, Galaxy AI - Preto', price: 1994.05, kind: 'device', model: 'galaxy-watch8-classic', size: 46, conn: 'lte' },
   { title: 'Smartwatch Samsung Galaxy Watch8 Classic LTE 4G 46mm', price: 1889.1, kind: 'device', model: 'galaxy-watch8-classic' },
+  // --- Galaxy Watch Ultra 2 (2026, só LTE, 47 mm) ---
+  { title: 'Smartwatch Samsung Galaxy Watch Ultra 2 47mm LTE com Análise de Impedância Bioelétrica Preto', price: 3699, kind: 'device', model: 'galaxy-watch-ultra2', size: 47, conn: 'lte' },
+  { title: 'Samsung Galaxy Watch Ultra2 Titânio Prata', price: 2990, kind: 'device', model: 'galaxy-watch-ultra2', size: 47, conn: 'lte' },
+  { title: 'Galaxy Watch Ultra2 SM-L715FZSPZTO', price: 4999, kind: 'device', model: 'galaxy-watch-ultra2', size: 47, conn: 'lte' },
+  { title: 'Pulseira Marine Galaxy Watch Ultra 2', price: 299, kind: 'accessory' },
+  // --- Galaxy Watch9 (2026) ---
+  { title: 'Smartwatch Samsung Galaxy Watch9 40,0 mm', price: 2339.1, kind: 'device', model: 'galaxy-watch9', size: 40, conn: 'bt' },
+  { title: 'Samsung Galaxy Watch9 Smartwatch 44mm LTE Galaxy AI Tela em Cristal de Safira Prata', price: 2799, kind: 'device', model: 'galaxy-watch9', size: 44, conn: 'lte' },
+  { title: 'Galaxy Watch 9 SM-L350 Grafite', price: 2499, kind: 'device', model: 'galaxy-watch9', size: 44, conn: 'bt' },
+  { title: 'Galaxy Watch9 BT na compra do Galaxy Z Fold8', price: 999, kind: 'bundle' },
   // --- Galaxy Watch Ultra (só LTE, 47 mm: vale mesmo sem estar no título) ---
   { title: 'Samsung Galaxy Watch Ultra 2025 Smartwatch 47mm LTE', price: 1799.1, kind: 'device', model: 'galaxy-watch-ultra', size: 47, conn: 'lte' },
   { title: 'Samsung Galaxy Watch Ultra Smartwatch 47mm LTE 64GB 2GB RAM Galaxy AI Titânio Aeroespacial - Titânio Azul', price: 1685.95, kind: 'device', model: 'galaxy-watch-ultra', size: 47, conn: 'lte' },
@@ -100,8 +110,7 @@ const CASES: Expect[] = [
   { title: 'Relógio Digital Smartwatch Watch 8 Pro Tamanho 45mm Unissex - Microwear', price: 188.9, kind: 'clone' },
   { title: 'Relógio Smartwatch Ecossistema Xiaomi,Haylou Watch 2 Pro A Prova Dagua', price: 272.15, kind: 'clone' },
   { title: 'Relógio Smartwatch Watch 7 Ultra 49mm - Microwear', price: 199, kind: 'clone' },
-  { title: 'Smartwatch Samsung Galaxy Watch9 40,0 mm', price: 2339.1, kind: 'other' },
-  { title: 'Smartwatch Samsung Galaxy Watch Ultra 2 47mm', price: 3999, kind: 'other' },
+  { title: 'Smartwatch Samsung Galaxy Watch10 44mm', price: 2999, kind: 'other' },
   { title: 'Smartwatch Samsung Galaxy Watch 46mm Bluetooth (2018)', price: 699, kind: 'other' },
   { title: 'Smartwatch Xiaomi Redmi Watch 5 Active', price: 246.82, kind: 'other' },
   { title: 'Smartwatch Xiaomi Smart Band 10', price: 309.9, kind: 'other' },
@@ -119,6 +128,7 @@ const CASES: Expect[] = [
   { title: 'Samsung Galaxy Watch 4 5 6 Relógio Smart', price: 899, kind: 'ambiguous' },
   { title: 'Samsung Galaxy Watch 7 6 5 Relógio Smart', price: 899, kind: 'ambiguous' },
   { title: 'Galaxy Watch7 e Galaxy Watch Ultra com desconto', price: 1500, kind: 'ambiguous' },
+  { title: 'Galaxy Watch9 e Galaxy Watch Ultra 2 em promoção', price: 2500, kind: 'ambiguous' },
   { title: 'Smartwatch Samsung Galaxy Watch Ultra 47mm', price: 299, kind: 'implausible' },
   { title: 'Smartwatch Samsung Galaxy Watch8 40mm', price: 199, kind: 'implausible' },
 ];

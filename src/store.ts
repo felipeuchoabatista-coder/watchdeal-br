@@ -28,6 +28,7 @@ export const DEFAULT_CONFIG: AlertConfig = {
   alertarNovoMinimo: true,
   indiceMinimo: 85,
   incluirUsados: false,
+  incluirImportados: true,
   incluirVariantesOcultas: false,
   canais: { telegram: true, ntfy: true },
 };

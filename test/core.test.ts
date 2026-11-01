@@ -47,6 +47,15 @@ test('relevância dos cupons de loja', () => {
   assert.equal(couponScope('qualquer coisa', 'Shopee', true), 'modelo');
 });
 
+test('importado perde pontos e o bônus de loja confiável, com o motivo explicado', () => {
+  const ref = { median30: 1500, min90: 1400, days: 40 };
+  const nacional = scoreOffer({ price: 1450, store: 'Amazon' }, ref);
+  const importado = scoreOffer({ price: 1450, store: 'Amazon', imported: true }, ref);
+  assert.equal(nacional.value - importado.value, 8, '−5 de importado e sem o +3 de loja confiável');
+  assert.ok(importado.reasons.includes('Importado: garantia e taxas podem ser diferentes'));
+  assert.ok(!nacional.reasons.some((r) => r.startsWith('Importado')));
+});
+
 test('histórico guarda o menor preço do dia e calcula referências', () => {
   let s: HistoryPoint[] = [];
   s = mergePoint(s, { d: '2026-10-30', p: 1300, s: 'A', o: 'zoom' });

@@ -2,7 +2,7 @@
   "name": "watchdeal-br",
   "version": "1.0.0",
   "private": true,
-  "description": "Rastreador 24h de promoções e cupons para Galaxy Watch (Ultra, 8, 7, FE, 6, 5 e 4), Xiaomi Watch 2 e TicWatch (Pro 5 e Atlas).",
+  "description": "Rastreador 24h de promoções e cupons para os smartwatches Wear OS do Brasil (Galaxy Watch, Xiaomi Watch 2 e TicWatch).",
   "type": "module",
   "engines": {
     "node": ">=24"
