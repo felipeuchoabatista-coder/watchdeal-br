@@ -197,9 +197,12 @@ if (import.meta.main) {
     fetcher: fetchText,
   })
     .then(({ health }) => {
-      // Falha a execução só se TODAS as fontes que rodaram falharam.
+      // Falha a execução só se TODAS as fontes que rodaram deram erro e ao menos uma
+      // falhou de verdade. Bloqueio é esperado (o Pelando sempre bloqueia o GitHub) e
+      // aparece na aba Fontes; não deve gerar e-mail de falha a cada rodada.
       const ran = health.sources.filter((s) => s.lastRunAt === health.generatedAt);
-      if (ran.length > 0 && ran.every((s) => s.status === 'falhou' || s.status === 'bloqueado')) process.exitCode = 1;
+      const allDown = ran.length > 0 && ran.every((s) => s.status === 'falhou' || s.status === 'bloqueado');
+      if (allDown && ran.some((s) => s.status === 'falhou')) process.exitCode = 1;
     })
     .catch((err) => {
       console.error(err);
