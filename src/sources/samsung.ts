@@ -89,7 +89,7 @@ export const samsung: Source = {
   id: 'samsung',
   name: 'Samsung (loja oficial)',
   site: 'shop.samsung.com.br',
-  everyMinutes: 15,
+  everyMinutes: 10,
   async collect(fetcher: Fetcher) {
     const { results, warnings } = await fetchAllTolerant(
       QUERIES.map((q) => ({

@@ -146,7 +146,7 @@ export const promobit: Source = {
   id: 'promobit',
   name: 'Promobit',
   site: 'promobit.com.br',
-  everyMinutes: 10,
+  everyMinutes: 5,
   async collect(fetcher: Fetcher, ctx: SourceContext) {
     const nowMs = ctx.now.getTime();
     const wantFinished = nowMs - Number(ctx.memory.lastFinishedAt ?? 0) > FINISHED_EVERY_MS;

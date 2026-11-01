@@ -138,7 +138,7 @@ export const zoom: Source = {
   id: 'zoom',
   name: 'Zoom',
   site: 'zoom.com.br',
-  everyMinutes: 20,
+  everyMinutes: 15,
   async collect(fetcher: Fetcher) {
     const blockMarkers = ['captcha', 'Access Denied'];
     const searches = await fetchAllTolerant(

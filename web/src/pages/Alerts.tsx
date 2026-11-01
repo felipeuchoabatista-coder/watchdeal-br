@@ -22,7 +22,7 @@ export function Alerts({ data, now }: { data: AppData; now: number }) {
     <div className="page">
       <h1 className="page-title">Alertas</h1>
       <p className="muted small">
-        O rastreador roda no GitHub a cada ~10 minutos, mesmo com o celular desligado, e avisa quando aparece:
+        O rastreador roda no GitHub a cada ~5 minutos, mesmo com o celular desligado, e avisa quando aparece:
       </p>
       <ul className="alert-types">
         <li><b>📉 Menor preço em 90 dias</b> para uma variante (ex.: Watch8 40mm Bluetooth).</li>

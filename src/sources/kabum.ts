@@ -73,7 +73,7 @@ export const kabum: Source = {
   id: 'kabum',
   name: 'KaBuM!',
   site: 'kabum.com.br',
-  everyMinutes: 15,
+  everyMinutes: 10,
   async collect(fetcher: Fetcher) {
     const { results, warnings } = await fetchAllTolerant(
       QUERIES.map((q) => ({

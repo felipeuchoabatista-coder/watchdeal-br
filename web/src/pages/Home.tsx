@@ -115,7 +115,7 @@ export function Home({ data, prefs, setPrefs, now }: { data: AppData; prefs: Pre
 
         {fresh.length === 0 && older.length === 0 ? (
           <Empty title="Nenhuma oferta com esses filtros">
-            Tente incluir usados ou outro modelo. O rastreador verifica as lojas a cada 10–30 minutos.
+            Tente incluir usados ou outro modelo. O rastreador verifica as lojas a cada 5–30 minutos.
           </Empty>
         ) : (
           <div className="offers">

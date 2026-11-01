@@ -2,14 +2,14 @@
 
 ## 1. Publicar no GitHub (uma vez)
 
-O repositório precisa ser **público** para o GitHub Actions rodar de graça a cada 10 minutos. O código fica visível, mas as senhas (tokens de alerta) ficam protegidas em *Secrets*.
+O repositório precisa ser **público** para o GitHub Actions rodar de graça a cada 5 minutos. O código fica visível, mas as senhas (tokens de alerta) ficam protegidas em *Secrets*.
 
 1. Crie o repositório e envie o código (`git push`).
 2. Em **Settings → Pages**, escolha **Source: GitHub Actions**.
 3. Em **Actions → Coletar ofertas → Run workflow**, marque *Consultar todas as fontes agora* e rode.
 4. Em ~2 minutos o app estará em `https://<seu-usuário>.github.io/<repositório>/`.
 
-A partir daí, a coleta roda sozinha a cada ~10 minutos. Os dados ficam no branch `data`.
+A partir daí, a coleta roda sozinha a cada ~5 minutos: cada execução agenda a próxima. Os dados ficam no branch `data`. Para pausar, crie a variável `COLETA_CONTINUA` = `false` em **Settings → Secrets and variables → Actions → Variables**.
 
 ## 2. Instalar no celular
 

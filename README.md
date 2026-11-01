@@ -13,7 +13,7 @@ Roda de graça no GitHub (Actions + Pages) e vira um **app instalável no celula
 
 ## O que ele faz
 
-- **Coleta a cada 10–30 min** em 6 fontes, cada uma no seu ritmo:
+- **Coleta a cada 5 min** (cada fonte no seu ritmo, de 5 a 30 min) em 6 fontes, cada uma no seu ritmo:
   - **Zoom**: comparador que cobre Magalu, Amazon, Casas Bahia, Fast Shop e outras, com ~40 dias de histórico por produto.
   - **Samsung**: loja oficial, com preço no Pix.
   - **KaBuM!**: inclui usados e Oferta Ninja.
@@ -40,7 +40,7 @@ Roda de graça no GitHub (Actions + Pages) e vira um **app instalável no celula
 ## Como funciona
 
 ```
-GitHub Actions (a cada 10 min)
+GitHub Actions (a cada 5 min; cada execução agenda a próxima)
   └─ src/run.ts ── fontes (src/sources/*) ──► classifica (core/matcher)
         │                                     pontua (core/scoring)
         │                                     histórico (core/history)

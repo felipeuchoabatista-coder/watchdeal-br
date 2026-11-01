@@ -27,7 +27,7 @@ export function Sources({ data, prefs, setPrefs, now }: { data: AppData; prefs: 
       <h1 className="page-title">Fontes e ajustes</h1>
       <p className="muted small">
         Última coleta {ago(data.snapshot.generatedAt, now)}
-        {health ? ` · rodada levou ${(health.cycleMs / 1000).toFixed(0)}s` : ''}. Cada fonte tem seu intervalo (10–30 min); fontes que bloqueiam acesso automático ficam de fora — o app nunca tenta burlar bloqueios.
+        {health ? ` · rodada levou ${(health.cycleMs / 1000).toFixed(0)}s` : ''}. Cada fonte tem seu intervalo (5–30 min); fontes que bloqueiam acesso automático ficam de fora — o app nunca tenta burlar bloqueios.
       </p>
 
       <ul className="sources">

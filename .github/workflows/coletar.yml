@@ -1,7 +1,10 @@
 name: Coletar ofertas
 
-# Roda a cada 10 minutos (o GitHub pode atrasar em horários de pico),
-# quando o código muda e sob demanda pela aba Actions.
+# Coleta a cada 5 minutos: ao terminar, cada execução agenda a próxima
+# (job "agendar"). O cron do GitHub é só reserva para religar a corrente
+# se ela parar; ele sozinho atrasa muito em horários de pico.
+# Para pausar: Settings → Secrets and variables → Actions → Variables,
+# crie COLETA_CONTINUA = false (volta a valer só o cron).
 on:
   schedule:
     - cron: '4,14,24,34,44,54 * * * *'
@@ -116,3 +119,31 @@ jobs:
           path: web/dist
       - id: deploy
         uses: actions/deploy-pages@v5
+
+  # Espera completar 5 minutos desde o início desta execução e dispara a
+  # próxima. Só dispara se não houver outra na fila, para nunca existirem
+  # duas correntes ao mesmo tempo (o cron de reserva também passa por aqui).
+  agendar:
+    needs: coletar
+    if: ${{ !cancelled() && vars.COLETA_CONTINUA != 'false' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      actions: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Agendar a próxima coleta
+        run: |
+          inicio=$(date -d "$(gh api "repos/$GH_REPO/actions/runs/$GITHUB_RUN_ID" --jq .run_started_at)" +%s)
+          espera=$(( 300 - ($(date +%s) - inicio) ))
+          if [ "$espera" -gt 0 ]; then echo "Aguardando ${espera}s"; sleep "$espera"; fi
+          outras=$(gh run list --workflow coletar.yml --limit 20 --json databaseId,status \
+            --jq "[.[] | select(.status != \"completed\" and .databaseId != $GITHUB_RUN_ID)] | length")
+          if [ "$outras" -gt 0 ]; then
+            echo "Já existe coleta na fila ($outras); não agendo outra."
+          else
+            gh workflow run coletar.yml --ref main
+            echo "Próxima coleta disparada."
+          fi

@@ -107,7 +107,7 @@ export const pelando: Source = {
   id: 'pelando',
   name: 'Pelando',
   site: 'pelando.com.br',
-  everyMinutes: 10,
+  everyMinutes: 30,
   async collect(fetcher: Fetcher) {
     const { results, warnings } = await fetchAllTolerant(
       QUERIES.map((q) => ({
