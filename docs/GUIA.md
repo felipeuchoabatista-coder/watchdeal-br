@@ -51,7 +51,7 @@ Edite `config/alertas.json` direto no site do GitHub (dá para fazer pelo celula
 
 ```json
 {
-  "alvos": { "galaxy-watch8": 1100, "galaxy-watch-fe": 750, "galaxy-watch4": 650, "xiaomi-watch2": 700 },
+  "alvos": { "galaxy-watch8": 1100, "galaxy-watch-fe": 950, "galaxy-watch4": 900, "xiaomi-watch2": 800 },
   "alertarNovoMinimo": true,
   "indiceMinimo": 85,
   "incluirUsados": false,

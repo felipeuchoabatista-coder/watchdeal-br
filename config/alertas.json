@@ -1,9 +1,9 @@
 {
   "alvos": {
-    "galaxy-watch8": null,
-    "galaxy-watch-fe": null,
-    "galaxy-watch4": null,
-    "xiaomi-watch2": null
+    "galaxy-watch8": 1100,
+    "galaxy-watch-fe": 950,
+    "galaxy-watch4": 900,
+    "xiaomi-watch2": 800
   },
   "alertarNovoMinimo": true,
   "indiceMinimo": 85,
