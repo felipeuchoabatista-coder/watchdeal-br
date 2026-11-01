@@ -9,7 +9,10 @@ import { fetchAllTolerant, type Source } from './source.ts';
  */
 
 const API = 'https://servicespub.prod.api.aws.grupokabum.com.br/catalog/v2/products';
-const QUERIES = ['galaxy watch', 'galaxy watch fe', 'galaxy watch4', 'xiaomi watch 2'];
+const QUERIES = [
+  'galaxy watch', 'galaxy watch ultra', 'galaxy watch7', 'galaxy watch fe', 'galaxy watch6', 'galaxy watch5', 'galaxy watch4',
+  'xiaomi watch 2', 'ticwatch',
+];
 
 interface KabumItem {
   id: number;

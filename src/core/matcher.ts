@@ -19,7 +19,19 @@ const ACCESSORY_WORDS = [
 const ACCESSORY_START = /^(\d+\s*(x|un|unid|pcs?)?\s+)?(kit\s+(de\s+)?)?(\d+\s+)?(pulseira|pulseiras|correia|bracelete|pelicula|peliculas|capa|capinha|case|bumper|protetor|carregador|cabo|base|dock|suporte|adaptador|fecho|fivela|vidro|strap|moldura|bezel|aro|estojo|film|garantia|samsung care)\b/;
 
 /** Anúncio "para"/"compatível com" o relógio: acessório ou genérico. */
-const FOR_DEVICE = /\b(compativel|compatível|compat\.?|p\/|para\s+(o\s+|os\s+|relogio\s+|smartwatch\s+)?(samsung\s+)?(galaxy|xiaomi|mi\s+watch|watch)|for\s+(samsung\s+)?galaxy)\b/;
+const FOR_DEVICE = /\b(compativel|compatível|compat\.?|p\/|para\s+(o\s+|os\s+|relogio\s+|smartwatch\s+)?(samsung\s+|mobvoi\s+)?(galaxy|xiaomi|mi\s+watch|watch|tic\s?watch)|for\s+(samsung\s+)?galaxy|for\s+(mobvoi\s+)?tic\s?watch)\b/;
+
+/** Começo de título de relógio de verdade (não de acessório "para" ele). */
+const DEVICE_START = /^(smartwatch|relogio|samsung|galaxy|xiaomi|mobvoi|tic\s?watch)\b/;
+
+/** Marcas cujos relógios podem ter palavras comuns em clones ("relógio inteligente"). */
+const REAL_BRAND = /\b(samsung|xiaomi|mobvoi|tic\s?watch)\b/;
+
+/**
+ * "Compatível com Android/iPhone" descreve o próprio relógio (comum em anúncios
+ * importados), não um acessório "compatível com" ele.
+ */
+const PHONE_COMPAT = /\b(somente\s+)?compativel\s+(somente\s+)?(com\s+)?(o\s+|os\s+)?(android|ios|iphone|smartphones?|celulares?)\b/g;
 
 /** Sinais típicos de relógio genérico que usa o nome do original. */
 const CLONE_WORDS = /\b(similar|replica|réplica|tipo galaxy|estilo|linha premium|hw\d+|w\d{2}\s*(pro|max|mini|ultra)?|gs\d+|x8 ultra|dt\s?\d+|iwo|microwear|lnd|smart watch band|serie \d+|series \d+|haylou|mibro|kieslect|imilab|colmi|lige|blulory|amazfit|huawei|apple|garmin|relogio inteligente)\b/;
@@ -43,6 +55,7 @@ function prepare(title: string): string {
     .replace(/(\d{2})(?:[.,]\d)?\s*mm\b/g, '$1mm')
     .replace(/galaxy\s*watch\s*-?\s*(\d)/g, 'galaxy watch $1')
     .replace(/watch\s*-?\s*(\d)/g, 'watch $1')
+    .replace(PHONE_COMPAT, ' ')
     .replace(/[()[\]{}|,;:!?®™]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
@@ -70,11 +83,23 @@ function detectModelsByName(t: string): ModelHit[] {
   };
 
   // Samsung — exige "galaxy watch" para evitar clones "Watch 8 Ultra".
+  // "Ultra 2" seria outra geração; "Ultra 2025" é a mesma, com cor e memória novas.
+  push('galaxy-watch-ultra', /\bgalaxy watch ultra\b(?!\s*2\b)/);
   push('galaxy-watch8-classic', /\bgalaxy watch 8 classic\b/);
   if (!/\bgalaxy watch 8 classic\b/.test(t)) push('galaxy-watch8', /\bgalaxy watch 8\b(?!\s*(ultra|pro\b))/);
+  push('galaxy-watch7', /\bgalaxy watch 7\b(?![\d.,]|\s*g\b|\s*(ultra|pro|classic)\b)/);
+  push('galaxy-watch6-classic', /\bgalaxy watch 6 classic\b/);
+  if (!/\bgalaxy watch 6 classic\b/.test(t)) push('galaxy-watch6', /\bgalaxy watch 6\b(?![\d.,]|\s*g\b|\s*(ultra|pro)\b)/);
+  push('galaxy-watch5-pro', /\bgalaxy watch 5 pro\b/);
+  if (!/\bgalaxy watch 5 pro\b/.test(t)) push('galaxy-watch5', /\bgalaxy watch 5\b(?![\d.,]|\s*g\b|\s*(ultra|classic)\b)/);
   push('galaxy-watch4-classic', /\bgalaxy watch 4 classic\b/);
   if (!/\bgalaxy watch 4 classic\b/.test(t)) push('galaxy-watch4', /\bgalaxy watch 4\b(?![\d.,]|\s*g\b)/);
   push('galaxy-watch-fe', /\bgalaxy watch fe\b/);
+
+  // Mobvoi — exige "TicWatch" (às vezes escrito "Tic Watch" ou "Pro5").
+  push('ticwatch-pro5-enduro', /\btic\s?watch pro\s?5 enduro\b/);
+  if (!/\btic\s?watch pro\s?5 enduro\b/.test(t)) push('ticwatch-pro5', /\btic\s?watch pro\s?5\b(?![\d.,]|\s*g\b)/);
+  push('ticwatch-atlas', /\btic\s?watch atlas\b/);
 
   // Xiaomi — "Xiaomi Watch 2" sem Redmi/Band/Lite.
   if (/\bxiaomi\b/.test(t) && !/\b(redmi|smart band|mi band|band \d|lite|haylou|amazfit|s\s?\d)\b/.test(t.replace(/\bwatch 2 pro\b/, ''))) {
@@ -135,7 +160,7 @@ export function classify(input: ClassifyInput): Classification {
   const models = new Set<ModelId>([...codeHits.map((h) => h.model), ...nameHits.map((h) => h.model)]);
 
   if (models.size === 0) {
-    if (CLONE_WORDS.test(t) && /\bwatch\s+(8|4|fe|2)\b/.test(t)) {
+    if (CLONE_WORDS.test(t) && /\bwatch\s+(8|7|6|5|4|fe|ultra|2)\b/.test(t)) {
       return { ...base, kind: 'clone', reason: 'Relógio genérico usando o nome do modelo' };
     }
     return { ...base, kind: 'other', reason: 'Nenhum modelo rastreado no título' };
@@ -143,7 +168,7 @@ export function classify(input: ClassifyInput): Classification {
 
   // Acessórios: começam com a palavra do acessório ou são "para"/"compatível com" o relógio.
   if (ACCESSORY_START.test(t)) return { ...base, kind: 'accessory', reason: 'Título começa com acessório' };
-  if (FOR_DEVICE.test(t) && !/^(smartwatch|relogio|samsung|galaxy|xiaomi)\b/.test(t)) {
+  if (FOR_DEVICE.test(t) && !DEVICE_START.test(t)) {
     return { ...base, kind: 'accessory', reason: 'Anúncio "para" o relógio' };
   }
   if (/\b(compativel|compatível)\b/.test(t)) {
@@ -153,7 +178,7 @@ export function classify(input: ClassifyInput): Classification {
   if (BUNDLE.test(t)) return { ...base, kind: 'bundle', reason: 'Combo com outro produto' };
 
   // Relógio genérico citando o modelo ("Smartwatch W28 Pro Watch 8").
-  if (CLONE_WORDS.test(t) && !/\bsamsung\b|\bxiaomi\b/.test(t)) {
+  if (CLONE_WORDS.test(t) && !REAL_BRAND.test(t)) {
     return { ...base, kind: 'clone', reason: 'Indícios de relógio genérico' };
   }
 
@@ -192,6 +217,7 @@ export function classify(input: ClassifyInput): Classification {
 
   const code = codeHits.find((h) => h.model === model);
   const size = code?.size ?? detectSize(t, model);
-  const connectivity = code?.connectivity ?? detectConnectivity(t);
+  const only = spec.connectivities.length === 1 ? spec.connectivities[0] : undefined;
+  const connectivity = code?.connectivity ?? only ?? detectConnectivity(t);
   return { kind: 'device', model, size, connectivity, condition, reason: code ? 'Código do fabricante' : 'Nome do modelo' };
 }

@@ -66,7 +66,22 @@ Edite `config/alertas.json` direto no site do GitHub (dá para fazer pelo celula
 | `alertarNovoMinimo` | Avisa quando surge o menor preço dos últimos 90 dias de uma variante. |
 | `indiceMinimo` | Índice de Oferta a partir do qual a oferta conta como "imperdível" (padrão 85). |
 | `incluirUsados` | Também alerta usados e recondicionados. |
-| `incluirVariantesOcultas` | Também alerta Watch8 Classic, Watch4 Classic e Xiaomi Watch 2 Pro. |
+| `incluirVariantesOcultas` | Também alerta Watch8 Classic, Watch6 Classic, Watch5 Pro, Watch4 Classic, Xiaomi Watch 2 Pro e TicWatch Pro 5 Enduro. |
+
+Nomes dos modelos para usar em `alvos`:
+
+| Modelo | Nome em `alvos` |
+|---|---|
+| Galaxy Watch Ultra | `galaxy-watch-ultra` |
+| Galaxy Watch8 / Watch8 Classic | `galaxy-watch8` / `galaxy-watch8-classic` |
+| Galaxy Watch7 | `galaxy-watch7` |
+| Galaxy Watch FE | `galaxy-watch-fe` |
+| Galaxy Watch6 / Watch6 Classic | `galaxy-watch6` / `galaxy-watch6-classic` |
+| Galaxy Watch5 / Watch5 Pro | `galaxy-watch5` / `galaxy-watch5-pro` |
+| Galaxy Watch4 / Watch4 Classic | `galaxy-watch4` / `galaxy-watch4-classic` |
+| Xiaomi Watch 2 / Watch 2 Pro | `xiaomi-watch2` / `xiaomi-watch2-pro` |
+| TicWatch Pro 5 / Pro 5 Enduro | `ticwatch-pro5` / `ticwatch-pro5-enduro` |
+| TicWatch Atlas | `ticwatch-atlas` |
 
 O campo de preço-alvo dentro do app só destaca ofertas naquele aparelho. A notificação usa o arquivo acima.
 

@@ -8,6 +8,8 @@ import type { AppData } from '../data.ts';
 import type { Prefs } from '../prefs.ts';
 
 const FRESH_MS = 72 * 3_600_000;
+const HIDDEN = MODELS.filter((m) => !m.primary).map((m) => m.shortName);
+const HIDDEN_HINT = `${HIDDEN.slice(0, -1).join(', ')} e ${HIDDEN.at(-1)}`;
 
 export function visibleOffers(offers: Offer[], prefs: Prefs): Offer[] {
   return offers.filter((o) => {
@@ -107,8 +109,8 @@ export function Home({ data, prefs, setPrefs, now }: { data: AppData; prefs: Pre
             <Toggle
               checked={prefs.showHidden}
               onChange={(v) => setPrefs({ showHidden: v })}
-              label="Mostrar Classic e Pro"
-              hint="Watch8 Classic, Watch4 Classic e Xiaomi Watch 2 Pro"
+              label="Mostrar Classic, Pro e Enduro"
+              hint={HIDDEN_HINT}
             />
           </div>
         )}
