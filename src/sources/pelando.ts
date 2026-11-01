@@ -10,7 +10,10 @@ import { canonicalStore, fetchAllTolerant, type ExternalHistory, type Source } f
  * Os dados vêm das props serializadas do Astro (atributo props do <astro-island>).
  */
 
-const QUERIES = ['galaxy-watch', 'galaxy-watch-fe', 'galaxy-watch4', 'galaxy-watch-8', 'xiaomi-watch-2'];
+const QUERIES = [
+  'galaxy-watch', 'galaxy-watch-ultra', 'galaxy-watch-8', 'galaxy-watch-7', 'galaxy-watch-fe', 'galaxy-watch-6', 'galaxy-watch-5',
+  'galaxy-watch4', 'xiaomi-watch-2', 'ticwatch',
+];
 
 interface PelandoDeal {
   id: string;

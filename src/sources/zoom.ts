@@ -13,12 +13,18 @@ import { canonicalStore, fetchAllTolerant, type ExternalHistory, type Source } f
 const BASE = 'https://www.zoom.com.br';
 const SEARCHES = [
   '/smartwatch/samsung',
-  '/search?q=galaxy%20watch%20fe',
-  '/search?q=galaxy%20watch4',
+  '/search?q=galaxy%20watch%20ultra',
   '/search?q=galaxy%20watch8',
+  '/search?q=galaxy%20watch7',
+  '/search?q=galaxy%20watch%20fe',
+  '/search?q=galaxy%20watch6',
+  '/search?q=galaxy%20watch5',
+  '/search?q=galaxy%20watch4',
   '/search?q=xiaomi%20watch%202',
+  '/search?q=ticwatch',
 ];
-const MAX_PRODUCT_PAGES = 14;
+/** Páginas de produto abertas por rodada (cada uma traz ofertas por loja e ~40 dias de histórico). */
+const MAX_PRODUCT_PAGES = 28;
 
 interface ZoomHit {
   type: string;

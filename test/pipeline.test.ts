@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { BlockedError, type Fetcher } from '../src/core/http.ts';
+import { MODELS } from '../src/core/catalog.ts';
 import type { Health, Snapshot } from '../src/core/types.ts';
 import { runOnce } from '../src/run.ts';
 import { pendingAlerts } from '../src/alerts/notify.ts';
@@ -60,7 +61,7 @@ test('ciclo completo: coleta, classifica, pontua, guarda histórico e respeita i
 
     const snap = readJson<Snapshot>(dir, 'ofertas.json');
     assert.ok(snap.offers.length >= 10, `ofertas: ${snap.offers.length}`);
-    assert.equal(snap.summary.length, 7);
+    assert.equal(snap.summary.length, MODELS.length, 'um resumo por modelo do catálogo');
     for (const o of snap.offers) {
       assert.doesNotMatch(o.title, /^(pulseira|pel[ií]cula|capa|carregador)/i, o.title);
       assert.ok(o.score.value >= 0 && o.score.value <= 100);

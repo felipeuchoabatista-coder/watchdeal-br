@@ -1,13 +1,21 @@
 # WatchDeal BR ⌚📉
 
-Rastreador **24 horas** de promoções e cupons para quatro smartwatches no Brasil:
+Rastreador **24 horas** de promoções e cupons para dez smartwatches (e seis variantes) no Brasil:
 
 | Modelo | Variantes rastreadas | Ocultos por padrão |
 |---|---|---|
-| **Samsung Galaxy Watch8** | 40/44 mm · Bluetooth/LTE | Watch8 Classic |
+| **Samsung Galaxy Watch Ultra** | 47 mm · LTE (inclui a edição 2025) | — |
+| **Samsung Galaxy Watch8** | 40/44 mm · Bluetooth/LTE | Watch8 Classic (46 mm) |
+| **Samsung Galaxy Watch7** | 40/44 mm · Bluetooth/LTE | — |
 | **Samsung Galaxy Watch FE** | 40 mm · Bluetooth/LTE | — |
-| **Samsung Galaxy Watch4** | 40/44 mm · Bluetooth/LTE | Watch4 Classic |
+| **Samsung Galaxy Watch6** | 40/44 mm · Bluetooth/LTE | Watch6 Classic (43/47 mm) |
+| **Samsung Galaxy Watch5** | 40/44 mm · Bluetooth/LTE | Watch5 Pro (45 mm) |
+| **Samsung Galaxy Watch4** | 40/44 mm · Bluetooth/LTE | Watch4 Classic (42/46 mm) |
 | **Xiaomi Watch 2** | Bluetooth | Xiaomi Watch 2 Pro |
+| **Mobvoi TicWatch Pro 5** | Bluetooth | TicWatch Pro 5 Enduro |
+| **Mobvoi TicWatch Atlas** | Bluetooth | — |
+
+Os ocultos são identificados e ganham histórico, mas só aparecem no app com o filtro **Mostrar Classic, Pro e Enduro** e só geram alerta com `incluirVariantesOcultas` (veja o [guia](docs/GUIA.md#4-preço-alvo-e-preferências)).
 
 Roda de graça no GitHub (Actions + Pages) e vira um **app instalável no celular** (PWA), com alertas por **Telegram** ou **ntfy**. O computador serve só para desenvolver.
 
@@ -20,7 +28,7 @@ Roda de graça no GitHub (Actions + Pages) e vira um **app instalável no celula
   - **Amazon**
   - **Pelando**: ofertas da comunidade com "temperatura".
   - **Promobit**: ofertas com cupom, mural de cupons e histórico de ofertas encerradas.
-- **Identifica o modelo de verdade**: separa Watch8 de Watch8 Classic e de clones "Watch 8 Ultra", e descarta pulseira, película, carregador, combos com celular e listas de compatibilidade. Usa o código do fabricante (SM-R860, SM-L320, M2320W1…) quando ele aparece. Tudo isso é coberto por 56 casos de teste com títulos reais.
+- **Identifica o modelo de verdade**: separa Watch8 de Watch8 Classic, Watch5 de Watch5 Pro, TicWatch Pro 5 de Pro 5 Enduro e de clones "Watch 8 Ultra", e descarta pulseira, película, carregador, combos com celular e listas de compatibilidade. Usa o código do fabricante (SM-R860, SM-L320, SM-L705, M2320W1…) quando ele aparece. Tudo isso é coberto por mais de 90 casos de teste com títulos reais.
 - **Histórico de preço** por variante: menor preço do dia entre todas as lojas, incluindo o histórico importado do Zoom e ofertas antigas das comunidades.
 - **Índice de Oferta (0–100)**, de 50 (preço típico) a 85+ (*Imperdível*):
   - **Base:** distância da mediana de 30 dias.

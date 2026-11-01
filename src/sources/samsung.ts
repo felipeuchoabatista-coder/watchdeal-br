@@ -12,7 +12,11 @@ const BASE = 'https://shop.samsung.com/br/api/catalog_system/pub/products/search
 const QUERIES = [
   { ft: 'galaxy watch', from: 0, to: 49 },
   { ft: 'galaxy watch', from: 50, to: 99 },
+  { ft: 'galaxy watch ultra', from: 0, to: 29 },
+  { ft: 'galaxy watch7', from: 0, to: 29 },
   { ft: 'galaxy watch fe', from: 0, to: 29 },
+  { ft: 'galaxy watch6', from: 0, to: 29 },
+  { ft: 'galaxy watch5', from: 0, to: 29 },
   { ft: 'galaxy watch4', from: 0, to: 29 },
 ];
 

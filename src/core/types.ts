@@ -1,13 +1,22 @@
 // Tipos compartilhados entre o coletor (Node) e o app (web).
 
 export type ModelId =
-  | 'galaxy-watch4'
-  | 'galaxy-watch4-classic'
-  | 'galaxy-watch-fe'
+  | 'galaxy-watch-ultra'
   | 'galaxy-watch8'
   | 'galaxy-watch8-classic'
+  | 'galaxy-watch7'
+  | 'galaxy-watch-fe'
+  | 'galaxy-watch6'
+  | 'galaxy-watch6-classic'
+  | 'galaxy-watch5'
+  | 'galaxy-watch5-pro'
+  | 'galaxy-watch4'
+  | 'galaxy-watch4-classic'
   | 'xiaomi-watch2'
-  | 'xiaomi-watch2-pro';
+  | 'xiaomi-watch2-pro'
+  | 'ticwatch-pro5'
+  | 'ticwatch-pro5-enduro'
+  | 'ticwatch-atlas';
 
 export type Connectivity = 'bt' | 'lte';
 export type Condition = 'novo' | 'usado' | 'recondicionado';
