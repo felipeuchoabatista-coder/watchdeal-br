@@ -82,7 +82,8 @@ test('ciclo completo: coleta, classifica, pontua, guarda histórico e respeita i
     const fetch2 = fakeFetcher();
     await runOnce({ ...base, fetcher: fetch2, now: new Date(t0.getTime() + 20 * 60_000) });
     assert.ok(!fetch2.calls.some((u) => u.includes('amazon.com.br')), 'Amazon não consultada antes da hora');
-    assert.ok(fetch2.calls.some((u) => u.includes('pelando.com.br')), 'Pelando (10 min) consultado');
+    assert.ok(fetch2.calls.some((u) => u.includes('promobit.com.br')), 'Promobit (5 min) consultado');
+    assert.ok(!fetch2.calls.some((u) => u.includes('pelando.com.br')), 'Pelando (30 min) não consultado antes da hora');
     const snap2 = readJson<Snapshot>(dir, 'ofertas.json');
     const amazonOffers = snap2.offers.filter((o) => o.source === 'amazon');
     assert.ok(amazonOffers.length > 0, 'ofertas da Amazon mantidas');
