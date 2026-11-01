@@ -14,7 +14,7 @@ import { canonicalStore, fetchAllTolerant, type ExternalHistory, type Source, ty
 const API = 'https://api.promobit.com.br/search/result';
 const SITE = 'https://www.promobit.com.br';
 const QUERIES = [
-  'galaxy watch', 'galaxy watch ultra', 'galaxy watch8', 'galaxy watch7', 'galaxy watch fe', 'galaxy watch6', 'galaxy watch5',
+  'galaxy watch', 'galaxy watch ultra', 'galaxy watch ultra 2', 'galaxy watch9', 'galaxy watch8', 'galaxy watch7', 'galaxy watch fe', 'galaxy watch6', 'galaxy watch5',
   'galaxy watch4', 'xiaomi watch 2', 'ticwatch',
 ];
 /** Lojas que vendem os modelos rastreados — cupons gerais delas interessam. */

@@ -55,6 +55,7 @@ Edite `config/alertas.json` direto no site do GitHub (dá para fazer pelo celula
   "alertarNovoMinimo": true,
   "indiceMinimo": 85,
   "incluirUsados": false,
+  "incluirImportados": true,
   "incluirVariantesOcultas": false,
   "canais": { "telegram": true, "ntfy": true }
 }
@@ -66,13 +67,15 @@ Edite `config/alertas.json` direto no site do GitHub (dá para fazer pelo celula
 | `alertarNovoMinimo` | Avisa quando surge o menor preço dos últimos 90 dias de uma variante. |
 | `indiceMinimo` | Índice de Oferta a partir do qual a oferta conta como "imperdível" (padrão 85). |
 | `incluirUsados` | Também alerta usados e recondicionados. |
-| `incluirVariantesOcultas` | Também alerta Watch8 Classic, Watch6 Classic, Watch5 Pro, Watch4 Classic, Xiaomi Watch 2 Pro e TicWatch Pro 5 Enduro. |
+| `incluirImportados` | Alerta ofertas importadas (AliExpress, versão global, modelo de outro país, envio do exterior). Use `false` para alertar só nacionais. O TicWatch e o Xiaomi quase só aparecem importados. |
+| `incluirVariantesOcultas` | Também alerta os demais modelos: Galaxy Watch Ultra 2, Watch9, Watch8 Classic, Watch6, Watch6 Classic, Watch5, Watch5 Pro, Watch4 Classic, TicWatch Pro 5 Enduro e TicWatch Atlas. |
 
 Nomes dos modelos para usar em `alvos`:
 
 | Modelo | Nome em `alvos` |
 |---|---|
-| Galaxy Watch Ultra | `galaxy-watch-ultra` |
+| Galaxy Watch Ultra / Ultra 2 | `galaxy-watch-ultra` / `galaxy-watch-ultra2` |
+| Galaxy Watch9 | `galaxy-watch9` |
 | Galaxy Watch8 / Watch8 Classic | `galaxy-watch8` / `galaxy-watch8-classic` |
 | Galaxy Watch7 | `galaxy-watch7` |
 | Galaxy Watch FE | `galaxy-watch-fe` |

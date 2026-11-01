@@ -9,6 +9,8 @@ export interface Prefs {
   showHidden: boolean;
   includeUsed: boolean;
   onlyCoupon: boolean;
+  /** Esconde ofertas com sinal de importação (AliExpress, versão global, envio do exterior). */
+  onlyNational: boolean;
   sort: 'indice' | 'preco' | 'recentes';
   targets: Partial<Record<ModelId, number>>;
   theme: 'auto' | 'light' | 'dark';
@@ -18,6 +20,7 @@ const DEFAULTS: Prefs = {
   showHidden: false,
   includeUsed: false,
   onlyCoupon: false,
+  onlyNational: false,
   sort: 'indice',
   targets: {},
   theme: 'auto',

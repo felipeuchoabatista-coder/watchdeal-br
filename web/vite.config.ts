@@ -43,7 +43,7 @@ export default defineConfig({
         id: './',
         name: 'WatchDeal BR — promoções de smartwatch',
         short_name: 'WatchDeal',
-        description: 'Promoções e cupons 24h para Galaxy Watch Ultra, Watch8, Watch7, Watch FE, Watch6, Watch5 e Watch4, Xiaomi Watch 2 e TicWatch Pro 5 e Atlas.',
+        description: 'Promoções e cupons 24h para os smartwatches Wear OS do Brasil: Galaxy Watch Ultra, Watch8, Watch7, Watch FE, Watch4, Xiaomi Watch 2 e 2 Pro, TicWatch Pro 5 e mais 10 modelos.',
         lang: 'pt-BR',
         start_url: './',
         scope: './',

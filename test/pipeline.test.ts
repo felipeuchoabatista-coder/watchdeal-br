@@ -4,10 +4,11 @@ import { mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { BlockedError, type Fetcher } from '../src/core/http.ts';
 import { MODELS } from '../src/core/catalog.ts';
-import type { Health, Snapshot } from '../src/core/types.ts';
+import type { Health, RawOffer, Snapshot } from '../src/core/types.ts';
+import { runCycle, type CycleInput } from '../src/pipeline.ts';
 import { runOnce } from '../src/run.ts';
 import { pendingAlerts } from '../src/alerts/notify.ts';
-import type { CouponsFile, EventsFile } from '../src/store.ts';
+import { DEFAULT_CONFIG, type CouponsFile, type EventsFile } from '../src/store.ts';
 
 const fx = (name: string) => readFileSync(new URL(`./fixtures/${name}`, import.meta.url), 'utf8');
 
@@ -112,4 +113,43 @@ test('ciclo completo: coleta, classifica, pontua, guarda histórico e respeita i
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+test('origem: importado é marcado, sobrevive à fusão de fontes e só alerta com incluirImportados', () => {
+  const raw = (source: RawOffer['source'], id: string, title: string, store: string, price: number): RawOffer => ({
+    source, sourceOfferId: id, title, store, price, url: `https://exemplo.com/${id}`, available: true,
+  });
+  const input = (incluirImportados: boolean): CycleInput => ({
+    now: new Date('2026-11-01T12:00:00Z'),
+    rawBySource: {
+      kabum: [raw('kabum', '1', 'Samsung Galaxy Watch8 Smartwatch 40mm BT, Galaxy AI', 'KaBuM!', 1300)],
+      zoom: [
+        raw('zoom', '2', 'Samsung Galaxy Watch8 40mm BT Grafite', 'AliExpress', 1150),
+        raw('zoom', '3', 'Samsung Galaxy Watch8 40mm BT Prata', 'Mercado Livre', 1200),
+      ],
+      // A mesma oferta do Mercado Livre vista no Promobit, onde o título revela a versão global.
+      promobit: [raw('promobit', '4', 'Galaxy Watch8 40mm BT Versão Global', 'Mercado Livre', 1200)],
+    },
+    couponsBySource: {},
+    externalHistory: [],
+    previous: null,
+    previousCoupons: [],
+    histories: {} as CycleInput['histories'],
+    state: { sources: {}, offersSeen: {}, alertsSent: {} },
+    config: { ...DEFAULT_CONFIG, alvos: { 'galaxy-watch8': 1400 }, incluirImportados },
+  });
+
+  const all = runCycle(input(true));
+  const byStore = Object.fromEntries(all.snapshot.offers.map((o) => [o.store, o]));
+  assert.equal(all.snapshot.offers.length, 3, 'Mercado Livre visto em duas fontes vira uma oferta só');
+  assert.equal(byStore['KaBuM!'].origin, 'nacional');
+  assert.equal(byStore['AliExpress'].origin, 'importado');
+  assert.match(byStore['AliExpress'].originReason ?? '', /Loja internacional/);
+  assert.equal(byStore['Mercado Livre'].origin, 'importado', 'sinal de importação de qualquer fonte vale para a oferta');
+  assert.equal(byStore['Mercado Livre'].originReason, 'Versão global');
+  assert.ok(byStore['AliExpress'].score.reasons.includes('Importado: garantia e taxas podem ser diferentes'));
+  const alertedStores = (out: ReturnType<typeof runCycle>) =>
+    out.events.filter((e) => e.type === 'abaixo-alvo').map((e) => e.store).sort();
+  assert.deepEqual(alertedStores(all), ['AliExpress', 'KaBuM!', 'Mercado Livre']);
+  assert.deepEqual(alertedStores(runCycle(input(false))), ['KaBuM!'], 'importados não alertam com incluirImportados: false');
 });

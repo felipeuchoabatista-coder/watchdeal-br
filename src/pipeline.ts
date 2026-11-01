@@ -1,6 +1,7 @@
 import { MODELS, getModel, variantKeyOf, variantOf } from './core/catalog.ts';
 import { mergePoint, prune, seriesStats, type SeriesStats } from './core/history.ts';
 import { classify } from './core/matcher.ts';
+import { detectOrigin } from './core/origin.ts';
 import { scoreOffer } from './core/scoring.ts';
 import { median, round2, shortHash, spDay } from './core/text.ts';
 import type {
@@ -77,7 +78,13 @@ function toDraft(raw: RawOffer, now: Date): Draft | undefined {
     size: c.size,
     connectivity,
     condition: c.condition,
+    ...originOf(raw),
   };
+}
+
+function originOf(raw: Pick<RawOffer, 'title' | 'store' | 'seller'>): Pick<Offer, 'origin' | 'originReason'> {
+  const r = detectOrigin(raw);
+  return r.reason ? { origin: r.origin, originReason: r.reason } : { origin: r.origin };
 }
 
 /** Une a mesma oferta vista em várias fontes, preservando cupom e sinais da comunidade. */
@@ -101,6 +108,11 @@ function dedupe(drafts: Draft[]): Draft[] {
       merged.community = { ...o.community, ...merged.community };
       merged.endsAt ??= o.endsAt;
       merged.image ??= o.image;
+      // Se qualquer fonte mostra sinal de importação, a oferta é importada.
+      if (o.origin === 'importado' && merged.origin !== 'importado') {
+        merged.origin = 'importado';
+        merged.originReason = o.originReason;
+      }
     }
     const alsoOn = others
       .filter((o) => o.source !== primary.source)
@@ -140,7 +152,8 @@ export function runCycle(input: CycleInput): CycleOutput {
     if (now.getTime() - new Date(prev.lastSeen).getTime() > STALE_MS) continue;
     if (prev.postedAt && now.getTime() - new Date(prev.postedAt).getTime() > COMMUNITY_MAX_AGE_MS) continue;
     const { score: _score, firstSeen: _f, lastSeen: _l, alsoOn: _a, ...rest } = prev;
-    drafts.push(rest);
+    // Ofertas guardadas antes da detecção de origem ganham a origem agora.
+    drafts.push(rest.origin ? rest : { ...rest, ...originOf(rest) });
   }
   const offersDraft = dedupe(drafts);
 
@@ -208,7 +221,7 @@ export function runCycle(input: CycleInput): CycleOutput {
       ...d,
       firstSeen: seen?.firstSeen ?? nowIso,
       lastSeen: ranSources.has(d.source) ? nowIso : input.previous?.offers.find((p) => p.id === d.id)?.lastSeen ?? nowIso,
-      score: scoreOffer(d, refFor(d)),
+      score: scoreOffer({ ...d, imported: d.origin === 'importado' }, refFor(d)),
     };
   });
   offers.sort((a, b) => b.score.value - a.score.value || a.price - b.price);
@@ -290,6 +303,7 @@ function detectEvents(offers: Offer[], input: CycleInput, now: Date, coupons: Co
   for (const o of offers) {
     if (!isFresh(o, now)) continue;
     if (o.condition !== 'novo' && !config.incluirUsados) continue;
+    if (o.origin === 'importado' && !config.incluirImportados) continue;
     if (!getModel(o.model).primary && !config.incluirVariantesOcultas) continue;
     const spec = getModel(o.model);
     const base = { model: o.model, offerId: o.id, title: o.title, price: o.price, store: o.store, url: o.url };

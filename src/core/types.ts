@@ -1,7 +1,9 @@
 // Tipos compartilhados entre o coletor (Node) e o app (web).
 
 export type ModelId =
+  | 'galaxy-watch-ultra2'
   | 'galaxy-watch-ultra'
+  | 'galaxy-watch9'
   | 'galaxy-watch8'
   | 'galaxy-watch8-classic'
   | 'galaxy-watch7'
@@ -67,6 +69,9 @@ export interface RawOffer {
   freeShipping?: boolean;
 }
 
+/** Nacional = sem sinal de importação. Importado = loja internacional, versão global, envio do exterior etc. */
+export type Origin = 'nacional' | 'importado';
+
 export type ClassificationKind =
   | 'device'
   | 'accessory'
@@ -109,6 +114,9 @@ export interface Offer extends RawOffer {
   size?: number;
   connectivity: Connectivity;
   condition: Condition;
+  origin: Origin;
+  /** Por que a oferta foi considerada importada (ex.: "Versão global"). */
+  originReason?: string;
   firstSeen: string;
   lastSeen: string;
   score: Score;
@@ -227,7 +235,9 @@ export interface AlertConfig {
   /** Índice de Oferta mínimo para alertar oferta "Imperdível". */
   indiceMinimo: number;
   incluirUsados: boolean;
-  /** Também alertar modelos Classic/Pro. */
+  /** Também alertar ofertas importadas (AliExpress, versão global, envio do exterior). */
+  incluirImportados: boolean;
+  /** Também alertar os "demais modelos" (ocultos por padrão no app). */
   incluirVariantesOcultas: boolean;
   canais: { telegram: boolean; ntfy: boolean };
 }

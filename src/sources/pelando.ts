@@ -11,7 +11,7 @@ import { canonicalStore, fetchAllTolerant, type ExternalHistory, type Source } f
  */
 
 const QUERIES = [
-  'galaxy-watch', 'galaxy-watch-ultra', 'galaxy-watch-8', 'galaxy-watch-7', 'galaxy-watch-fe', 'galaxy-watch-6', 'galaxy-watch-5',
+  'galaxy-watch', 'galaxy-watch-ultra', 'galaxy-watch-ultra-2', 'galaxy-watch-9', 'galaxy-watch-8', 'galaxy-watch-7', 'galaxy-watch-fe', 'galaxy-watch-6', 'galaxy-watch-5',
   'galaxy-watch4', 'xiaomi-watch-2', 'ticwatch',
 ];
 
