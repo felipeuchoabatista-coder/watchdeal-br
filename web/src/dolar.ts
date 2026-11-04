@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchQuote, type DollarFile, type DollarQuote } from '../../src/core/dolar.ts';
+import { AWESOME_URL, fetchQuote, type DollarFile, type DollarQuote } from '../../src/core/dolar.ts';
 
 /** Sem chave, a AwesomeAPI atualiza a cada 1 min: buscar mais vezes não adianta. */
 const LIVE_MS = 60_000;
@@ -8,8 +8,17 @@ const RETRY_MS = 5 * 60_000;
 /** Cotação ao vivo mais velha que isso (falhas seguidas) dá lugar à da coleta. */
 const LIVE_MAX_AGE_MS = 10 * 60_000;
 
+/** A AwesomeAPI recusou por limite de uso (HTTP 429): pula ela por 15 min. */
+const AWESOME_PAUSE_MS = 15 * 60_000;
+let awesomePausedUntil = 0;
+
 async function getJson(url: string): Promise<unknown> {
+  const awesome = url.startsWith(AWESOME_URL);
+  // Enquanto a AwesomeAPI estiver no limite, nem tenta: a Coinbase responde no lugar,
+  // e o limite tem tempo de se renovar.
+  if (awesome && Date.now() < awesomePausedUntil) throw new Error('limite de uso; tentando de novo mais tarde');
   const res = await fetch(url, { cache: 'no-store' });
+  if (awesome && res.status === 429) awesomePausedUntil = Date.now() + AWESOME_PAUSE_MS;
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
 }

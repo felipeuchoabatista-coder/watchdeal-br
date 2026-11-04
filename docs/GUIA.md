@@ -112,6 +112,6 @@ Uma rodada que falha não derruba a execução: ela tenta de novo 5 minutos depo
 Vá em **Actions → Coletar ofertas → Run workflow** e marque *Consultar todas as fontes agora*. A execução em andamento encerra em até 1 minuto, e a sua assume (os dados novos aparecem em ~5 minutos).
 
 **O app mostra "Última coleta há 1 h" (ou mais)**
-Confira em **Actions → Coletar ofertas** se as execuções estão verdes e no branch `data` se o último commit é recente. Os dados levam até ~5 minutos a mais para aparecer, por causa do cache do GitHub. Se o app em si estiver desatualizado (tela antiga), rode **Actions → Publicar app → Run workflow**.
+Confira em **Actions → Coletar ofertas** se as execuções estão verdes e no branch `data` se o último commit é recente. Os dados levam até ~5 minutos a mais para aparecer, por causa do cache do GitHub. Se o app em si estiver desatualizado (tela antiga), feche e abra o app: ele se atualiza sozinho. Se continuar antigo, veja se a última execução de **Actions → Publicar app** ficou vermelha. Nesse caso, rodar de novo não resolve: o GitHub Pages não publica duas vezes o mesmo commit. A próxima mudança no código publica o app de novo.
 
 Se nenhuma execução estiver em andamento nem na fila, a coleta parou. Isso só deve acontecer se o GitHub passar horas fora do ar. Rode **Actions → Coletar ofertas → Run workflow** uma vez, e ela volta a se manter sozinha. O agendamento de reserva do GitHub (cron) também religa a coleta, mas pode levar horas.
