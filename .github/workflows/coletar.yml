@@ -55,14 +55,28 @@ jobs:
       - name: Baixar dados anteriores
         env:
           GH_TOKEN: ${{ github.token }}
+        # Só começa do zero se o branch "data" realmente não existir (código 2
+        # do ls-remote). Um erro do GitHub (código 128) não pode ser confundido
+        # com "primeira execução": a coleta salvaria por cima do branch e
+        # apagaria todo o histórico de preços. Nesse caso a execução falha sem
+        # salvar nada (data/ fica vazia) e a próxima tenta de novo.
         run: |
-          if git ls-remote --exit-code --heads origin data > /dev/null; then
-            git clone --quiet --depth 1 --branch data \
-              "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
-            rm -rf data/.git
-          else
+          for n in 1 2 3 4; do
+            rc=0
+            git ls-remote --exit-code --heads origin data > /dev/null || rc=$?
+            [ "$rc" -eq 0 ] && git clone --quiet --depth 1 --branch data \
+              "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data && break
+            [ "$rc" -eq 2 ] && break
+            rm -rf data
+            [ "$n" -lt 4 ] || { echo "::error::Não consegui baixar o branch data (GitHub fora do ar?)."; exit 1; }
+            echo "Falhou (tentativa $n de 4); repetindo em $((15 * 2 ** (n - 1)))s." >&2
+            sleep $((15 * 2 ** (n - 1)))
+          done
+          if [ "$rc" -eq 2 ]; then
             echo "Primeira execução: começando sem histórico."
             mkdir -p data
+          else
+            rm -rf data/.git
           fi
 
       - name: Enviar alerta de teste
@@ -104,7 +118,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit --quiet -m "dados $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push --quiet --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
+          # O GitHub às vezes recusa o push com "Internal Server Error" por
+          # instantes; sem repetir, a coleta inteira se perde (e o registro dos
+          # alertas já enviados também). Espera 15 s, 30 s, 1 e 2 min.
+          for n in 1 2 3 4 5; do
+            git push --quiet --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data && exit 0
+            [ "$n" -lt 5 ] || break
+            echo "Push falhou (tentativa $n de 5); repetindo em $((15 * 2 ** (n - 1)))s." >&2
+            sleep $((15 * 2 ** (n - 1)))
+          done
+          exit 1
 
   # Espera completar 5 minutos desde o início desta execução e dispara a
   # próxima. Só dispara se não houver outra na fila, para nunca existirem
