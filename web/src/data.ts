@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import type { DollarFile } from '../../src/core/dolar.ts';
 import type { Coupon, DealEvent, Health, ModelHistory, ModelId, Snapshot } from '../../src/core/types.ts';
 
 export interface AppData {
@@ -6,6 +7,8 @@ export interface AppData {
   coupons: Coupon[];
   events: DealEvent[];
   health: Health | null;
+  /** Cotação do dólar salva pela coleta (o app também busca ao vivo). */
+  dollar: DollarFile | null;
 }
 
 /**
@@ -29,13 +32,14 @@ export function useAppData() {
   const load = useCallback(async () => {
     setLoading(true);
     try {
-      const [snapshot, coupons, events, health] = await Promise.all([
+      const [snapshot, coupons, events, health, dollar] = await Promise.all([
         getJson<Snapshot>('ofertas.json'),
         getJson<{ coupons: Coupon[] }>('cupons.json').catch(() => ({ coupons: [] })),
         getJson<{ events: DealEvent[] }>('eventos.json').catch(() => ({ events: [] })),
         getJson<Health>('saude.json').catch(() => null),
+        getJson<DollarFile>('dolar.json').catch(() => null),
       ]);
-      setData({ snapshot, coupons: coupons.coupons, events: events.events, health });
+      setData({ snapshot, coupons: coupons.coupons, events: events.events, health, dollar });
       setError(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err));

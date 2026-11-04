@@ -117,6 +117,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
           WATCHDEAL_APP_URL: ${{ env.APP_URL }}
+          AWESOMEAPI_TOKEN: ${{ secrets.AWESOMEAPI_TOKEN }}
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           FORCAR: ${{ inputs.forcar == true || github.event_name == 'push' }}

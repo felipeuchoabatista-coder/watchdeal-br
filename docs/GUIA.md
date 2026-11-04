@@ -85,6 +85,18 @@ Nomes dos modelos para usar em `alvos`:
 
 O campo de preço-alvo dentro do app só destaca ofertas naquele aparelho. A notificação usa o arquivo acima.
 
+### Cotação do dólar
+
+O cartão **Dólar comercial**, no topo da aba Ofertas, mostra a cotação de venda.
+- **Atualização:** a cada minuto, enquanto o app está aberto. O indicador **ao vivo** fica verde.
+- **Detalhes:** a variação do dia (verde quando o dólar cai, vermelho quando sobe), a compra, a máxima, a mínima e a tendência de 30 dias.
+- **Sem internet:** vale a última cotação salva pela coleta, com o aviso **última coleta**.
+- **Gráfico de cada relógio:** ao tocar num dia, o balão mostra o dólar daquele dia. Abaixo do gráfico aparece quanto o dólar variou no período escolhido.
+
+A cotação vem da AwesomeAPI. Quando ela recusa (limite de uso gratuito) ou está fora do ar, vem da Coinbase (taxa de mercado) e, por último, do Banco Central (PTAX, boletins das 10h às 13h). O histórico diário é o fechamento PTAX do Banco Central.
+
+*Opcional:* uma chave gratuita da AwesomeAPI tira a coleta do limite por IP e do cache de 1 minuto. Para obtê-la, faça o cadastro em [awesomeapi.com.br](https://awesomeapi.com.br). Depois crie o segredo `AWESOMEAPI_TOKEN` em **Settings → Secrets and variables → Actions**. A chave fica só na coleta: o app no celular continua usando a versão sem chave.
+
 ## 5. Problemas comuns
 
 **"Os dados não são atualizados há X"**

@@ -1,11 +1,13 @@
 import { useMemo, useState, type CSSProperties } from 'react';
 import { MODELS, getModel, variantLabel } from '../../../src/core/catalog.ts';
+import { dollarOn } from '../../../src/core/dolar.ts';
 import type { ModelId, Offer } from '../../../src/core/types.ts';
 import { Chip, Empty, ScoreBadge } from '../components/bits.tsx';
 import { OfferCard } from '../components/cards.tsx';
 import { Icon } from '../components/Icon.tsx';
 import { PriceChart } from '../components/PriceChart.tsx';
 import { brl, dateBR, pct, useHistory, type AppData } from '../data.ts';
+import { pct2, rate2 } from '../dolar.ts';
 import type { Prefs } from '../prefs.ts';
 import { sortOffers } from './Home.tsx';
 
@@ -42,6 +44,11 @@ export function ModelPage({ model, data, prefs, setPrefs, now }: { model: ModelI
   const best: Offer | undefined = variantOffers.find((o) => o.condition === 'novo');
   const target = prefs.targets[model];
   const siblings = MODELS.filter((m) => m.family === spec.family && m.id !== model);
+
+  // Como o dólar andou no mesmo período do gráfico.
+  const dollarDaily = data.dollar?.daily;
+  const dollarFrom = shown.length > 1 && dollarDaily ? dollarOn(dollarDaily, shown[0].d) : undefined;
+  const dollarTo = shown.length > 1 && dollarDaily ? dollarOn(dollarDaily, shown[shown.length - 1].d) : undefined;
 
   return (
     <div className="page">
@@ -112,7 +119,13 @@ export function ModelPage({ model, data, prefs, setPrefs, now }: { model: ModelI
         {history === null && series.length === 0 ? (
           <div className="chart chart--empty">Carregando histórico…</div>
         ) : (
-          <PriceChart points={shown} median30={stats?.median30} target={target} label={`Histórico do ${spec.shortName} ${variantLabel(variant ?? '')}`} />
+          <PriceChart points={shown} median30={stats?.median30} target={target} dollar={dollarDaily} label={`Histórico do ${spec.shortName} ${variantLabel(variant ?? '')}`} />
+        )}
+        {dollarFrom !== undefined && dollarTo !== undefined && (
+          <p className="chart-dollar">
+            Dólar no período: {rate2(dollarFrom)} → {rate2(dollarTo)}{' '}
+            <span className={dollarTo > dollarFrom ? 'is-up' : dollarTo < dollarFrom ? 'is-down' : ''}>({pct2((dollarTo / dollarFrom - 1) * 100)})</span>
+          </p>
         )}
       </section>
 

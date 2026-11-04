@@ -4,6 +4,7 @@ import { mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { BlockedError, type Fetcher } from '../src/core/http.ts';
 import { MODELS } from '../src/core/catalog.ts';
+import type { DollarFile } from '../src/core/dolar.ts';
 import type { Health, Snapshot } from '../src/core/types.ts';
 import { runOnce } from '../src/run.ts';
 import { pendingAlerts } from '../src/alerts/notify.ts';
@@ -37,6 +38,8 @@ function fakeFetcher(tweak: { kabumPriceFactor?: number; blockAmazon?: boolean }
     if (url.includes('promobit') && url.includes('/coupons')) return fx('promobit-cupons.json');
     if (url.includes('promobit') && url.includes('FINISHED')) return JSON.stringify({ offers: [] });
     if (url.includes('promobit')) return fx('promobit-ofertas.json');
+    if (url.includes('economia.awesomeapi.com.br')) return fx('dolar-awesome.json');
+    if (url.includes('api.bcb.gov.br/dados/serie/bcdata.sgs.1')) return fx('dolar-sgs.json');
     throw new Error(`URL inesperada no teste: ${url}`);
   }) as Fetcher & { calls: string[] };
   fetcher.calls = calls;
@@ -79,12 +82,19 @@ test('ciclo completo: coleta, classifica, pontua, guarda histórico e respeita i
     const coupons = readJson<CouponsFile>(dir, 'cupons.json');
     assert.ok(coupons.coupons.length > 0);
 
+    const dollar = readJson<DollarFile>(dir, 'dolar.json');
+    assert.equal(dollar.current?.source, 'awesomeapi');
+    assert.equal(dollar.current?.sell, 5.4618);
+    assert.equal(dollar.daily.length, 23, 'histórico do dólar baixado na 1ª rodada');
+
     // 2ª rodada, 20 min depois: Amazon (30 min) não está na hora e suas ofertas são mantidas.
     const fetch2 = fakeFetcher();
     await runOnce({ ...base, fetcher: fetch2, now: new Date(t0.getTime() + 20 * 60_000) });
     assert.ok(!fetch2.calls.some((u) => u.includes('amazon.com.br')), 'Amazon não consultada antes da hora');
     assert.ok(fetch2.calls.some((u) => u.includes('promobit.com.br')), 'Promobit (5 min) consultado');
     assert.ok(!fetch2.calls.some((u) => u.includes('pelando.com.br')), 'Pelando (30 min) não consultado antes da hora');
+    assert.ok(fetch2.calls.some((u) => u.includes('awesomeapi')), 'cotação do dólar a cada rodada');
+    assert.ok(!fetch2.calls.some((u) => u.includes('bcdata.sgs')), 'histórico do dólar só a cada 6 h');
     const snap2 = readJson<Snapshot>(dir, 'ofertas.json');
     const amazonOffers = snap2.offers.filter((o) => o.source === 'amazon');
     assert.ok(amazonOffers.length > 0, 'ofertas da Amazon mantidas');
