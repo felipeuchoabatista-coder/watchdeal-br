@@ -1,0 +1,49 @@
+name: Publicar app
+
+# Monta o app (web/) e publica no GitHub Pages quando o código muda, ou sob
+# demanda pela aba Actions. Os dados não vão junto: o app lê direto do branch
+# "data", que o workflow "Coletar ofertas" atualiza a cada 5 minutos.
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md', 'docs/**', 'config/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Montar o app
+        env:
+          VITE_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          VITE_DATA_URL: https://raw.githubusercontent.com/${{ github.repository }}/data/
+        run: npm run build
+
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: web/dist
+      - id: deploy
+        uses: actions/deploy-pages@v5

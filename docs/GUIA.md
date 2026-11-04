@@ -6,10 +6,10 @@ O repositório precisa ser **público** para o GitHub Actions rodar de graça a 
 
 1. Crie o repositório e envie o código (`git push`).
 2. Em **Settings → Pages**, escolha **Source: GitHub Actions**.
-3. Em **Actions → Coletar ofertas → Run workflow**, marque *Consultar todas as fontes agora* e rode.
+3. Em **Actions → Publicar app → Run workflow**, rode para publicar o app. Depois, em **Actions → Coletar ofertas → Run workflow**, marque *Consultar todas as fontes agora* e rode.
 4. Em ~2 minutos o app estará em `https://<seu-usuário>.github.io/<repositório>/`.
 
-A partir daí, a coleta roda sozinha a cada ~5 minutos: cada execução agenda a próxima. Os dados ficam no branch `data`. Para pausar, crie a variável `COLETA_CONTINUA` = `false` em **Settings → Secrets and variables → Actions → Variables**.
+A partir daí, a coleta roda sozinha a cada ~5 minutos: cada execução agenda a próxima. Os dados ficam no branch `data`, e o app os lê direto de lá: o site só é republicado quando o código muda (todo `git push` no `main` faz isso). Para pausar, crie a variável `COLETA_CONTINUA` = `false` em **Settings → Secrets and variables → Actions → Variables**.
 
 ## 2. Instalar no celular
 
@@ -98,3 +98,6 @@ Só acontece quando todas as fontes falham ao mesmo tempo, quase sempre por inst
 
 **Quero forçar uma coleta agora**
 Vá em **Actions → Coletar ofertas → Run workflow** e marque *Consultar todas as fontes agora*.
+
+**O app mostra "Última coleta há 1 h" (ou mais)**
+Confira em **Actions → Coletar ofertas** se as execuções estão verdes e no branch `data` se o último commit é recente. Os dados levam até ~5 minutos a mais para aparecer, por causa do cache do GitHub. Se o app em si estiver desatualizado (tela antiga), rode **Actions → Publicar app → Run workflow**.

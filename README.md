@@ -53,8 +53,10 @@ GitHub Actions (a cada 5 min; cada execução agenda a próxima)
         │                                     pontua (core/scoring)
         │                                     histórico (core/history)
         ├─► branch "data": ofertas.json, cupons.json, historico/*.json, eventos.json, saude.json
-        ├─► alertas: Telegram / ntfy (src/alerts)
-        └─► GitHub Pages: app PWA (web/) + dados
+        └─► alertas: Telegram / ntfy (src/alerts)
+
+GitHub Pages: app PWA (web/), publicado só quando o código muda.
+  └─ lê os dados direto do branch "data" (raw.githubusercontent.com)
 ```
 
 | Pasta | Conteúdo |
