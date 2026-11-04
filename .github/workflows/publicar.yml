@@ -21,7 +21,8 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # A publicação abaixo espera o Pages por até 25 min.
+    timeout-minutes: 35
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -42,8 +43,52 @@ jobs:
         run: npm run build
 
       - uses: actions/configure-pages@v6
-      - uses: actions/upload-pages-artifact@v5
+      - id: artefato
+        uses: actions/upload-pages-artifact@v5
         with:
           path: web/dist
+
+      # Faz o mesmo que actions/deploy-pages, com duas diferenças:
+      # - Cada tentativa tem versão própria. O deploy-pages usa o commit como
+      #   versão, então "Re-run" de uma publicação que falhou reaproveita a
+      #   publicação cancelada e nunca termina.
+      # - Espera até 25 min e, se o Pages demorar mais, não cancela. O
+      #   deploy-pages desiste e cancela em 10 min. Em 04/11, o Pages ficou
+      #   mais que isso em "updating_pages" em três publicações seguidas, e
+      #   todas foram canceladas.
       - id: deploy
-        uses: actions/deploy-pages@v5
+        name: Publicar no Pages
+        uses: actions/github-script@v8
+        env:
+          ARTIFACT_ID: ${{ steps.artefato.outputs.artifact_id }}
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const version = `${context.sha}.${context.runId}.${process.env.GITHUB_RUN_ATTEMPT}`;
+            const { data } = await github.request('POST /repos/{owner}/{repo}/pages/deployments', {
+              owner,
+              repo,
+              artifact_id: Number(process.env.ARTIFACT_ID),
+              pages_build_version: version,
+              oidc_token: await core.getIDToken(),
+            });
+            core.setOutput('page_url', data.page_url);
+            const id = data.id ?? data.status_url.split('/').pop();
+            core.info(`Publicação ${id} criada.`);
+            const falhas = ['deployment_failed', 'deployment_content_failed', 'deployment_cancelled', 'deployment_lost'];
+            const limite = Date.now() + 25 * 60_000;
+            let erros = 0;
+            while (Date.now() < limite) {
+              await new Promise((resolve) => setTimeout(resolve, 15_000));
+              try {
+                const { data: st } = await github.request('GET /repos/{owner}/{repo}/pages/deployments/{id}', { owner, repo, id });
+                erros = 0;
+                core.info(`Situação: ${st.status || '(sem status)'}`);
+                if (st.status === 'succeed') return;
+                if (falhas.includes(st.status)) return core.setFailed(`O Pages recusou a publicação: ${st.status}. Rode de novo (Re-run).`);
+              } catch (err) {
+                if (++erros >= 10) return core.setFailed(`Não consegui consultar o Pages: ${err.message}`);
+                core.warning(`Consulta ao Pages falhou (${erros}): ${err.message}`);
+              }
+            }
+            core.setFailed('O Pages não terminou em 25 min. A publicação não foi cancelada e pode terminar sozinha; se o site não mudar, rode de novo (Re-run).');
