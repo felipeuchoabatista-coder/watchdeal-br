@@ -2,7 +2,14 @@
  * Cliente HTTP educado: identifica-se como navegador comum, espaça requisições
  * ao mesmo site e NÃO tenta contornar bloqueios — 403/429/captcha viram
  * BlockedError e a fonte fica marcada como "bloqueada" até a próxima rodada.
+ *
+ * Usa o fetch do pacote undici, não o embutido no Node: o embutido no Node 24
+ * tem um bug (nodejs/undici#5360) que derruba o processo inteiro com
+ * "AssertionError: assert(!this.paused)" quando o site fecha a conexão no
+ * meio de uma resposta. O pacote (8.12 ou mais novo) já tem a correção.
  */
+
+import { fetch } from 'undici';
 
 export class BlockedError extends Error {
   constructor(message: string) {
@@ -64,9 +71,7 @@ export const fetchText: Fetcher = async (url, options = {}) => {
         signal: AbortSignal.timeout(timeoutMs),
       });
       if (!res.ok) {
-        // Descarta o corpo antes de desistir: um corpo não lido deixa o
-        // parser do undici pausado e, quando o site fecha a conexão, o Node
-        // derruba o processo inteiro (AssertionError: assert(!this.paused)).
+        // Descarta o corpo antes de desistir, para liberar a conexão.
         await res.body?.cancel().catch(() => {});
         if (res.status === 403 || res.status === 429) throw new BlockedError(`${host} respondeu ${res.status}`);
         throw new HttpError(res.status, `${host} respondeu ${res.status}`);

@@ -109,11 +109,17 @@ jobs:
   # Espera completar 5 minutos desde o início desta execução e dispara a
   # próxima. Só dispara se não houver outra na fila, para nunca existirem
   # duas correntes ao mesmo tempo (o cron de reserva também passa por aqui).
+  #
+  # A API do GitHub às vezes falha por instantes (ex.: HTTP 502 em 04/11 às
+  # 09:36, que parou a corrente por quase 1 h). Por isso cada chamada é
+  # repetida por até ~8 min antes de desistir: o cron de reserva não serve de
+  # rede de segurança, porque o GitHub descarta a maioria dos disparos dele
+  # (às vezes passa 8 h sem rodar).
   agendar:
     needs: coletar
     if: ${{ !cancelled() && vars.COLETA_CONTINUA != 'false' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     permissions:
       actions: write
     env:
@@ -122,14 +128,30 @@ jobs:
     steps:
       - name: Agendar a próxima coleta
         run: |
-          inicio=$(date -d "$(gh api "repos/$GH_REPO/actions/runs/$GITHUB_RUN_ID" --jq .run_started_at)" +%s)
-          espera=$(( 300 - ($(date +%s) - inicio) ))
-          if [ "$espera" -gt 0 ]; then echo "Aguardando ${espera}s"; sleep "$espera"; fi
-          outras=$(gh run list --workflow coletar.yml --limit 20 --json databaseId,status \
-            --jq "[.[] | select(.status != \"completed\" and .databaseId != $GITHUB_RUN_ID)] | length")
+          # Repete o comando com espera crescente (15 s, 30 s, 1, 2 e 4 min).
+          tentar() {
+            local n
+            for n in 1 2 3 4 5 6; do
+              "$@" && return 0
+              [ "$n" -lt 6 ] || break
+              echo "Falhou (tentativa $n de 6); repetindo em $((15 * 2 ** (n - 1)))s." >&2
+              sleep $((15 * 2 ** (n - 1)))
+            done
+            return 1
+          }
+
+          if inicio=$(tentar gh api "repos/$GH_REPO/actions/runs/$GITHUB_RUN_ID" --jq .run_started_at); then
+            espera=$(( 300 - ($(date +%s) - $(date -d "$inicio" +%s)) ))
+            if [ "$espera" -gt 0 ]; then echo "Aguardando ${espera}s"; sleep "$espera"; fi
+          fi
+
+          # Sem conseguir consultar a fila, dispara mesmo assim: se sobrar uma
+          # coleta a mais, a próxima vê a outra na fila e a corrente volta a ser uma.
+          outras=$(tentar gh run list --workflow coletar.yml --limit 20 --json databaseId,status \
+            --jq "[.[] | select(.status != \"completed\" and .databaseId != $GITHUB_RUN_ID)] | length") || outras=0
           if [ "$outras" -gt 0 ]; then
             echo "Já existe coleta na fila ($outras); não agendo outra."
           else
-            gh workflow run coletar.yml --ref main
+            tentar gh workflow run coletar.yml --ref main
             echo "Próxima coleta disparada."
           fi

@@ -101,3 +101,5 @@ Vá em **Actions → Coletar ofertas → Run workflow** e marque *Consultar toda
 
 **O app mostra "Última coleta há 1 h" (ou mais)**
 Confira em **Actions → Coletar ofertas** se as execuções estão verdes e no branch `data` se o último commit é recente. Os dados levam até ~5 minutos a mais para aparecer, por causa do cache do GitHub. Se o app em si estiver desatualizado (tela antiga), rode **Actions → Publicar app → Run workflow**.
+
+Se a última execução tiver mais de 10 minutos e nenhuma estiver na fila, a corrente de coletas parou. Isso acontece quando a API do GitHub fica fora do ar por mais de ~8 minutos seguidos. Rode **Actions → Coletar ofertas → Run workflow** uma vez, e ela volta a se agendar sozinha. O agendamento de reserva do GitHub (cron) também religa a corrente, mas pode levar horas.
