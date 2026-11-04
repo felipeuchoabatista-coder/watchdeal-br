@@ -9,7 +9,7 @@ O repositório precisa ser **público** para o GitHub Actions rodar de graça a 
 3. Em **Actions → Publicar app → Run workflow**, rode para publicar o app. Depois, em **Actions → Coletar ofertas → Run workflow**, marque *Consultar todas as fontes agora* e rode.
 4. Em ~2 minutos o app estará em `https://<seu-usuário>.github.io/<repositório>/`.
 
-A partir daí, a coleta roda sozinha a cada ~5 minutos: cada execução agenda a próxima. Os dados ficam no branch `data`, e o app os lê direto de lá: o site só é republicado quando o código muda (todo `git push` no `main` faz isso). Para pausar, crie a variável `COLETA_CONTINUA` = `false` em **Settings → Secrets and variables → Actions → Variables**.
+A partir daí, a coleta roda sozinha a cada 5 minutos. Cada execução de **Coletar ofertas** fica ligada por ~5 h 15 min, coletando e gravando a cada 5 minutos, e deixa a próxima execução esperando na fila para assumir quando ela terminar. Por isso, em **Actions**, é normal ver sempre uma execução em andamento (amarela, por horas) e outra na fila. Os dados ficam no branch `data`, e o app os lê direto de lá: o site só é republicado quando o código muda (todo `git push` no `main` faz isso). Para pausar, crie a variável `COLETA_CONTINUA` = `false` em **Settings → Secrets and variables → Actions → Variables**.
 
 ## 2. Instalar no celular
 
@@ -94,12 +94,12 @@ O GitHub pausa agendamentos de repositórios públicos sem atividade por 60 dias
 O site recusou o acesso automático naquele momento. O WatchDeal não tenta burlar o bloqueio: ele tenta de novo na próxima rodada e segue com as outras fontes.
 
 **A coleta falhou (e-mail do GitHub)**
-Só acontece quando todas as fontes falham ao mesmo tempo, quase sempre por instabilidade passageira. Se repetir, abra o log em **Actions**.
+Uma rodada que falha não derruba a execução: ela tenta de novo 5 minutos depois. A execução só fica vermelha quando não conseguiu gravar nada no branch `data` ou deixar a próxima na fila, quase sempre por instabilidade do GitHub. Mesmo assim, ela tenta religar a coleta antes de terminar. Se repetir, abra o log em **Actions**.
 
 **Quero forçar uma coleta agora**
-Vá em **Actions → Coletar ofertas → Run workflow** e marque *Consultar todas as fontes agora*.
+Vá em **Actions → Coletar ofertas → Run workflow** e marque *Consultar todas as fontes agora*. A execução em andamento encerra em até 1 minuto, e a sua assume (os dados novos aparecem em ~5 minutos).
 
 **O app mostra "Última coleta há 1 h" (ou mais)**
 Confira em **Actions → Coletar ofertas** se as execuções estão verdes e no branch `data` se o último commit é recente. Os dados levam até ~5 minutos a mais para aparecer, por causa do cache do GitHub. Se o app em si estiver desatualizado (tela antiga), rode **Actions → Publicar app → Run workflow**.
 
-Se a última execução tiver mais de 10 minutos e nenhuma estiver na fila, a corrente de coletas parou. Isso acontece quando a API do GitHub fica fora do ar por mais de ~8 minutos seguidos. Rode **Actions → Coletar ofertas → Run workflow** uma vez, e ela volta a se agendar sozinha. O agendamento de reserva do GitHub (cron) também religa a corrente, mas pode levar horas.
+Se nenhuma execução estiver em andamento nem na fila, a coleta parou. Isso só deve acontecer se o GitHub passar horas fora do ar. Rode **Actions → Coletar ofertas → Run workflow** uma vez, e ela volta a se manter sozinha. O agendamento de reserva do GitHub (cron) também religa a coleta, mas pode levar horas.
