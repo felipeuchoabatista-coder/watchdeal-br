@@ -8,7 +8,12 @@ export interface AppData {
   health: Health | null;
 }
 
-const BASE = 'data/';
+/**
+ * De onde vêm os dados. No GitHub, direto do branch "data"
+ * (raw.githubusercontent.com), que a coleta atualiza a cada 5 min sem
+ * precisar republicar o app. Em desenvolvimento, a pasta data/ local.
+ */
+const BASE = (import.meta.env.VITE_DATA_URL || 'data/').replace(/\/?$/, '/');
 
 async function getJson<T>(name: string): Promise<T> {
   const res = await fetch(`${BASE}${name}`, { cache: 'no-cache' });

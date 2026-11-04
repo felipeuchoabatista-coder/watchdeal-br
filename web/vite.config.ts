@@ -65,6 +65,8 @@ export default defineConfig({
         runtimeCaching: [
           {
             // Dados: sempre tenta a versão mais nova; sem internet, usa a última salva.
+            // Vale para a pasta local data/ e para o branch "data" no
+            // raw.githubusercontent.com (…/<repo>/data/ofertas.json).
             urlPattern: ({ url }) => url.pathname.includes('/data/'),
             handler: 'NetworkFirst',
             options: {

@@ -63,10 +63,14 @@ export const fetchText: Fetcher = async (url, options = {}) => {
         redirect: 'follow',
         signal: AbortSignal.timeout(timeoutMs),
       });
-      if (res.status === 403 || res.status === 429) {
-        throw new BlockedError(`${host} respondeu ${res.status}`);
+      if (!res.ok) {
+        // Descarta o corpo antes de desistir: um corpo não lido deixa o
+        // parser do undici pausado e, quando o site fecha a conexão, o Node
+        // derruba o processo inteiro (AssertionError: assert(!this.paused)).
+        await res.body?.cancel().catch(() => {});
+        if (res.status === 403 || res.status === 429) throw new BlockedError(`${host} respondeu ${res.status}`);
+        throw new HttpError(res.status, `${host} respondeu ${res.status}`);
       }
-      if (!res.ok) throw new HttpError(res.status, `${host} respondeu ${res.status}`);
       const body = await res.text();
       const marker = blockMarkers.find((m) => body.includes(m));
       if (marker) throw new BlockedError(`${host} exibiu página de verificação`);
