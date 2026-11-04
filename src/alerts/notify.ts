@@ -1,3 +1,4 @@
+import { fetch } from 'undici';
 import { getModel } from '../core/catalog.ts';
 import type { AlertConfig, DealEvent, DealEventType } from '../core/types.ts';
 
