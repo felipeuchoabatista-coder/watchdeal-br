@@ -48,7 +48,7 @@ Roda de graça no GitHub (Actions + Pages) e vira um **app instalável no celula
 ## Como funciona
 
 ```
-GitHub Actions (a cada 5 min; cada execução agenda a próxima)
+GitHub Actions (a cada 5 min; cada execução dura ~5 h e deixa a próxima na fila)
   └─ src/run.ts ── fontes (src/sources/*) ──► classifica (core/matcher)
         │                                     pontua (core/scoring)
         │                                     histórico (core/history)
