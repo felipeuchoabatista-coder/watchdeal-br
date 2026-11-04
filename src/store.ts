@@ -1,5 +1,6 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
+import type { DollarFile } from './core/dolar.ts';
 import type {
   AlertConfig, Coupon, DealEvent, Health, ModelHistory, ModelId, Snapshot, SourceId,
 } from './core/types.ts';
@@ -64,6 +65,7 @@ export class DataStore {
   coupons = () => this.read<CouponsFile>('cupons.json', { generatedAt: '', coupons: [] });
   events = () => this.read<EventsFile>('eventos.json', { generatedAt: '', events: [] });
   health = () => this.read<Health | null>('saude.json', null);
+  dollar = () => this.read<DollarFile | null>('dolar.json', null);
   state = () => this.read<CollectorState>('estado.json', { sources: {}, offersSeen: {}, alertsSent: {} });
   history = (model: ModelId) =>
     this.read<ModelHistory>(`historico/${model}.json`, { model, updatedAt: '', variants: {} });

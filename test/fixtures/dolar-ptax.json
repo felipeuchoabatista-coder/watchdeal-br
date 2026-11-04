@@ -1,0 +1,45 @@
+{
+  "@odata.context": "https://was-p.bcnet.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata$metadata#_CotacaoMoedaDia",
+  "value": [
+    {
+      "paridadeCompra": 1.00000,
+      "paridadeVenda": 1.00000,
+      "cotacaoCompra": 5.46630,
+      "cotacaoVenda": 5.46690,
+      "dataHoraCotacao": "2026-11-04 10:07:11.299421",
+      "tipoBoletim": "Abertura"
+    },
+    {
+      "paridadeCompra": 1.00000,
+      "paridadeVenda": 1.00000,
+      "cotacaoCompra": 5.47490,
+      "cotacaoVenda": 5.47550,
+      "dataHoraCotacao": "2026-11-04 11:09:10.007807",
+      "tipoBoletim": "Intermediário"
+    },
+    {
+      "paridadeCompra": 1.00000,
+      "paridadeVenda": 1.00000,
+      "cotacaoCompra": 5.47890,
+      "cotacaoVenda": 5.47950,
+      "dataHoraCotacao": "2026-11-04 12:11:09.207151",
+      "tipoBoletim": "Intermediário"
+    },
+    {
+      "paridadeCompra": 1.00000,
+      "paridadeVenda": 1.00000,
+      "cotacaoCompra": 5.48870,
+      "cotacaoVenda": 5.48930,
+      "dataHoraCotacao": "2026-11-04 13:05:19.048931",
+      "tipoBoletim": "Intermediário"
+    },
+    {
+      "paridadeCompra": 1.00000,
+      "paridadeVenda": 1.00000,
+      "cotacaoCompra": 5.47720,
+      "cotacaoVenda": 5.47780,
+      "dataHoraCotacao": "2026-11-04 13:05:19.232051",
+      "tipoBoletim": "Fechamento PTAX"
+    }
+  ]
+}

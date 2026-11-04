@@ -36,6 +36,7 @@ Roda de graça no GitHub (Actions + Pages) e vira um **app instalável no celula
   - **Desconto:** vendedor terceiro de marketplace.
   - **Detecta:** preço "de" inflado.
   - **Conservador:** sem histórico suficiente, o teto é *Boa*.
+- **Dólar comercial ao vivo**: a cotação aparece no topo do app e é atualizada a cada minuto enquanto ele está aberto. Mostra a variação do dia e a tendência de 30 dias, e o gráfico de cada relógio mostra o dólar de cada dia. Vem da AwesomeAPI, com a Coinbase e o Banco Central (PTAX) de reserva.
 - **Cupons relevantes**: códigos das ofertas e cupons por loja. Cupons de outras categorias (moda, games, móveis…) são descartados.
 - **Alertas sem repetição**:
   - menor preço em 90 dias
@@ -52,11 +53,12 @@ GitHub Actions (a cada 5 min; cada execução dura ~5 h e deixa a próxima na fi
   └─ src/run.ts ── fontes (src/sources/*) ──► classifica (core/matcher)
         │                                     pontua (core/scoring)
         │                                     histórico (core/history)
-        ├─► branch "data": ofertas.json, cupons.json, historico/*.json, eventos.json, saude.json
+        ├─► branch "data": ofertas.json, cupons.json, historico/*.json, eventos.json, saude.json, dolar.json
         └─► alertas: Telegram / ntfy (src/alerts)
 
 GitHub Pages: app PWA (web/), publicado só quando o código muda.
-  └─ lê os dados direto do branch "data" (raw.githubusercontent.com)
+  ├─ lê os dados direto do branch "data" (raw.githubusercontent.com)
+  └─ busca o dólar ao vivo a cada minuto (AwesomeAPI → Coinbase → Banco Central)
 ```
 
 | Pasta | Conteúdo |

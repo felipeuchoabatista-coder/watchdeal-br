@@ -662,6 +662,109 @@ img {
   stroke-width: 2;
 }
 
+/* ===== Dólar ===== */
+.dollar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  --accent: var(--series);
+}
+.dollar__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.dollar__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.dollar__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.dollar__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+.dollar__status.is-live {
+  color: var(--ok-ink);
+  font-weight: 600;
+}
+.dollar__status.is-live .dollar__dot {
+  background: var(--ok-ink);
+  animation: dollar-pulse 2s ease-in-out infinite;
+}
+@keyframes dollar-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+.dollar__main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+.dollar__now {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.dollar__value {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.dollar__change {
+  font-size: 13px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+/* Para quem compra importado, dólar em queda é boa notícia (verde). */
+.dollar__change.is-down {
+  color: var(--ok-ink);
+}
+.dollar__change.is-up {
+  color: var(--bad-ink);
+}
+.dollar__trend {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 0;
+}
+.dollar__trend .spark {
+  max-width: none;
+}
+.dollar__range,
+.dollar__details,
+.dollar__source {
+  font-size: 11.5px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.dollar__details {
+  color: var(--text-2);
+}
+.chart-dollar {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
 /* ===== Alertas recentes ===== */
 .alerts-strip {
   display: flex;

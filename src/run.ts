@@ -1,7 +1,9 @@
 import { join } from 'node:path';
 import { channelsFromEnv, pendingAlerts, ALERT_TTL_MS } from './alerts/notify.ts';
 import { MODELS } from './core/catalog.ts';
-import { BlockedError, fetchText, type Fetcher } from './core/http.ts';
+import { DOLLAR_SOURCE_NAMES, fetchQuote, mergeDollar, parseSgs, sgsUrl, type GetJson } from './core/dolar.ts';
+import { BlockedError, fetchJson, fetchText, type Fetcher } from './core/http.ts';
+import { addDays, spDay } from './core/text.ts';
 import type { Coupon, DealEvent, Health, ModelHistory, ModelId, RawOffer, SourceHealth, SourceId } from './core/types.ts';
 import { runCycle } from './pipeline.ts';
 import { SOURCES } from './sources/index.ts';
@@ -27,6 +29,10 @@ interface RunOptions {
   fetcher: Fetcher;
   now?: Date;
   log?: (msg: string) => void;
+  /** Atualizar a cotação do dólar (padrão: sim). */
+  dollar?: boolean;
+  /** Chave opcional da AwesomeAPI (segredo AWESOMEAPI_TOKEN): sem cache e sem limite por IP. */
+  awesomeToken?: string;
 }
 
 function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
@@ -45,6 +51,39 @@ function isDue(source: Source, lastRunAt: string | undefined, now: Date): boolea
   return now.getTime() - new Date(lastRunAt).getTime() >= (source.everyMinutes - 1) * 60_000;
 }
 
+/** O histórico diário do dólar muda uma vez por dia: baixa de novo a cada 6 h. */
+const DOLLAR_DAILY_EVERY_MS = 6 * 3_600_000;
+
+/**
+ * Atualiza data/dolar.json: cotação atual e fechamentos diários. Falha aqui não
+ * afeta as ofertas; o app mostra a última cotação salva, com o horário dela.
+ */
+async function updateDollar(store: DataStore, fetcher: Fetcher, now: Date, log: (msg: string) => void, token?: string): Promise<void> {
+  const prev = await store.dollar().catch(() => null);
+  const get: GetJson = (url) => fetchJson(fetcher, url, { retries: 1, timeoutMs: 10_000 });
+  const today = spDay(now);
+  const lastDay = prev?.daily.at(-1)?.d;
+  const dailyAge = prev?.dailyUpdatedAt ? now.getTime() - new Date(prev.dailyUpdatedAt).getTime() : Infinity;
+  const needDaily = !lastDay || dailyAge >= DOLLAR_DAILY_EVERY_MS;
+  const [quote, daily] = await Promise.all([
+    fetchQuote(get, now, token).catch((err: Error) => {
+      log(`  ✗ Dólar: ${err.message}`);
+      return undefined;
+    }),
+    needDaily
+      ? get(sgsUrl(lastDay ? addDays(lastDay, -7) : addDays(today, -560), today))
+          .then(parseSgs)
+          .catch((err: Error) => {
+            log(`  ✗ Dólar (histórico): ${err.message}`);
+            return undefined;
+          })
+      : Promise.resolve(undefined),
+  ]);
+  if (!quote && !daily) return;
+  await store.write('dolar.json', mergeDollar(prev, { quote, daily }, now));
+  if (quote) log(`  ✓ Dólar: R$ ${quote.sell.toFixed(4)} (${DOLLAR_SOURCE_NAMES[quote.source]})`);
+}
+
 export async function runOnce(opts: RunOptions): Promise<{ health: Health; events: DealEvent[]; sent: number }> {
   const log = opts.log ?? ((m: string) => console.log(m));
   const started = Date.now();
@@ -61,6 +100,12 @@ export async function runOnce(opts: RunOptions): Promise<{ health: Health; event
   const due = SOURCES.filter((s) => (opts.only ? opts.only.includes(s.id) : true))
     .filter((s) => opts.force || isDue(s, state.sources[s.id]?.lastRunAt, now));
   log(`Fontes nesta rodada: ${due.map((s) => s.name).join(', ') || 'nenhuma'}`);
+
+  // Cotação do dólar, em paralelo com as fontes.
+  const dollarTask = opts.dollar === false
+    ? Promise.resolve()
+    : withTimeout(updateDollar(store, opts.fetcher, now, log, opts.awesomeToken), 60_000, 'Dólar')
+        .catch((err: Error) => log(`  ✗ ${err.message}`));
 
   const rawBySource: Partial<Record<SourceId, RawOffer[]>> = {};
   const couponsBySource: Partial<Record<SourceId, Coupon[]>> = {};
@@ -179,6 +224,7 @@ export async function runOnce(opts: RunOptions): Promise<{ health: Health; event
     store.write('saude.json', health),
     store.write('estado.json', state),
     ...Object.values(out.histories).map((h) => store.write(`historico/${h.model}.json`, h)),
+    dollarTask,
   ]);
 
   log(`Pronto: ${out.snapshot.offers.length} ofertas, ${out.coupons.length} cupons, ${newEvents.length} eventos novos, ${sent} alertas enviados (${((Date.now() - started) / 1000).toFixed(1)}s).`);
@@ -195,6 +241,7 @@ if (import.meta.main) {
     alerts: !args.includes('--sem-alertas'),
     only,
     fetcher: fetchText,
+    awesomeToken: process.env.AWESOMEAPI_TOKEN?.trim() || undefined,
   })
     .then(({ health }) => {
       // Falha a execução só se TODAS as fontes que rodaram deram erro e ao menos uma

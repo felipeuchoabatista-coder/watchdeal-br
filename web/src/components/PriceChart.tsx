@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type PointerEvent } from 'react';
+import { dollarOn, type DollarPoint } from '../../../src/core/dolar.ts';
 import type { HistoryPoint } from '../../../src/core/types.ts';
 import { brl, brl0, dateBR } from '../data.ts';
+import { rate2 } from '../dolar.ts';
 
 const ORIGIN: Record<HistoryPoint['o'], string> = {
   coleta: 'Coleta WatchDeal',
@@ -31,9 +33,11 @@ interface Props {
   target?: number;
   label: string;
   height?: number;
+  /** Fechamentos do dólar: o balão mostra a cotação de cada dia. */
+  dollar?: DollarPoint[];
 }
 
-export function PriceChart({ points, median30, target, label, height = 220 }: Props) {
+export function PriceChart({ points, median30, target, label, height = 220, dollar }: Props) {
   const wrap = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(340);
   const [active, setActive] = useState<number | null>(null);
@@ -111,6 +115,7 @@ export function PriceChart({ points, median30, target, label, height = 220 }: Pr
   const minP = points[geo.minIdx];
   const last = points[points.length - 1];
   const act = active !== null ? points[active] : null;
+  const actDollar = act && dollar ? dollarOn(dollar, act.d) : undefined;
   const tipLeft = act ? Math.min(Math.max(geo.x(act.d) - 80, 4), width - 164) : 0;
   const minLabelAbove = geo.y(minP.p) > pad.t + 40;
 
@@ -187,6 +192,7 @@ export function PriceChart({ points, median30, target, label, height = 220 }: Pr
           <b>{brl(act.p)}</b>
           <span>{act.s}</span>
           <small>{ORIGIN[act.o]}</small>
+          {actDollar !== undefined && <small>Dólar {rate2(actDollar)}</small>}
         </div>
       )}
       <details className="chart__table">

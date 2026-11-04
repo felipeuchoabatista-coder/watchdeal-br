@@ -3,6 +3,7 @@ import { MODELS, PRIMARY_MODELS, getModel } from '../../../src/core/catalog.ts';
 import type { ModelId, Offer } from '../../../src/core/types.ts';
 import { Chip, Empty, Toggle } from '../components/bits.tsx';
 import { ModelCard, OfferCard } from '../components/cards.tsx';
+import { DollarCard } from '../components/DollarCard.tsx';
 import { Icon } from '../components/Icon.tsx';
 import type { AppData } from '../data.ts';
 import type { Prefs } from '../prefs.ts';
@@ -63,6 +64,8 @@ export function Home({ data, prefs, setPrefs, now }: { data: AppData; prefs: Pre
 
   return (
     <div className="page">
+      <DollarCard file={data.dollar} now={now} />
+
       <section aria-labelledby="h-best">
         <h2 id="h-best" className="section-title">Melhor preço agora</h2>
         <div className="mgrid">{cards}</div>
