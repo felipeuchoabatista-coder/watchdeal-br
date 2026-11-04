@@ -48,14 +48,13 @@ jobs:
         with:
           path: web/dist
 
-      # Faz o mesmo que actions/deploy-pages, com duas diferenças:
-      # - Cada tentativa tem versão própria. O deploy-pages usa o commit como
-      #   versão, então "Re-run" de uma publicação que falhou reaproveita a
-      #   publicação cancelada e nunca termina.
-      # - Espera até 25 min e, se o Pages demorar mais, não cancela. O
-      #   deploy-pages desiste e cancela em 10 min. Em 04/11, o Pages ficou
-      #   mais que isso em "updating_pages" em três publicações seguidas, e
-      #   todas foram canceladas.
+      # Faz o mesmo que actions/deploy-pages, mas espera até 25 min e, se o
+      # Pages demorar mais, não cancela. O deploy-pages desiste e cancela em
+      # 10 min. Em 04/11, o Pages ficou mais que isso em "updating_pages" em
+      # três publicações seguidas, e todas foram canceladas.
+      # A versão tem de ser o próprio commit: o Pages responde 404 a
+      # qualquer outro valor. Por isso, um "Re-run" retoma a publicação
+      # daquele commit, em vez de criar outra.
       - id: deploy
         name: Publicar no Pages
         uses: actions/github-script@v8
@@ -64,12 +63,11 @@ jobs:
         with:
           script: |
             const { owner, repo } = context.repo;
-            const version = `${context.sha}.${context.runId}.${process.env.GITHUB_RUN_ATTEMPT}`;
             const { data } = await github.request('POST /repos/{owner}/{repo}/pages/deployments', {
               owner,
               repo,
               artifact_id: Number(process.env.ARTIFACT_ID),
-              pages_build_version: version,
+              pages_build_version: context.sha,
               oidc_token: await core.getIDToken(),
             });
             core.setOutput('page_url', data.page_url);
@@ -85,10 +83,10 @@ jobs:
                 erros = 0;
                 core.info(`Situação: ${st.status || '(sem status)'}`);
                 if (st.status === 'succeed') return;
-                if (falhas.includes(st.status)) return core.setFailed(`O Pages recusou a publicação: ${st.status}. Rode de novo (Re-run).`);
+                if (falhas.includes(st.status)) return core.setFailed(`O Pages recusou a publicação: ${st.status}. A próxima mudança no código publica de novo.`);
               } catch (err) {
                 if (++erros >= 10) return core.setFailed(`Não consegui consultar o Pages: ${err.message}`);
                 core.warning(`Consulta ao Pages falhou (${erros}): ${err.message}`);
               }
             }
-            core.setFailed('O Pages não terminou em 25 min. A publicação não foi cancelada e pode terminar sozinha; se o site não mudar, rode de novo (Re-run).');
+            core.setFailed('O Pages não terminou em 25 min. A publicação não foi cancelada e pode terminar sozinha; "Re-run" volta a esperar por ela.');
