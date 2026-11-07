@@ -1,0 +1,3718 @@
+{
+ "generatedAt": "2026-11-07T11:30:24.475Z",
+ "offers": [
+  {
+   "source": "promobit",
+   "sourceOfferId": "3175731",
+   "title": "Smartwatch Galaxy Watch8 40mm BT (Nacional com garantia)",
+   "store": "Shopee",
+   "price": 1030.4,
+   "coupon": {
+    "description": "R$120 Off",
+    "value": 120
+   },
+   "url": "https://www.promobit.com.br/oferta/smartwatch-galaxy-watch8-40mm-bt-nacional-com-garantia-3175731/",
+   "discussionUrl": "https://www.promobit.com.br/oferta/smartwatch-galaxy-watch8-40mm-bt-nacional-com-garantia-3175731/",
+   "image": "https://www.promobit.com.br/326901515617938916537364153231.jpg",
+   "available": true,
+   "postedAt": "2026-11-05T15:13:28.000Z",
+   "community": {
+    "likes": 4,
+    "comments": 1
+   },
+   "id": "promobit:3175731",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-05T15:19:24.977Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 100,
+    "label": "Imperdível",
+    "reasons": [
+     "17% abaixo da mediana de 30 dias (R$ 1.248,31)",
+     "Perto do menor preço de 90 dias (R$ 1.030,40)"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1573602912",
+   "title": "Smartwatch Unissex Samsung Galaxy Watch 5 Pro 45mm Titânio Preto SM-R920",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch5 Pro SM-R920N 45,0 mm GPS",
+   "store": "Americanas",
+   "price": 1879.1,
+   "priceCard": 2184.96,
+   "installments": {
+    "n": 8,
+    "value": 273.12
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1573602912",
+   "image": "https://image.zst.com.br/C8C867C5C3A7635D35F63753F50E1698_235_235.jpg",
+   "available": true,
+   "id": "zoom:1573602912",
+   "model": "galaxy-watch5-pro",
+   "variant": "45mm-bt",
+   "variantKey": "galaxy-watch5-pro|45mm-bt|novo",
+   "size": 45,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-03T17:51:34.777Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 100,
+    "label": "Imperdível",
+    "reasons": [
+     "35% abaixo da mediana de 30 dias (R$ 2.872,67)",
+     "Perto do menor preço de 90 dias (R$ 1.879,10)"
+    ],
+    "ref": {
+     "median30": 2872.67,
+     "min90": 1879.1,
+     "allTimeLow": 1879.1
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDX5W5T9",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm LTE, Galaxy AI",
+   "store": "Amazon",
+   "price": 1471.99,
+   "listPrice": 3499,
+   "url": "https://www.amazon.com.br/dp/B0FDX5W5T9",
+   "image": "https://m.media-amazon.com/images/I/41SnB5tK1PL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDX5W5T9",
+   "model": "galaxy-watch8",
+   "variant": "44mm-lte",
+   "variantKey": "galaxy-watch8|44mm-lte|novo",
+   "size": 44,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T03:03:01.504Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 81,
+    "label": "Ótima",
+    "reasons": [
+     "11% abaixo da mediana das lojas agora (R$ 1.654,55)",
+     "Preço \"de\" R$ 3.499,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1869,
+     "min90": 1255.5,
+     "allTimeLow": 1255.5,
+     "marketMedian": 1654.55
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDX9MDXK",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm LTE, Galaxy AI",
+   "store": "Amazon",
+   "price": 1519.99,
+   "listPrice": 3499,
+   "url": "https://www.amazon.com.br/dp/B0FDX9MDXK",
+   "image": "https://m.media-amazon.com/images/I/41RnHMx5UzL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDX9MDXK",
+   "model": "galaxy-watch8",
+   "variant": "44mm-lte",
+   "variantKey": "galaxy-watch8|44mm-lte|novo",
+   "size": 44,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-06T16:40:52.460Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 73,
+    "label": "Ótima",
+    "reasons": [
+     "8% abaixo da mediana das lojas agora (R$ 1.654,55)",
+     "Preço \"de\" R$ 3.499,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1869,
+     "min90": 1255.5,
+     "allTimeLow": 1255.5,
+     "marketMedian": 1654.55
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0B27BRBTC",
+   "title": "Smartwatch Samsung Galaxy Watch4 Classic LTE 46mm Prata 16GB",
+   "store": "Amazon",
+   "price": 2089.05,
+   "listPrice": 2199,
+   "url": "https://www.amazon.com.br/dp/B0B27BRBTC",
+   "image": "https://m.media-amazon.com/images/I/51qdb-sz32L._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0B27BRBTC",
+   "model": "galaxy-watch4-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch4-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T14:36:25.402Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 71,
+    "label": "Ótima",
+    "reasons": [
+     "4% abaixo da mediana de 30 dias (R$ 2.184,05)",
+     "Perto do menor preço de 90 dias (R$ 2.089,05)"
+    ],
+    "ref": {
+     "median30": 2184.05,
+     "min90": 2089.05,
+     "allTimeLow": 2089.05
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDX5XGHN",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm BT, Galaxy AI - Prata",
+   "store": "Amazon",
+   "price": 1383,
+   "listPrice": 3199,
+   "url": "https://www.amazon.com.br/dp/B0FDX5XGHN",
+   "image": "https://m.media-amazon.com/images/I/61iTGVZS+0L._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDX5XGHN",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T14:36:25.402Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 70,
+    "label": "Ótima",
+    "reasons": [
+     "4% abaixo da mediana de 30 dias (R$ 1.439,00)",
+     "Perto do menor preço de 90 dias (R$ 1.349,10)",
+     "Preço \"de\" R$ 3.199,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0CCQP9JB7",
+   "title": "Samsung Smartwatch Galaxy Watch6 Classic LTE 47mm Tela Super AMOLED de 1.47\" Grafite",
+   "store": "Amazon",
+   "price": 1700.5,
+   "listPrice": 1790,
+   "url": "https://www.amazon.com.br/dp/B0CCQP9JB7",
+   "image": "https://m.media-amazon.com/images/I/41gN0jD+ePL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0CCQP9JB7",
+   "model": "galaxy-watch6-classic",
+   "variant": "47mm-lte",
+   "variantKey": "galaxy-watch6-classic|47mm-lte|novo",
+   "size": 47,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T14:36:25.402Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 66,
+    "label": "Boa",
+    "reasons": [
+     "5% abaixo da mediana de 30 dias (R$ 1.790,00)"
+    ],
+    "ref": {
+     "median30": 1790,
+     "min90": 1169.1,
+     "allTimeLow": 883.9
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1506362480",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm LTE, Galaxy AI | Prata",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch4 BT SM-R870N 44,0 mm GPS",
+   "store": "Amazon",
+   "price": 1599.99,
+   "url": "https://www.zoom.com.br/lead?oid=1506362480",
+   "image": "https://image.zst.com.br/53A10E23DF5CA974F9BAB84BB2AF3FF3_235_235.jpg",
+   "available": true,
+   "id": "zoom:1506362480",
+   "model": "galaxy-watch8",
+   "variant": "44mm-lte",
+   "variantKey": "galaxy-watch8|44mm-lte|novo",
+   "size": 44,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-05T23:16:05.406Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 61,
+    "label": "Boa",
+    "reasons": [
+     "3% abaixo da mediana das lojas agora (R$ 1.654,55)"
+    ],
+    "ref": {
+     "median30": 1869,
+     "min90": 1255.5,
+     "allTimeLow": 1255.5,
+     "marketMedian": 1654.55
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1368471682",
+   "title": "Smartwatch Samsung Galaxy Watch4 Classic LTE 42mm Prata 16GB, Prata, P",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch4 Classic LTE SM-R885FZ 4G 42,0 mm GPS",
+   "store": "Magazine Luiza",
+   "price": 999,
+   "priceCard": 1109.97,
+   "installments": {
+    "n": 9,
+    "value": 123.33
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1368471682",
+   "image": "https://image.zst.com.br/BD767814DD4F901500ECF61472523840_235_235.jpg",
+   "available": true,
+   "id": "zoom:1368471682",
+   "model": "galaxy-watch4-classic",
+   "variant": "42mm-lte",
+   "variantKey": "galaxy-watch4-classic|42mm-lte|novo",
+   "size": 42,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 60,
+    "label": "Boa",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 999,00)"
+    ],
+    "ref": {
+     "median30": 999,
+     "min90": 999,
+     "allTimeLow": 999
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0BDPGSS9G",
+   "title": "Samsung Galaxy Watch5 BT 44mm Prata",
+   "store": "Amazon",
+   "price": 1139.9,
+   "listPrice": 1199.9,
+   "url": "https://www.amazon.com.br/dp/B0BDPGSS9G",
+   "image": "https://m.media-amazon.com/images/I/6157tP2OTuL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0BDPGSS9G",
+   "model": "galaxy-watch5",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch5|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-06T17:15:55.798Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 60,
+    "label": "Boa",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 1.139,90)"
+    ],
+    "ref": {
+     "median30": 1139.9,
+     "min90": 1139.9,
+     "allTimeLow": 1124.1
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B09MDRJB6M",
+   "title": "SAMSUNG GALAXY WATCH 4 CLASSIC BT 46MM PRETO",
+   "store": "Amazon",
+   "price": 1196.9,
+   "listPrice": 1259.9,
+   "url": "https://www.amazon.com.br/dp/B09MDRJB6M",
+   "image": "https://m.media-amazon.com/images/I/61oL9FVOHtL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B09MDRJB6M",
+   "model": "galaxy-watch4-classic",
+   "variant": "46mm-bt",
+   "variantKey": "galaxy-watch4-classic|46mm-bt|novo",
+   "size": 46,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-07T02:58:37.553Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 60,
+    "label": "Boa",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 1.196,90)"
+    ],
+    "ref": {
+     "median30": 1196.9,
+     "min90": 1196.9,
+     "allTimeLow": 1196.9
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1577957256",
+   "title": "Samsung Galaxy Watch4 Classic Bluetooth 1.2 caixa 42mm de aço inoxidáv",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch4 Classic BT SM-R880NZ 42,0 mm GPS Inox",
+   "store": "Magazine Luiza",
+   "price": 1323.45,
+   "priceCard": 1538.9,
+   "installments": {
+    "n": 10,
+    "value": 153.89
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1577957256",
+   "image": "https://image.zst.com.br/BEA4518B31985366F92CFADF6BD1083F_235_235.jpg",
+   "available": true,
+   "id": "zoom:1577957256",
+   "model": "galaxy-watch4-classic",
+   "variant": "42mm-bt",
+   "variantKey": "galaxy-watch4-classic|42mm-bt|novo",
+   "size": 42,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 60,
+    "label": "Boa",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 1.323,45)"
+    ],
+    "ref": {
+     "median30": 1323.45,
+     "min90": 1323.45,
+     "allTimeLow": 1323.45,
+     "marketMedian": 1347.24
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1573602746",
+   "title": "Smartwatch Samsung Galaxy Watch4 BT 44mm Preto",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch4 BT SM-R870N 44,0 mm GPS",
+   "store": "Americanas",
+   "price": 1349.99,
+   "installments": {
+    "n": 8,
+    "value": 168.74
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1573602746",
+   "image": "https://image.zst.com.br/C06B1636BEE0AEF6CAFB7EF053879356_235_235.jpg",
+   "available": true,
+   "id": "zoom:1573602746",
+   "model": "galaxy-watch4",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch4|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-03T17:51:34.777Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 60,
+    "label": "Boa",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 1.349,99)"
+    ],
+    "ref": {
+     "median30": 1349.99,
+     "min90": 1349.99,
+     "allTimeLow": 1349.99
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0CCQW5HJD",
+   "title": "Samsung Smartwatch Galaxy Watch6 LTE 44mm Tela Super AMOLED de 1.47\" Grafite",
+   "store": "Amazon",
+   "price": 2759.39,
+   "url": "https://www.amazon.com.br/dp/B0CCQW5HJD",
+   "image": "https://m.media-amazon.com/images/I/61vvtvy5WOL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0CCQW5HJD",
+   "model": "galaxy-watch6",
+   "variant": "44mm-lte",
+   "variantKey": "galaxy-watch6|44mm-lte|novo",
+   "size": 44,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T14:36:25.402Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 60,
+    "label": "Boa",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 2.759,39)"
+    ],
+    "ref": {
+     "median30": 2759.39,
+     "min90": 2759.39,
+     "allTimeLow": 2759.39
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "3385",
+   "title": "Smartwatch Samsung Galaxy Watch6 Classic LTE 43mm Tela Super AMOLED de 1.31\" - Grafite",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 3799,
+   "installments": {
+    "n": 18,
+    "value": 211.05
+   },
+   "url": "https://shop.samsung.com.br/galaxy-watch6-classic-lte-43mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/221821/R955---LTE43_01.jpg?v=638309881008870000",
+   "available": true,
+   "id": "samsung:3385",
+   "model": "galaxy-watch6-classic",
+   "variant": "43mm-lte",
+   "variantKey": "galaxy-watch6-classic|43mm-lte|novo",
+   "size": 43,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 60,
+    "label": "Boa",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 3.799,00)"
+    ],
+    "ref": {
+     "median30": 3799,
+     "min90": 3799,
+     "allTimeLow": 3799
+    }
+   }
+  },
+  {
+   "source": "promobit",
+   "sourceOfferId": "3160374",
+   "title": "Samsung Galaxy Watch8 Classic Smartwatch 46mm LTE Galaxy AI Tela em Cristal de Safira",
+   "store": "Shopee",
+   "price": 1839.08,
+   "url": "https://www.promobit.com.br/oferta/samsung-galaxy-watch8-classic-smartwatch-46mm-lte-galaxy-ai-tela-em-cristal-de-safira-3160374/",
+   "discussionUrl": "https://www.promobit.com.br/oferta/samsung-galaxy-watch8-classic-smartwatch-46mm-lte-galaxy-ai-tela-em-cristal-de-safira-3160374/",
+   "image": "https://www.promobit.com.br/540963474317934730309601813619.jpg",
+   "available": true,
+   "postedAt": "2026-10-31T18:56:50.000Z",
+   "community": {
+    "likes": 11,
+    "comments": 2
+   },
+   "id": "promobit:3160374",
+   "model": "galaxy-watch8-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch8-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T20:06:50.682Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 57,
+    "label": "Boa",
+    "reasons": [
+     "3% abaixo da mediana de 30 dias (R$ 1.889,10)"
+    ],
+    "ref": {
+     "median30": 1889.1,
+     "min90": 1628.06,
+     "allTimeLow": 1628.06,
+     "marketMedian": 2189
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1577785398",
+   "title": "Samsung Galaxy Watch4 Classic Bluetooth1.2 caixa 42mm de aço inoxidáve",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch4 Classic BT SM-R880NZ 42,0 mm GPS Inox",
+   "store": "Magazine Luiza",
+   "price": 1347.24,
+   "priceCard": 1496.9,
+   "installments": {
+    "n": 10,
+    "value": 149.69
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1577785398",
+   "image": "https://image.zst.com.br/FB8A46652A50D36DAFC7E4F82D068D2A_235_235.jpg",
+   "available": true,
+   "id": "zoom:1577785398",
+   "model": "galaxy-watch4-classic",
+   "variant": "42mm-bt",
+   "variantKey": "galaxy-watch4-classic|42mm-bt|novo",
+   "size": 42,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 56,
+    "label": "Boa",
+    "reasons": [
+     "2% acima da mediana de 30 dias (R$ 1.323,45)",
+     "Perto do menor preço de 90 dias (R$ 1.323,45)"
+    ],
+    "ref": {
+     "median30": 1323.45,
+     "min90": 1323.45,
+     "allTimeLow": 1323.45,
+     "marketMedian": 1347.24
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDX8YCRH",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm BT, Galaxy AI",
+   "store": "Amazon",
+   "price": 1248.32,
+   "listPrice": 2999,
+   "url": "https://www.amazon.com.br/dp/B0FDX8YCRH",
+   "image": "https://m.media-amazon.com/images/I/61iTGVZS+0L._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDX8YCRH",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-07T02:58:37.553Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 53,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Preço \"de\" R$ 2.999,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDX9Y1ZT",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm LTE, Galaxy AI",
+   "store": "Amazon",
+   "price": 1349.99,
+   "listPrice": 3299,
+   "url": "https://www.amazon.com.br/dp/B0FDX9Y1ZT",
+   "image": "https://m.media-amazon.com/images/I/61iTGVZS+0L._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDX9Y1ZT",
+   "model": "galaxy-watch8",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch8|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T14:36:25.402Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 53,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Preço \"de\" R$ 3.299,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1349.99,
+     "min90": 1052,
+     "allTimeLow": 1052,
+     "marketMedian": 1791.36
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1141110854",
+   "title": "Samsung Smartwatch Galaxy Watch6 Classic LTE 47mm Tela Super AMOLED de 1.47\" Grafite",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch6 Classic LTE 47mm",
+   "store": "Amazon",
+   "price": 1790,
+   "url": "https://www.zoom.com.br/lead?oid=1141110854",
+   "image": "https://image.zst.com.br/6B04E0A9090C4C398059B933B363BD5D_235_235.jpg",
+   "available": true,
+   "id": "zoom:1141110854",
+   "model": "galaxy-watch6-classic",
+   "variant": "47mm-lte",
+   "variantKey": "galaxy-watch6-classic|47mm-lte|novo",
+   "size": 47,
+   "connectivity": "lte",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-02T07:28:38.837Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 53,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias"
+    ],
+    "ref": {
+     "median30": 1790,
+     "min90": 1169.1,
+     "allTimeLow": 883.9
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1508007791",
+   "title": "Samsung Galaxy Watch8 Classic Smartwatch 46mm LTE, Galaxy AI, Tela em ",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 Classic LTE 4G 46mm",
+   "store": "Magazine Luiza",
+   "price": 1889.1,
+   "priceCard": 2099,
+   "installments": {
+    "n": 10,
+    "value": 209.9
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1508007791",
+   "image": "https://image.zst.com.br/E180EFE94FDE8F15BFE041E5CAD67172_235_235.jpg",
+   "available": true,
+   "id": "zoom:1508007791",
+   "model": "galaxy-watch8-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch8-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-06T13:19:37.793Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 53,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias"
+    ],
+    "ref": {
+     "median30": 1889.1,
+     "min90": 1628.06,
+     "allTimeLow": 1628.06,
+     "marketMedian": 2189
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "357460",
+   "title": "Relogio De Pulso Galaxy Watch 4 Classic Lte 42mm - Prata",
+   "store": "KaBuM!",
+   "seller": "Magalu",
+   "marketplace": true,
+   "price": 999,
+   "priceCard": 1110,
+   "installments": {
+    "n": 10,
+    "value": 111
+   },
+   "url": "https://www.kabum.com.br/produto/357460/samsung-galaxy-watch4-classic-1-2-polegadas-rede-movel-caixa-42mm-de-aco-inoxidavel-silver-multiira-silver-de-fluoroelastomero-e-o-arco-black-de-aco-inox-sm-r885f",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/357460/xlarge/Relogio-De-Pulso-Galaxy-Watch-4-Classic-Lte-42mm-Prata_1774984121.jpg",
+   "available": true,
+   "id": "kabum:357460",
+   "model": "galaxy-watch4-classic",
+   "variant": "42mm-lte",
+   "variantKey": "galaxy-watch4-classic|42mm-lte|novo",
+   "size": 42,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 52,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 999,00)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 999,
+     "min90": 999,
+     "allTimeLow": 999
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "240467",
+   "title": "Smartwatch Samsung Galaxy, Watch 4 LTE 44Mm, Preto",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 1337.97,
+   "installments": {
+    "n": 10,
+    "value": 133.79
+   },
+   "url": "https://www.kabum.com.br/produto/240467/smartwatch-samsung-galaxy-watch-4-lte-44mm-preto",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/240467/xlarge/Smartwatch-Samsung-Galaxy-Watch-4-LTE-44Mm-Preto_1751905229.jpg",
+   "available": true,
+   "id": "kabum:240467",
+   "model": "galaxy-watch4",
+   "variant": "44mm-lte",
+   "variantKey": "galaxy-watch4|44mm-lte|novo",
+   "size": 44,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 52,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 1.337,97)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1337.97,
+     "min90": 1337.97,
+     "allTimeLow": 1337.97
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "240129",
+   "title": "Smartwatch Samsung Galaxy Watch 4 Bt, 40mm - Preto",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 1545,
+   "installments": {
+    "n": 10,
+    "value": 154.5
+   },
+   "url": "https://www.kabum.com.br/produto/240129/smartwatch-samsung-galaxy-watch-4-bt-40mm-preto",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/240129/xlarge/Smartwatch-Samsung-Galaxy-Watch-4-Bt-40mm-Preto_1777055669.jpg",
+   "available": true,
+   "id": "kabum:240129",
+   "model": "galaxy-watch4",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch4|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 52,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 1.545,00)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1545,
+     "min90": 1545,
+     "allTimeLow": 1545
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "381298",
+   "title": "Samsung Galaxy Watch 5 Bt, 40mm, Tela Super Amoled 1.2\" - Grafite.",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 1749.97,
+   "installments": {
+    "n": 10,
+    "value": 174.99
+   },
+   "url": "https://www.kabum.com.br/produto/381298/samsung-galaxy-watch-5-bt-40mm-tela-super-amoled-1-2-grafite-",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/381298/xlarge/Samsung-Galaxy-Watch-5-Bt-40mm-Tela-Super-Amoled-1-2-Grafite-_1777055669.jpg",
+   "available": true,
+   "id": "kabum:381298",
+   "model": "galaxy-watch5",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch5|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 52,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Perto do menor preço de 90 dias (R$ 1.749,97)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1749.97,
+     "min90": 1749.97,
+     "allTimeLow": 474
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1575950666",
+   "title": "Xiaomi Watch 2 M2320W1 Preto Global Oferta Lançamento 2026 - Xiaom Wat",
+   "canonicalTitle": "Smartwatch Xiaomi Watch 2 GPS",
+   "store": "Magazine Luiza",
+   "price": 919.59,
+   "priceCard": 988.8,
+   "installments": {
+    "n": 8,
+    "value": 123.6
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1575950666",
+   "image": "https://image.zst.com.br/48E694393AB0050EC495377A896C1254_235_235.jpg",
+   "available": true,
+   "id": "zoom:1575950666",
+   "model": "xiaomi-watch2",
+   "variant": "padrao-bt",
+   "variantKey": "xiaomi-watch2|padrao-bt|novo",
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-01T05:56:49.389Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 51,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias"
+    ],
+    "ref": {
+     "median30": 910.72,
+     "min90": 890.45,
+     "allTimeLow": 890.45,
+     "marketMedian": 1052.48
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDXB22BL",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm LTE, Galaxy AI - Grafite",
+   "store": "Amazon",
+   "price": 1367.05,
+   "listPrice": 3299,
+   "url": "https://www.amazon.com.br/dp/B0FDXB22BL",
+   "image": "https://m.media-amazon.com/images/I/61zc3QnQvcL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDXB22BL",
+   "model": "galaxy-watch8",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch8|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 50,
+    "label": "Na média",
+    "reasons": [
+     "1% acima da mediana de 30 dias (R$ 1.349,99)",
+     "Preço \"de\" R$ 3.299,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1349.99,
+     "min90": 1052,
+     "allTimeLow": 1052,
+     "marketMedian": 1791.36
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1578652558",
+   "title": "Xiaomi Watch 2 Black Versão Global Wear OS Google Maps GPS",
+   "store": "Magazine Luiza",
+   "price": 931.87,
+   "priceCard": 1035.44,
+   "installments": {
+    "n": 8,
+    "value": 129.43
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1578652558",
+   "image": "https://image.zst.com.br/21603DAF6DC78994C696A48FA524E114_375_375.jpg",
+   "available": true,
+   "id": "zoom:1578652558",
+   "model": "xiaomi-watch2",
+   "variant": "padrao-bt",
+   "variantKey": "xiaomi-watch2|padrao-bt|novo",
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 47,
+    "label": "Na média",
+    "reasons": [
+     "2% acima da mediana de 30 dias (R$ 910,72)"
+    ],
+    "ref": {
+     "median30": 910.72,
+     "min90": 890.45,
+     "allTimeLow": 890.45,
+     "marketMedian": 1052.48
+    }
+   }
+  },
+  {
+   "source": "promobit",
+   "sourceOfferId": "3165128",
+   "title": "Smartwatch Samsung Galaxy Watch8 40mm Branco 32GB Bluetooth",
+   "store": "AliExpress",
+   "price": 1274,
+   "listPrice": 2999,
+   "coupon": {
+    "code": "AEMEGA5"
+   },
+   "url": "https://www.promobit.com.br/oferta/smartwatch-samsung-galaxy-watch8-40mm-branco-32gb-bluetooth-3165128/",
+   "discussionUrl": "https://www.promobit.com.br/oferta/smartwatch-samsung-galaxy-watch8-40mm-branco-32gb-bluetooth-3165128/",
+   "image": "https://www.promobit.com.br/916535886117936643111931421116.png",
+   "available": true,
+   "postedAt": "2026-11-03T00:04:07.000Z",
+   "community": {
+    "likes": 3,
+    "comments": 0
+   },
+   "id": "promobit:3165128",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-03T00:06:56.148Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 45,
+    "label": "Na média",
+    "reasons": [
+     "2% acima da mediana de 30 dias (R$ 1.248,31)",
+     "Preço \"de\" R$ 2.999,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "480325",
+   "title": "Smartwatch Samsung Galaxy Watch6 Bt 40mm, Tela Amoled De 1.31\", Monitoramento de Saúde Completo, Grafite",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 1430.67,
+   "installments": {
+    "n": 10,
+    "value": 143.06
+   },
+   "url": "https://www.kabum.com.br/produto/480325/smartwatch-samsung-galaxy-watch6-bt-40mm-tela-amoled-de-1-31-monitoramento-de-saude-completo-grafite",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/480325/xlarge/Smartwatch-Samsung-Galaxy-Watch6-Bt-40mm-Tela-Amoled-De-1-31-Monitoramento-de-Sa-de-Completo-Grafite_1793028817.png",
+   "available": true,
+   "id": "kabum:480325",
+   "model": "galaxy-watch6",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch6|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 45,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1430.67,
+     "min90": 512.43,
+     "allTimeLow": 512.43
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "480326",
+   "title": "Smartwatch Samsung Galaxy Watch6 BT, 44mm, Tela Amoled De 1.47\", Monitoramento de Saúde, Prata - Sm-r940nzspzto",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 1545,
+   "installments": {
+    "n": 10,
+    "value": 154.5
+   },
+   "url": "https://www.kabum.com.br/produto/480326/smartwatch-samsung-galaxy-watch6-bt-44mm-tela-amoled-de-1-47-monitoramento-de-saude-prata-sm-r940nzspzto",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/480326/xlarge/Smartwatch-Samsung-Galaxy-Watch6-BT-44mm-Tela-Amoled-De-1-47-Monitoramento-de-Sa-de-Prata-Sm-r940nzspzto_1790275415.png",
+   "available": true,
+   "id": "kabum:480326",
+   "model": "galaxy-watch6",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch6|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 45,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1545,
+     "min90": 989.1,
+     "allTimeLow": 989.1
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "614211",
+   "title": "Samsung Galaxy Watch7 Smartwatch 40mm Bluetooth, Galaxy Ai, Tela Em Cristal De Safira",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 1719.07,
+   "installments": {
+    "n": 10,
+    "value": 171.9
+   },
+   "url": "https://www.kabum.com.br/produto/614211/samsung-galaxy-watch7-smartwatch-40mm-bluetooth-galaxy-ai-tela-em-cristal-de-safira",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/614211/xlarge/Samsung-Galaxy-Watch7-Smartwatch-40mm-Bluetooth-Galaxy-Ai-Tela-Em-Cristal-De-Safira_1791492818.jpg",
+   "available": true,
+   "id": "kabum:614211",
+   "model": "galaxy-watch7",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch7|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 45,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1719.07,
+     "min90": 563.73,
+     "allTimeLow": 563.73
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "381073",
+   "title": "Samsung Galaxy Watch5 Pro BT, 45mm, Tela AMOLED de 1.4\", Cristal Safira, Titânio, Monitoramento de Saúde, GPS, Google Wear OS, Preto",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 2872.67,
+   "installments": {
+    "n": 10,
+    "value": 287.26
+   },
+   "url": "https://www.kabum.com.br/produto/381073/samsung-galaxy-watch5-pro-bt-45mm-tela-amoled-de-1-4-cristal-safira-titanio-monitoramento-de-saude-gps-google-wear-os-preto",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/381073/xlarge/Samsung-Galaxy-Watch5-Pro-BT-45mm-Tela-AMOLED-de-1-4-Cristal-Safira-Tit-nio-Monitoramento-de-Sa-de-GPS-Google-Wear-OS-Preto_1777056011.jpg",
+   "available": true,
+   "id": "kabum:381073",
+   "model": "galaxy-watch5-pro",
+   "variant": "45mm-bt",
+   "variantKey": "galaxy-watch5-pro|45mm-bt|novo",
+   "size": 45,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 45,
+    "label": "Na média",
+    "reasons": [
+     "No preço típico da mediana de 30 dias",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 2872.67,
+     "min90": 1879.1,
+     "allTimeLow": 1879.1
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "480339",
+   "title": "Smartwatch Samsung Galaxy Watch6 Bt, 44mm, Bluetooth, Tela 1.47p, 16GB, Grafite - Sm-R940nzkpzto",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 1574.87,
+   "installments": {
+    "n": 10,
+    "value": 157.48
+   },
+   "url": "https://www.kabum.com.br/produto/480339/smartwatch-samsung-galaxy-watch6-bt-44mm-bluetooth-tela-1-47p-16gb-grafite-sm-r940nzkpzto",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/480339/xlarge/Smartwatch-Samsung-Galaxy-Watch6-Bt-44mm-Bluetooth-Tela-1-47p-16GB-Grafite-Sm-R940nzkpzto_1791492825.png",
+   "available": true,
+   "id": "kabum:480339",
+   "model": "galaxy-watch6",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch6|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 40,
+    "label": "Na média",
+    "reasons": [
+     "2% acima da mediana de 30 dias (R$ 1.545,00)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1545,
+     "min90": 989.1,
+     "allTimeLow": 989.1
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDX5VNRL",
+   "title": "Samsung Galaxy Watch8 Classic Smartwatch 46mm LTE, Galaxy AI - Preto",
+   "store": "Amazon",
+   "price": 1994.05,
+   "listPrice": 4499,
+   "url": "https://www.amazon.com.br/dp/B0FDX5VNRL",
+   "image": "https://m.media-amazon.com/images/I/61zZnXRTOKL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDX5VNRL",
+   "model": "galaxy-watch8-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch8-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T14:36:25.402Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 39,
+    "label": "Cara",
+    "reasons": [
+     "6% acima da mediana de 30 dias (R$ 1.889,10)",
+     "Preço \"de\" R$ 4.499,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1889.1,
+     "min90": 1628.06,
+     "allTimeLow": 1628.06,
+     "marketMedian": 2189
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1505827576",
+   "title": "Smartwatch Samsung Galaxy Watch8 44mm Branco 32GB Bluetooth, Prata, Br",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 44,0 mm",
+   "store": "Magazine Luiza",
+   "price": 1529.1,
+   "priceCard": 1699,
+   "installments": {
+    "n": 10,
+    "value": 169.9
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1505827576",
+   "image": "https://image.zst.com.br/134DE9A8EE2D47C740DDC98EE891DD14_235_235.jpg",
+   "available": true,
+   "id": "zoom:1505827576",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 37,
+    "label": "Cara",
+    "reasons": [
+     "6% acima da mediana de 30 dias (R$ 1.439,00)"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDXC3Q9M",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm BT, Galaxy AI - Grafite",
+   "store": "Amazon",
+   "price": 1529.1,
+   "listPrice": 3199,
+   "url": "https://www.amazon.com.br/dp/B0FDXC3Q9M",
+   "image": "https://m.media-amazon.com/images/I/61zc3QnQvcL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDXC3Q9M",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-06T02:42:09.112Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 37,
+    "label": "Cara",
+    "reasons": [
+     "6% acima da mediana de 30 dias (R$ 1.439,00)",
+     "Preço \"de\" R$ 3.199,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "902608",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm Lte, Galaxy Ai, Tela Em Cristal De Safira Grafite",
+   "store": "KaBuM!",
+   "seller": "Magalu",
+   "marketplace": true,
+   "price": 1709.1,
+   "priceCard": 1899,
+   "installments": {
+    "n": 10,
+    "value": 189.9
+   },
+   "url": "https://www.kabum.com.br/produto/902608/samsung-galaxy-watch8-smartwatch-44mm-lte-galaxy-ai-tela-em-cristal-de-safira-grafite",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/902608/xlarge/Samsung-Galaxy-Watch8-Smartwatch-44mm-Lte-Galaxy-Ai-Tela-Em-Cristal-De-Safira-Grafite_1770928250.jpg",
+   "available": true,
+   "id": "kabum:902608",
+   "model": "galaxy-watch8",
+   "variant": "44mm-lte",
+   "variantKey": "galaxy-watch8|44mm-lte|novo",
+   "size": 44,
+   "connectivity": "lte",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-07T08:20:02.908Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 37,
+    "label": "Cara",
+    "reasons": [
+     "3% acima da mediana das lojas agora (R$ 1.654,55)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1869,
+     "min90": 1255.5,
+     "allTimeLow": 1255.5,
+     "marketMedian": 1654.55
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "1033084",
+   "title": "Smartwatch Samsung Galaxy Watch8 Sm-l500 46mm - Preto",
+   "store": "KaBuM!",
+   "seller": "TRUEX INFORMATICA E HARDWARE",
+   "marketplace": true,
+   "price": 3795.61,
+   "installments": {
+    "n": 10,
+    "value": 379.56
+   },
+   "url": "https://www.kabum.com.br/produto/1033084/smartwatch-samsung-galaxy-watch8-sm-l500-46mm-preto",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/1033084/xlarge/Smartwatch-Samsung-Galaxy-Watch8-Sm-l500-46mm-Preto_1781310240.jpg",
+   "available": true,
+   "id": "kabum:1033084",
+   "model": "galaxy-watch8-classic",
+   "variant": "46mm-bt",
+   "variantKey": "galaxy-watch8-classic|46mm-bt|novo",
+   "size": 46,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T15:01:43.753Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 35,
+    "label": "Cara",
+    "reasons": [
+     "4% acima da mediana de 30 dias (R$ 3.652,81)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 3652.81,
+     "min90": 3450.82,
+     "allTimeLow": 3450.82
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1566123632",
+   "title": "Smartwatch Samsung Galaxy Watch7 LTE 40mm - Creme SM-L305FZEAZTO, Crem",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch7 LTE 40mm",
+   "store": "Magazine Luiza",
+   "price": 1983.62,
+   "priceCard": 2204,
+   "installments": {
+    "n": 10,
+    "value": 220.4
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1566123632",
+   "image": "https://image.zst.com.br/66B7F424ED9765CB728F4738DCD2F390_235_235.jpg",
+   "available": true,
+   "id": "zoom:1566123632",
+   "model": "galaxy-watch7",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch7|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-05T07:53:54.503Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 34,
+    "label": "Cara",
+    "reasons": [
+     "8% acima da mediana de 30 dias (R$ 1.842,05)"
+    ],
+    "ref": {
+     "median30": 1842.05,
+     "min90": 1842.05,
+     "allTimeLow": 1842.05,
+     "marketMedian": 1983.62
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1505827526",
+   "title": "Smartwatch Samsung Galaxy Watch8 40mm Branco 32GB Bluetooth, Prata, Br",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 40mm",
+   "store": "Magazine Luiza",
+   "price": 1349.1,
+   "priceCard": 1499,
+   "installments": {
+    "n": 10,
+    "value": 149.9
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1505827526",
+   "image": "https://image.zst.com.br/5A890EB5BB36C1C68173BF03BC1ABDDC_235_235.jpg",
+   "available": true,
+   "id": "zoom:1505827526",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 33,
+    "label": "Cara",
+    "reasons": [
+     "8% acima da mediana de 30 dias (R$ 1.248,31)"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0FDX5NC1G",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm BT, Galaxy AI - Grafite",
+   "store": "Amazon",
+   "price": 1349.1,
+   "listPrice": 2399,
+   "url": "https://www.amazon.com.br/dp/B0FDX5NC1G",
+   "image": "https://m.media-amazon.com/images/I/61zc3QnQvcL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0FDX5NC1G",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T14:36:25.402Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 33,
+    "label": "Cara",
+    "reasons": [
+     "8% acima da mediana de 30 dias (R$ 1.248,31)",
+     "Preço \"de\" R$ 2.399,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "614212",
+   "title": "Samsung Galaxy Watch7 Smartwatch 40mm Lte, Galaxy Ai, Tela Em Cristal De Safira",
+   "store": "KaBuM!",
+   "seller": "MASTERCELL",
+   "marketplace": true,
+   "price": 1942.75,
+   "priceCard": 2045,
+   "installments": {
+    "n": 10,
+    "value": 204.5
+   },
+   "url": "https://www.kabum.com.br/produto/614212/samsung-galaxy-watch7-smartwatch-40mm-lte-galaxy-ai-tela-em-cristal-de-safira",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/614212/xlarge/Samsung-Galaxy-Watch7-Smartwatch-40mm-Lte-Galaxy-Ai-Tela-Em-Cristal-De-Safira_1777056007.jpg",
+   "available": true,
+   "id": "kabum:614212",
+   "model": "galaxy-watch7",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch7|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 31,
+    "label": "Cara",
+    "reasons": [
+     "5% acima da mediana de 30 dias (R$ 1.842,05)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1842.05,
+     "min90": 1842.05,
+     "allTimeLow": 1842.05,
+     "marketMedian": 1983.62
+    }
+   }
+  },
+  {
+   "source": "promobit",
+   "sourceOfferId": "3159851",
+   "title": "Smartwatch Samsung Galaxy Watch8 40mm 32GB Bluetooth - Grafite",
+   "store": "Netshoes",
+   "price": 1349.1,
+   "listPrice": 2999,
+   "url": "https://www.promobit.com.br/oferta/smartwatch-samsung-galaxy-watch8-40mm-32gb-bluetooth-grafite-3159851/",
+   "discussionUrl": "https://www.promobit.com.br/oferta/smartwatch-samsung-galaxy-watch8-40mm-32gb-bluetooth-grafite-3159851/",
+   "image": "https://www.promobit.com.br/326030794817934586939354371474.png",
+   "available": true,
+   "postedAt": "2026-10-31T14:57:26.000Z",
+   "community": {
+    "likes": 2,
+    "comments": 0
+   },
+   "id": "promobit:3159851",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 30,
+    "label": "Cara",
+    "reasons": [
+     "8% acima da mediana de 30 dias (R$ 1.248,31)",
+     "Preço \"de\" R$ 2.999,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "902609",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm Bt, Galaxy Ai, Tela Em Cristal De Safira Prata - Bluetooth",
+   "store": "KaBuM!",
+   "seller": "Magalu",
+   "marketplace": true,
+   "price": 1529.1,
+   "priceCard": 1699,
+   "installments": {
+    "n": 10,
+    "value": 169.9
+   },
+   "url": "https://www.kabum.com.br/produto/902609/samsung-galaxy-watch8-smartwatch-44mm-bt-galaxy-ai-tela-em-cristal-de-safira-prata-bluetooth",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/902609/xlarge/Samsung-Galaxy-Watch8-Smartwatch-44mm-Bt-Galaxy-Ai-Tela-Em-Cristal-De-Safira-Prata-Bluetooth_1770928249.jpg",
+   "available": true,
+   "id": "kabum:902609",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 29,
+    "label": "Cara",
+    "reasons": [
+     "6% acima da mediana de 30 dias (R$ 1.439,00)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "240105",
+   "title": "Smartwatch Samsung Galaxy Watch 4 Bt 44mm, Preto",
+   "store": "KaBuM!",
+   "seller": "Belmicro",
+   "marketplace": true,
+   "price": 1444.33,
+   "installments": {
+    "n": 10,
+    "value": 144.43
+   },
+   "url": "https://www.kabum.com.br/produto/240105/smartwatch-samsung-galaxy-watch-4-bt-44mm-preto",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/240105/xlarge/Smartwatch-Samsung-Galaxy-Watch-4-Bt-44mm-Preto_1759996734.jpg",
+   "available": true,
+   "id": "kabum:240105",
+   "model": "galaxy-watch4",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch4|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 28,
+    "label": "Cara",
+    "reasons": [
+     "7% acima da mediana de 30 dias (R$ 1.349,99)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1349.99,
+     "min90": 1349.99,
+     "allTimeLow": 1349.99
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1506398022",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm BT, Galaxy AI - Grafite",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 40mm",
+   "store": "Amazon",
+   "price": 1379,
+   "url": "https://www.zoom.com.br/lead?oid=1506398022",
+   "image": "https://image.zst.com.br/29848072457A9C43915E9F85F454CCA8_235_235.jpg",
+   "available": true,
+   "id": "zoom:1506398022",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-02T19:16:38.186Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 27,
+    "label": "Cara",
+    "reasons": [
+     "10% acima da mediana de 30 dias (R$ 1.248,31)"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "902610",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm Bt, Galaxy Ai, Tela Em Cristal De Safira Prata - Bluetooth",
+   "store": "KaBuM!",
+   "seller": "Magalu",
+   "marketplace": true,
+   "price": 1349.1,
+   "priceCard": 1499,
+   "installments": {
+    "n": 10,
+    "value": 149.9
+   },
+   "url": "https://www.kabum.com.br/produto/902610/samsung-galaxy-watch8-smartwatch-40mm-bt-galaxy-ai-tela-em-cristal-de-safira-prata-bluetooth",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/902610/xlarge/Samsung-Galaxy-Watch8-Smartwatch-40mm-Bt-Galaxy-Ai-Tela-Em-Cristal-De-Safira-Prata-Bluetooth_1787684920.jpg",
+   "available": true,
+   "id": "kabum:902610",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 25,
+    "label": "Cara",
+    "reasons": [
+     "8% acima da mediana de 30 dias (R$ 1.248,31)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1506362512",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm BT, Galaxy AI | Prata",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 40mm",
+   "store": "Amazon",
+   "price": 1387.01,
+   "url": "https://www.zoom.com.br/lead?oid=1506362512",
+   "image": "https://image.zst.com.br/ADEC3B7C829C08768FFAD831C9DC39F3_235_235.jpg",
+   "available": true,
+   "id": "zoom:1506362512",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-03T15:45:23.772Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 25,
+    "label": "Cara",
+    "reasons": [
+     "11% acima da mediana de 30 dias (R$ 1.248,31)"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1512107699",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm BT, Galaxy AI - Prata",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch4 BT SM-R870N 44,0 mm GPS",
+   "store": "Amazon",
+   "price": 1598.89,
+   "url": "https://www.zoom.com.br/lead?oid=1512107699",
+   "image": "https://image.zst.com.br/AD6540B7D774BD79D897B73AB01640FF_235_235.jpg",
+   "available": true,
+   "id": "zoom:1512107699",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-05T00:51:13.430Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 25,
+    "label": "Cara",
+    "reasons": [
+     "11% acima da mediana de 30 dias (R$ 1.439,00)"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1516148201",
+   "title": "Samsung Galaxy Watch8 Classic Smartwatch 46mm LTE, Galaxy AI - Branco",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 Classic LTE 4G 46mm",
+   "store": "Amazon",
+   "price": 2099,
+   "url": "https://www.zoom.com.br/lead?oid=1516148201",
+   "image": "https://image.zst.com.br/C180CC23723548EE527C4A09DBB020BB_235_235.jpg",
+   "available": true,
+   "id": "zoom:1516148201",
+   "model": "galaxy-watch8-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch8-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-06T13:19:37.793Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 25,
+    "label": "Cara",
+    "reasons": [
+     "11% acima da mediana de 30 dias (R$ 1.889,10)"
+    ],
+    "ref": {
+     "median30": 1889.1,
+     "min90": 1628.06,
+     "allTimeLow": 1628.06,
+     "marketMedian": 2189
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "240183",
+   "title": "Smartwatch Samsung Galaxy Watch 4 Classic Bt, 42mm, Prata",
+   "store": "KaBuM!",
+   "seller": "SHOPNEXT",
+   "marketplace": true,
+   "price": 1440.97,
+   "installments": {
+    "n": 10,
+    "value": 144.09
+   },
+   "url": "https://www.kabum.com.br/produto/240183/smartwatch-samsung-galaxy-watch-4-classic-bt-42mm-prata",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/240183/xlarge/Smartwatch-Samsung-Galaxy-Watch-4-Classic-Bt-42mm-Prata_1759996726.jpg",
+   "available": true,
+   "id": "kabum:240183",
+   "model": "galaxy-watch4-classic",
+   "variant": "42mm-bt",
+   "variantKey": "galaxy-watch4-classic|42mm-bt|novo",
+   "size": 42,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 23,
+    "label": "Cara",
+    "reasons": [
+     "9% acima da mediana de 30 dias (R$ 1.323,45)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1323.45,
+     "min90": 1323.45,
+     "allTimeLow": 1323.45,
+     "marketMedian": 1347.24
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1566118880",
+   "title": "Smartwatch Samsung Galaxy Watch7 LTE 40mm - Verde SM-L305FZGAZTO, Verd",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch7 LTE 40mm",
+   "store": "Magazine Luiza",
+   "price": 2061,
+   "priceCard": 2290,
+   "installments": {
+    "n": 10,
+    "value": 229
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1566118880",
+   "image": "https://image.zst.com.br/968F6F645A0230793F6518F2D96CDC01_235_235.jpg",
+   "available": true,
+   "id": "zoom:1566118880",
+   "model": "galaxy-watch7",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch7|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-05T07:53:54.503Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 23,
+    "label": "Cara",
+    "reasons": [
+     "12% acima da mediana de 30 dias (R$ 1.842,05)"
+    ],
+    "ref": {
+     "median30": 1842.05,
+     "min90": 1842.05,
+     "allTimeLow": 1842.05,
+     "marketMedian": 1983.62
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1575276707",
+   "title": "Xiaomi Watch 2 M2320W1 Preto 2GB RAM 32GB Versão Global Wear OS",
+   "canonicalTitle": "Smartwatch Xiaomi Watch 2 GPS",
+   "store": "Magazine Luiza",
+   "price": 1022.91,
+   "priceCard": 1099.89,
+   "installments": {
+    "n": 9,
+    "value": 122.21
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1575276707",
+   "image": "https://image.zst.com.br/D77A5A38D2C2AE6BD98BDDEA4B6D1362_235_235.jpg",
+   "available": true,
+   "id": "zoom:1575276707",
+   "model": "xiaomi-watch2",
+   "variant": "padrao-bt",
+   "variantKey": "xiaomi-watch2|padrao-bt|novo",
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-01T05:26:35.155Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 22,
+    "label": "Cara",
+    "reasons": [
+     "12% acima da mediana de 30 dias (R$ 910,72)"
+    ],
+    "ref": {
+     "median30": 910.72,
+     "min90": 890.45,
+     "allTimeLow": 890.45,
+     "marketMedian": 1052.48
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "614208",
+   "title": "Samsung Galaxy Watch7 Smartwatch 44mm Bluetooth, Galaxy Ai, Tela Em Cristal De Safira Verde",
+   "store": "KaBuM!",
+   "seller": "J&J",
+   "marketplace": true,
+   "price": 1529.99,
+   "priceCard": 1699.99,
+   "installments": {
+    "n": 10,
+    "value": 169.99
+   },
+   "url": "https://www.kabum.com.br/produto/614208/samsung-galaxy-watch7-smartwatch-44mm-bluetooth-galaxy-ai-tela-em-cristal-de-safira-verde",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/614208/xlarge/Samsung-Galaxy-Watch7-Smartwatch-44mm-Bluetooth-Galaxy-Ai-Tela-Em-Cristal-De-Safira-Verde_1792079611.jpg",
+   "available": true,
+   "id": "kabum:614208",
+   "model": "galaxy-watch7",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch7|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 17,
+    "label": "Cara",
+    "reasons": [
+     "11% acima da mediana de 30 dias (R$ 1.376,55)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1376.55,
+     "min90": 1279,
+     "allTimeLow": 863,
+     "marketMedian": 1803.1
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0CTMXNBLH",
+   "title": "Smartwatch Xiaomi Watch 2 Wear OS by Google Bluetooth M2320W1 Black BHR8035GL (Versão Global)",
+   "store": "Amazon",
+   "price": 1082.05,
+   "listPrice": 1139,
+   "url": "https://www.amazon.com.br/dp/B0CTMXNBLH",
+   "image": "https://m.media-amazon.com/images/I/71e8al5HJsL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0CTMXNBLH",
+   "model": "xiaomi-watch2",
+   "variant": "padrao-bt",
+   "variantKey": "xiaomi-watch2|padrao-bt|novo",
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T03:03:01.504Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 6,
+    "label": "Cara",
+    "reasons": [
+     "19% acima da mediana de 30 dias (R$ 910,72)"
+    ],
+    "ref": {
+     "median30": 910.72,
+     "min90": 890.45,
+     "allTimeLow": 890.45,
+     "marketMedian": 1052.48
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1563293009",
+   "title": "Smartwatch Samsung Galaxy Watch8 Classic 46mm LTE - Branco",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 Classic LTE 4G 46mm",
+   "store": "Magazine Luiza",
+   "price": 2279,
+   "installments": {
+    "n": 10,
+    "value": 227.9
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1563293009",
+   "image": "https://image.zst.com.br/6C8E0362DAB22A5395F316DD02C510FF_235_235.jpg",
+   "available": true,
+   "id": "zoom:1563293009",
+   "model": "galaxy-watch8-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch8-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 1,
+    "label": "Cara",
+    "reasons": [
+     "21% acima da mediana de 30 dias (R$ 1.889,10)"
+    ],
+    "ref": {
+     "median30": 1889.1,
+     "min90": 1628.06,
+     "allTimeLow": 1628.06,
+     "marketMedian": 2189
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "4617",
+   "title": "Samsung Galaxy Watch FE 40mm Bluetooth Display de 1.19\", Tela Super AMOLED - Rosé",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 1299,
+   "url": "https://shop.samsung.com.br/galaxy-watch-fe-bt-40mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/233590/1000x1000-PINK_0000s_0011_SM-R861_001_Front_Pink-Gold.jpg?v=638550298713130000",
+   "available": false,
+   "id": "samsung:4617",
+   "model": "galaxy-watch-fe",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch-fe|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "31% acima da mediana de 30 dias (R$ 989,10)"
+    ],
+    "ref": {
+     "median30": 989.1,
+     "min90": 809.1,
+     "allTimeLow": 809.1
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "551063",
+   "title": "Smartwatch Xiaomi Watch 2 Wear Os By Google, Nfc, Gps, M2320w1 Black - Bhr8035gl",
+   "store": "KaBuM!",
+   "seller": "MIX 2",
+   "marketplace": true,
+   "price": 1559.9,
+   "installments": {
+    "n": 10,
+    "value": 155.99
+   },
+   "url": "https://www.kabum.com.br/produto/551063/smartwatch-xiaomi-watch-2-wear-os-by-google-nfc-gps-m2320w1-black-bhr8035gl",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/551063/xlarge/Smartwatch-Xiaomi-Watch-2-Wear-Os-By-Google-Nfc-Gps-M2320w1-Black-Bhr8035gl_1771852627.jpg",
+   "available": true,
+   "id": "kabum:551063",
+   "model": "xiaomi-watch2",
+   "variant": "padrao-bt",
+   "variantKey": "xiaomi-watch2|padrao-bt|novo",
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "71% acima da mediana de 30 dias (R$ 910,72)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 910.72,
+     "min90": 890.45,
+     "allTimeLow": 890.45,
+     "marketMedian": 1052.48
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "1033070",
+   "title": "Smartwatch Xiaomi Watch 2 Bhr9306gl - Cinza Titânio",
+   "store": "KaBuM!",
+   "seller": "TRUEX INFORMATICA E HARDWARE",
+   "marketplace": true,
+   "price": 1653.4,
+   "installments": {
+    "n": 10,
+    "value": 165.34
+   },
+   "url": "https://www.kabum.com.br/produto/1033070/smartwatch-xiaomi-watch-2-bhr9306gl-cinza-titanio",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/1033070/xlarge/Smartwatch-Xiaomi-Watch-2-Bhr9306gl-Cinza-Tit-nio_1781310230.jpg",
+   "available": true,
+   "id": "kabum:1033070",
+   "model": "xiaomi-watch2",
+   "variant": "padrao-bt",
+   "variantKey": "xiaomi-watch2|padrao-bt|novo",
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T15:01:43.753Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "82% acima da mediana de 30 dias (R$ 910,72)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 910.72,
+     "min90": 890.45,
+     "allTimeLow": 890.45,
+     "marketMedian": 1052.48
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0D96V7WRB",
+   "title": "Samsung Galaxy Watch7 Smartwatch 44mm Bluetooth, Galaxy AI, Tela em Cristal de Safira, GPS de Dupla Frequência, Monitoramento avançado de saúde, sono e de coração, Processador de 3nm - Verde",
+   "store": "Amazon",
+   "price": 1803.1,
+   "listPrice": 2699,
+   "url": "https://www.amazon.com.br/dp/B0D96V7WRB",
+   "image": "https://m.media-amazon.com/images/I/51s+CAZpVXL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0D96V7WRB",
+   "model": "galaxy-watch7",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch7|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "31% acima da mediana de 30 dias (R$ 1.376,55)",
+     "Preço \"de\" R$ 2.699,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1376.55,
+     "min90": 1279,
+     "allTimeLow": 863,
+     "marketMedian": 1803.1
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1337656570",
+   "title": "Samsung Galaxy Watch7 Smartwatch 44mm Bluetooth, Galaxy AI, Tela em Cristal de Safira, GPS de Dupla Frequência, Monitoramento avançado de saúde, sono e de coração, Processador de 3nm - Verde",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch7 Bluetooth 44mm",
+   "store": "Amazon",
+   "price": 1898,
+   "url": "https://www.zoom.com.br/lead?oid=1337656570",
+   "image": "https://image.zst.com.br/CC18E66DC0CBF5F2AB09B730739837AE_235_235.jpg",
+   "available": true,
+   "id": "zoom:1337656570",
+   "model": "galaxy-watch7",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch7|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-06T21:07:09.806Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "38% acima da mediana de 30 dias (R$ 1.376,55)"
+    ],
+    "ref": {
+     "median30": 1376.55,
+     "min90": 1279,
+     "allTimeLow": 863,
+     "marketMedian": 1803.1
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1571641347",
+   "title": "Smartwatch Samsung Galaxy Watch8 40mm LTE Tela Cristal Safira GPS Prata",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 LTE 4G 40mm",
+   "store": "Fast Shop",
+   "price": 2215.68,
+   "url": "https://www.zoom.com.br/lead?oid=1571641347",
+   "image": "https://image.zst.com.br/02611D78A1D02461B98DAC752D4EEF64_235_235.jpg",
+   "available": true,
+   "id": "zoom:1571641347",
+   "model": "galaxy-watch8",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch8|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-06T13:19:37.793Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "64% acima da mediana de 30 dias (R$ 1.349,99)"
+    ],
+    "ref": {
+     "median30": 1349.99,
+     "min90": 1052,
+     "allTimeLow": 1052,
+     "marketMedian": 1791.36
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1571648148",
+   "title": "Smartwatch Samsung Galaxy Watch8 40mm LTE Tela Cristal Safira GPS Grafite",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 LTE 4G 40mm",
+   "store": "Fast Shop",
+   "price": 2235.21,
+   "url": "https://www.zoom.com.br/lead?oid=1571648148",
+   "image": "https://image.zst.com.br/C326DD114401EA958432B58A67039C83_235_235.jpg",
+   "available": true,
+   "id": "zoom:1571648148",
+   "model": "galaxy-watch8",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch8|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-06T13:19:37.793Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "66% acima da mediana de 30 dias (R$ 1.349,99)"
+    ],
+    "ref": {
+     "median30": 1349.99,
+     "min90": 1052,
+     "allTimeLow": 1052,
+     "marketMedian": 1791.36
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1570397540",
+   "title": "Smartwatch Samsung Galaxy Watch 7 40 mm Bluetooth Verde",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch7 Bluetooth 40mm",
+   "store": "Magazine Luiza",
+   "price": 2260.87,
+   "priceCard": 2431.03,
+   "installments": {
+    "n": 7,
+    "value": 347.29
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1570397540",
+   "image": "https://image.zst.com.br/DABCAB6D78E6DD1F0DE2229E02772BBD_235_235.jpg",
+   "available": true,
+   "id": "zoom:1570397540",
+   "model": "galaxy-watch7",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch7|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "32% acima da mediana de 30 dias (R$ 1.719,07)"
+    ],
+    "ref": {
+     "median30": 1719.07,
+     "min90": 563.73,
+     "allTimeLow": 563.73
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "902611",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm Bt, Galaxy Ai, Tela Em Cristal De Safira Grafite - Bluetooth",
+   "store": "KaBuM!",
+   "seller": "J&J",
+   "marketplace": true,
+   "price": 2293.99,
+   "installments": {
+    "n": 10,
+    "value": 229.39
+   },
+   "url": "https://www.kabum.com.br/produto/902611/samsung-galaxy-watch8-smartwatch-44mm-bt-galaxy-ai-tela-em-cristal-de-safira-grafite-bluetooth",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/902611/xlarge/Samsung-Galaxy-Watch8-Smartwatch-44mm-Bt-Galaxy-Ai-Tela-Em-Cristal-De-Safira-Grafite-Bluetooth_1787682516.jpg",
+   "available": true,
+   "id": "kabum:902611",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-02T15:50:01.118Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "59% acima da mediana de 30 dias (R$ 1.439,00)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "4628",
+   "title": "Samsung Galaxy Watch7 Smartwatch 40mm Bluetooth, Galaxy AI, Tela em Cristal de Safira - Verde",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 2299,
+   "url": "https://shop.samsung.com.br/galaxy-watch7-bt-40mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/250783/1000x1000__0002_Laranja.jpg.jpg?v=638798251072970000",
+   "available": false,
+   "id": "samsung:4628",
+   "model": "galaxy-watch7",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch7|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "34% acima da mediana de 30 dias (R$ 1.719,07)"
+    ],
+    "ref": {
+     "median30": 1719.07,
+     "min90": 563.73,
+     "allTimeLow": 563.73
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1571648147",
+   "title": "Smartwatch Samsung Galaxy Watch8 44mm LTE Tela Cristal Safira GPS Grafite",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 LTE 4G 44mm",
+   "store": "Fast Shop",
+   "price": 2391.45,
+   "url": "https://www.zoom.com.br/lead?oid=1571648147",
+   "image": "https://image.zst.com.br/24D56C26F2E5E66F719256E09B569264_235_235.jpg",
+   "available": true,
+   "id": "zoom:1571648147",
+   "model": "galaxy-watch8",
+   "variant": "44mm-lte",
+   "variantKey": "galaxy-watch8|44mm-lte|novo",
+   "size": 44,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "45% acima da mediana das lojas agora (R$ 1.654,55)"
+    ],
+    "ref": {
+     "median30": 1869,
+     "min90": 1255.5,
+     "allTimeLow": 1255.5,
+     "marketMedian": 1654.55
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "8402",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm BT, Galaxy AI, Tela em Cristal de Safira - Prata",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 2499,
+   "installments": {
+    "n": 18,
+    "value": 138.83
+   },
+   "url": "https://shop.samsung.com.br/galaxy-watch8-bt-40mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258631/watch8_1-1.jpg?v=638888660390370000",
+   "available": true,
+   "id": "samsung:8402",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "100% acima da mediana de 30 dias (R$ 1.248,31)"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "3384",
+   "title": "Smartwatch Samsung Galaxy Watch6 BT 40mm Tela Super AMOLED de 1.31\" - Creme",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 2499,
+   "installments": {
+    "n": 18,
+    "value": 138.83
+   },
+   "url": "https://shop.samsung.com.br/galaxy-watch6-bt-40mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/221815/R930---BT40_01.jpg?v=639059338503600000",
+   "available": true,
+   "id": "samsung:3384",
+   "model": "galaxy-watch6",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch6|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "75% acima da mediana de 30 dias (R$ 1.430,67)"
+    ],
+    "ref": {
+     "median30": 1430.67,
+     "min90": 512.43,
+     "allTimeLow": 512.43
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "4627",
+   "title": "Samsung Galaxy Watch7 Smartwatch 44mm Bluetooth, Galaxy AI, Tela em Cristal de Safira - Verde",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 2499,
+   "url": "https://shop.samsung.com.br/galaxy-watch7-bt-44mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/250839/1000x1000__0004_Verde.jpg.jpg?v=638798257604070000",
+   "available": false,
+   "id": "samsung:4627",
+   "model": "galaxy-watch7",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch7|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "82% acima da mediana de 30 dias (R$ 1.376,55)"
+    ],
+    "ref": {
+     "median30": 1376.55,
+     "min90": 1279,
+     "allTimeLow": 863,
+     "marketMedian": 1803.1
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "4630",
+   "title": "Samsung Galaxy Watch7 Smartwatch 40mm LTE, Galaxy AI, Tela em Cristal de Safira - Verde",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 2599,
+   "url": "https://shop.samsung.com.br/galaxy-watch7-lte-40mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/250755/1000x1000__0002_Laranja.jpg.jpg?v=638798249607430000",
+   "available": false,
+   "id": "samsung:4630",
+   "model": "galaxy-watch7",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch7|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "41% acima da mediana de 30 dias (R$ 1.842,05)"
+    ],
+    "ref": {
+     "median30": 1842.05,
+     "min90": 1842.05,
+     "allTimeLow": 1842.05,
+     "marketMedian": 1983.62
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "8401",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm BT, Galaxy AI, Tela em Cristal de Safira - Prata",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 2699,
+   "installments": {
+    "n": 18,
+    "value": 149.94
+   },
+   "url": "https://shop.samsung.com.br/galaxy-watch8-bt-44mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258611/watch8_1-1.jpg?v=638888660293400000",
+   "available": true,
+   "id": "samsung:8401",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "88% acima da mediana de 30 dias (R$ 1.439,00)"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1574188599",
+   "title": "Smartwatch Samsung Galaxy Watch8 SM-L330 44mm Monitoramento Frequência Cardíaca Sono e Estresse Bateria 48h Prata",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 44,0 mm",
+   "store": "Webcontinental",
+   "price": 2734.82,
+   "priceCard": 3038.64,
+   "installments": {
+    "n": 8,
+    "value": 379.83
+   },
+   "url": "https://www.zoom.com.br/lead?oid=1574188599",
+   "image": "https://image.zst.com.br/369A4FE9073AA9165180480FB4C1072B_235_235.jpg",
+   "available": true,
+   "id": "zoom:1574188599",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "90% acima da mediana de 30 dias (R$ 1.439,00)"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "8404",
+   "title": "Samsung Galaxy Watch8 Smartwatch 40mm LTE, Galaxy AI, Tela em Cristal de Safira - Prata",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 2799,
+   "url": "https://shop.samsung.com.br/galaxy-watch8-lte-40mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258671/watch8_1-1.jpg?v=638888660529970000",
+   "available": false,
+   "id": "samsung:8404",
+   "model": "galaxy-watch8",
+   "variant": "40mm-lte",
+   "variantKey": "galaxy-watch8|40mm-lte|novo",
+   "size": 40,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "107% acima da mediana de 30 dias (R$ 1.349,99)"
+    ],
+    "ref": {
+     "median30": 1349.99,
+     "min90": 1052,
+     "allTimeLow": 1052,
+     "marketMedian": 1791.36
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "1033013",
+   "title": "Smartwatch Samsung Galaxy Watch8 Sm-l320 40mm - Prata",
+   "store": "KaBuM!",
+   "seller": "TRUEX INFORMATICA E HARDWARE",
+   "marketplace": true,
+   "price": 2995.85,
+   "installments": {
+    "n": 10,
+    "value": 299.58
+   },
+   "url": "https://www.kabum.com.br/produto/1033013/smartwatch-samsung-galaxy-watch8-sm-l320-40mm-prata",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/1033013/xlarge/Smartwatch-Samsung-Galaxy-Watch8-Sm-l320-40mm-Prata_1788375819.jpg",
+   "available": true,
+   "id": "kabum:1033013",
+   "model": "galaxy-watch8",
+   "variant": "40mm-bt",
+   "variantKey": "galaxy-watch8|40mm-bt|novo",
+   "size": 40,
+   "connectivity": "bt",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-04T15:01:43.753Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "140% acima da mediana de 30 dias (R$ 1.248,31)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1248.31,
+     "min90": 1030.4,
+     "allTimeLow": 1030.4,
+     "marketMedian": 1349.1
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "8403",
+   "title": "Samsung Galaxy Watch8 Smartwatch 44mm LTE, Galaxy AI, Tela em Cristal de Safira - Prata",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 2999,
+   "installments": {
+    "n": 18,
+    "value": 166.61
+   },
+   "url": "https://shop.samsung.com.br/galaxy-watch8-lte-44mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258651/watch8_1-1.jpg?v=638888660462970000",
+   "available": true,
+   "id": "samsung:8403",
+   "model": "galaxy-watch8",
+   "variant": "44mm-lte",
+   "variantKey": "galaxy-watch8|44mm-lte|novo",
+   "size": 44,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "81% acima da mediana das lojas agora (R$ 1.654,55)"
+    ],
+    "ref": {
+     "median30": 1869,
+     "min90": 1255.5,
+     "allTimeLow": 1255.5,
+     "marketMedian": 1654.55
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "1033082",
+   "title": "Smartwatch Samsung Galaxy Watch8 Sm-l330 44mm - Prata",
+   "store": "KaBuM!",
+   "seller": "TRUEX INFORMATICA E HARDWARE",
+   "marketplace": true,
+   "price": 3038.69,
+   "installments": {
+    "n": 10,
+    "value": 303.86
+   },
+   "url": "https://www.kabum.com.br/produto/1033082/smartwatch-samsung-galaxy-watch8-sm-l330-44mm-prata",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/1033082/xlarge/Smartwatch-Samsung-Galaxy-Watch8-Sm-l330-44mm-Prata_1788382718.jpg",
+   "available": true,
+   "id": "kabum:1033082",
+   "model": "galaxy-watch8",
+   "variant": "44mm-bt",
+   "variantKey": "galaxy-watch8|44mm-bt|novo",
+   "size": 44,
+   "connectivity": "bt",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T15:01:43.753Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "111% acima da mediana de 30 dias (R$ 1.439,00)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 1439,
+     "min90": 1349.1,
+     "allTimeLow": 1349.1,
+     "marketMedian": 1598.89
+    }
+   }
+  },
+  {
+   "source": "amazon",
+   "sourceOfferId": "B0DCHRCSHR",
+   "title": "Samsung Galaxy Watch Ultra Smartwatch 47mm LTE, Galaxy AI, Titânio Aeroespacial, Titânio Cinza",
+   "store": "Amazon",
+   "price": 3324.05,
+   "listPrice": 4999,
+   "url": "https://www.amazon.com.br/dp/B0DCHRCSHR",
+   "image": "https://m.media-amazon.com/images/I/61Ry1uR8rKL._AC_UL320_.jpg",
+   "available": true,
+   "id": "amazon:B0DCHRCSHR",
+   "model": "galaxy-watch-ultra",
+   "variant": "47mm-lte",
+   "variantKey": "galaxy-watch-ultra|47mm-lte|novo",
+   "size": 47,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-04T14:36:25.402Z",
+   "lastSeen": "2026-11-07T11:20:23.147Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "85% acima da mediana de 30 dias (R$ 1.799,10)",
+     "Preço \"de\" R$ 4.999,00 parece inflado"
+    ],
+    "ref": {
+     "median30": 1799.1,
+     "min90": 1619.19,
+     "allTimeLow": 1399
+    },
+    "inflatedListPrice": true
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "3387",
+   "title": "Smartwatch Samsung Galaxy Watch6 Classic LTE 47mm Tela Super AMOLED de 1.47\" - Grafite",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 3999,
+   "url": "https://shop.samsung.com.br/galaxy-watch6-classic-lte-47mm/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/221833/R965---LTE47_01.jpg?v=638309881134130000",
+   "available": false,
+   "id": "samsung:3387",
+   "model": "galaxy-watch6-classic",
+   "variant": "47mm-lte",
+   "variantKey": "galaxy-watch6-classic|47mm-lte|novo",
+   "size": 47,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-11-01T01:54:36.342Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "123% acima da mediana de 30 dias (R$ 1.790,00)"
+    ],
+    "ref": {
+     "median30": 1790,
+     "min90": 1169.1,
+     "allTimeLow": 883.9
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "8405",
+   "title": "Samsung Galaxy Watch8 Classic Smartwatch 46mm LTE, Galaxy AI, Tela em Cristal de Safira - Preto",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 4499,
+   "installments": {
+    "n": 18,
+    "value": 249.94
+   },
+   "url": "https://shop.samsung.com.br/galaxy-watch8-classic/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258570/_0005_SM-L505_001_Front_Black.jpg?v=638888115887030000",
+   "available": true,
+   "id": "samsung:8405",
+   "model": "galaxy-watch8-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch8-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "138% acima da mediana de 30 dias (R$ 1.889,10)"
+    ],
+    "ref": {
+     "median30": 1889.1,
+     "min90": 1628.06,
+     "allTimeLow": 1628.06,
+     "marketMedian": 2189
+    }
+   }
+  },
+  {
+   "source": "zoom",
+   "sourceOfferId": "1506394349",
+   "title": "Samsung Galaxy Watch8 Classic Smartwatch 46mm LTE, Galaxy AI - Preto",
+   "canonicalTitle": "Smartwatch Samsung Galaxy Watch8 Classic LTE 4G 46mm",
+   "store": "Amazon",
+   "price": 4499,
+   "url": "https://www.zoom.com.br/lead?oid=1506394349",
+   "image": "https://image.zst.com.br/6D7741E0CD3CFAB75D408E731E71B214_235_235.jpg",
+   "available": true,
+   "id": "zoom:1506394349",
+   "model": "galaxy-watch8-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch8-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "138% acima da mediana de 30 dias (R$ 1.889,10)"
+    ],
+    "ref": {
+     "median30": 1889.1,
+     "min90": 1628.06,
+     "allTimeLow": 1628.06,
+     "marketMedian": 2189
+    }
+   }
+  },
+  {
+   "source": "samsung",
+   "sourceOfferId": "8406",
+   "title": "Samsung Galaxy Watch Ultra 2025 Smartwatch 47mm LTE, Galaxy AI, Titânio Aeroespacial - Titânio Cinza",
+   "store": "Samsung",
+   "seller": "Samsung (loja oficial)",
+   "price": 4999,
+   "installments": {
+    "n": 18,
+    "value": 277.72
+   },
+   "url": "https://shop.samsung.com.br/galaxy-watch-ultra/p",
+   "image": "https://samsungbrshop.vteximg.com.br/arquivos/ids/258304/1-preto.jpg?v=638887967570970000",
+   "available": true,
+   "id": "samsung:8406",
+   "model": "galaxy-watch-ultra",
+   "variant": "47mm-lte",
+   "variantKey": "galaxy-watch-ultra|47mm-lte|novo",
+   "size": 47,
+   "connectivity": "lte",
+   "condition": "novo",
+   "community": {},
+   "firstSeen": "2026-11-06T21:12:09.747Z",
+   "lastSeen": "2026-11-07T11:25:23.417Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "178% acima da mediana de 30 dias (R$ 1.799,10)"
+    ],
+    "ref": {
+     "median30": 1799.1,
+     "min90": 1619.19,
+     "allTimeLow": 1399
+    }
+   }
+  },
+  {
+   "source": "kabum",
+   "sourceOfferId": "719217",
+   "title": "Samsung Galaxy Watch 4 Classic Stainless Steel Smartwatch 46mm Lte - Preto-sm-r895uzkaxaa",
+   "store": "KaBuM!",
+   "seller": "New York Shop",
+   "marketplace": true,
+   "price": 5020.66,
+   "installments": {
+    "n": 10,
+    "value": 502.06
+   },
+   "url": "https://www.kabum.com.br/produto/719217/samsung-galaxy-watch-4-classic-stainless-steel-smartwatch-46mm-lte-preto-sm-r895uzkaxaa",
+   "image": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/719217/xlarge/Samsung-Galaxy-Watch-4-Classic-Stainless-Steel-Smartwatch-46mm-Lte-Preto-sm-r895uzkaxaa_1771852682.jpg",
+   "available": true,
+   "id": "kabum:719217",
+   "model": "galaxy-watch4-classic",
+   "variant": "46mm-lte",
+   "variantKey": "galaxy-watch4-classic|46mm-lte|novo",
+   "size": 46,
+   "connectivity": "lte",
+   "condition": "novo",
+   "firstSeen": "2026-10-31T16:17:29.956Z",
+   "lastSeen": "2026-11-07T11:30:24.475Z",
+   "score": {
+    "value": 0,
+    "label": "Cara",
+    "reasons": [
+     "130% acima da mediana de 30 dias (R$ 2.184,05)",
+     "Vendido por terceiro (marketplace)"
+    ],
+    "ref": {
+     "median30": 2184.05,
+     "min90": 2089.05,
+     "allTimeLow": 2089.05
+    }
+   }
+  }
+ ],
+ "summary": [
+  {
+   "model": "galaxy-watch-ultra",
+   "bestOfferId": "amazon:B0DCHRCSHR",
+   "bestPrice": 3324.05,
+   "offersCount": 2,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch-ultra|47mm-lte|novo",
+     "model": "galaxy-watch-ultra",
+     "variant": "47mm-lte",
+     "condition": "novo",
+     "current": 3324.05,
+     "currentOfferId": "amazon:B0DCHRCSHR",
+     "min90": 1619.19,
+     "median30": 1799.1,
+     "allTimeLow": {
+      "price": 1399,
+      "date": "2026-07-01",
+      "store": "Amazon"
+     },
+     "trend7d": 0.8476,
+     "days": 21
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch8",
+   "bestOfferId": "promobit:3175731",
+   "bestPrice": 1030.4,
+   "offersCount": 30,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch8|40mm-bt|novo",
+     "model": "galaxy-watch8",
+     "variant": "40mm-bt",
+     "condition": "novo",
+     "current": 1030.4,
+     "currentOfferId": "promobit:3175731",
+     "min90": 1030.4,
+     "median30": 1248.31,
+     "allTimeLow": {
+      "price": 1030.4,
+      "date": "2026-11-05",
+      "store": "Shopee"
+     },
+     "trend7d": -0.17309999999999998,
+     "days": 51
+    },
+    {
+     "variantKey": "galaxy-watch8|40mm-lte|novo",
+     "model": "galaxy-watch8",
+     "variant": "40mm-lte",
+     "condition": "novo",
+     "current": 1349.99,
+     "currentOfferId": "amazon:B0FDX9Y1ZT",
+     "min90": 1052,
+     "median30": 1349.99,
+     "allTimeLow": {
+      "price": 1052,
+      "date": "2026-10-15",
+      "store": "Mercado Livre"
+     },
+     "trend7d": -0.019299999999999998,
+     "days": 48
+    },
+    {
+     "variantKey": "galaxy-watch8|44mm-bt|novo",
+     "model": "galaxy-watch8",
+     "variant": "44mm-bt",
+     "condition": "novo",
+     "current": 1383,
+     "currentOfferId": "amazon:B0FDX5XGHN",
+     "min90": 1349.1,
+     "median30": 1439,
+     "allTimeLow": {
+      "price": 1349.1,
+      "date": "2026-10-20",
+      "store": "Magazine Luiza"
+     },
+     "trend7d": -0.039599999999999996,
+     "days": 47
+    },
+    {
+     "variantKey": "galaxy-watch8|44mm-lte|novo",
+     "model": "galaxy-watch8",
+     "variant": "44mm-lte",
+     "condition": "novo",
+     "current": 1471.99,
+     "currentOfferId": "amazon:B0FDX5W5T9",
+     "min90": 1255.5,
+     "median30": 1869,
+     "allTimeLow": {
+      "price": 1255.5,
+      "date": "2026-08-19",
+      "store": "Mercado Livre"
+     },
+     "trend7d": -0.0255,
+     "days": 49
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch7",
+   "bestOfferId": "kabum:614208",
+   "bestPrice": 1529.99,
+   "offersCount": 8,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch7|44mm-bt|novo",
+     "model": "galaxy-watch7",
+     "variant": "44mm-bt",
+     "condition": "novo",
+     "current": 1529.99,
+     "currentOfferId": "kabum:614208",
+     "min90": 1279,
+     "median30": 1376.55,
+     "allTimeLow": {
+      "price": 863,
+      "date": "2026-07-02",
+      "store": "Amazon"
+     },
+     "trend7d": 0.1115,
+     "days": 51
+    },
+    {
+     "variantKey": "galaxy-watch7|40mm-bt|novo",
+     "model": "galaxy-watch7",
+     "variant": "40mm-bt",
+     "condition": "novo",
+     "current": 1719.07,
+     "currentOfferId": "kabum:614211",
+     "min90": 563.73,
+     "median30": 1719.07,
+     "allTimeLow": {
+      "price": 563.73,
+      "date": "2026-09-04",
+      "store": "Loja desconhecida"
+     },
+     "trend7d": 0,
+     "days": 52
+    },
+    {
+     "variantKey": "galaxy-watch7|40mm-lte|novo",
+     "model": "galaxy-watch7",
+     "variant": "40mm-lte",
+     "condition": "novo",
+     "current": 1942.75,
+     "currentOfferId": "kabum:614212",
+     "min90": 1842.05,
+     "median30": 1842.05,
+     "allTimeLow": {
+      "price": 1842.05,
+      "date": "2026-09-22",
+      "store": "KaBuM!"
+     },
+     "trend7d": 0.0547,
+     "days": 47
+    },
+    {
+     "variantKey": "galaxy-watch7|tamx-bt|novo",
+     "model": "galaxy-watch7",
+     "variant": "tamx-bt",
+     "condition": "novo",
+     "days": 0
+    },
+    {
+     "variantKey": "galaxy-watch7|44mm-lte|novo",
+     "model": "galaxy-watch7",
+     "variant": "44mm-lte",
+     "condition": "novo",
+     "days": 0
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch-fe",
+   "offersCount": 0,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch-fe|40mm-bt|novo",
+     "model": "galaxy-watch-fe",
+     "variant": "40mm-bt",
+     "condition": "novo",
+     "min90": 809.1,
+     "median30": 989.1,
+     "allTimeLow": {
+      "price": 809.1,
+      "date": "2026-09-29",
+      "store": "Magazine Luiza"
+     },
+     "days": 14
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch6",
+   "bestOfferId": "kabum:480325",
+   "bestPrice": 1430.67,
+   "offersCount": 5,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch6|40mm-bt|novo",
+     "model": "galaxy-watch6",
+     "variant": "40mm-bt",
+     "condition": "novo",
+     "current": 1430.67,
+     "currentOfferId": "kabum:480325",
+     "min90": 512.43,
+     "median30": 1430.67,
+     "allTimeLow": {
+      "price": 512.43,
+      "date": "2026-09-04",
+      "store": "Loja desconhecida"
+     },
+     "trend7d": 0,
+     "days": 9
+    },
+    {
+     "variantKey": "galaxy-watch6|44mm-bt|novo",
+     "model": "galaxy-watch6",
+     "variant": "44mm-bt",
+     "condition": "novo",
+     "current": 1545,
+     "currentOfferId": "kabum:480326",
+     "min90": 989.1,
+     "median30": 1545,
+     "allTimeLow": {
+      "price": 989.1,
+      "date": "2026-10-15",
+      "store": "Loja via Zoom"
+     },
+     "trend7d": 0,
+     "days": 31
+    },
+    {
+     "variantKey": "galaxy-watch6|44mm-lte|novo",
+     "model": "galaxy-watch6",
+     "variant": "44mm-lte",
+     "condition": "novo",
+     "current": 2759.39,
+     "currentOfferId": "amazon:B0CCQW5HJD",
+     "min90": 2759.39,
+     "median30": 2759.39,
+     "allTimeLow": {
+      "price": 2759.39,
+      "date": "2026-10-31",
+      "store": "Amazon"
+     },
+     "trend7d": 0,
+     "days": 8
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch5",
+   "bestOfferId": "amazon:B0BDPGSS9G",
+   "bestPrice": 1139.9,
+   "offersCount": 2,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch5|44mm-bt|novo",
+     "model": "galaxy-watch5",
+     "variant": "44mm-bt",
+     "condition": "novo",
+     "current": 1139.9,
+     "currentOfferId": "amazon:B0BDPGSS9G",
+     "min90": 1139.9,
+     "median30": 1139.9,
+     "allTimeLow": {
+      "price": 1124.1,
+      "date": "2025-12-03",
+      "store": "Magazine Luiza"
+     },
+     "trend7d": 0.0141,
+     "days": 4
+    },
+    {
+     "variantKey": "galaxy-watch5|40mm-bt|novo",
+     "model": "galaxy-watch5",
+     "variant": "40mm-bt",
+     "condition": "novo",
+     "current": 1749.97,
+     "currentOfferId": "kabum:381298",
+     "min90": 1749.97,
+     "median30": 1749.97,
+     "allTimeLow": {
+      "price": 474,
+      "date": "2026-05-26",
+      "store": "Loja desconhecida"
+     },
+     "trend7d": 0,
+     "days": 9
+    },
+    {
+     "variantKey": "galaxy-watch5|40mm-lte|novo",
+     "model": "galaxy-watch5",
+     "variant": "40mm-lte",
+     "condition": "novo",
+     "allTimeLow": {
+      "price": 711,
+      "date": "2026-04-27",
+      "store": "Loja desconhecida"
+     },
+     "days": 1
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch4",
+   "bestOfferId": "kabum:240467",
+   "bestPrice": 1337.97,
+   "offersCount": 4,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch4|44mm-lte|novo",
+     "model": "galaxy-watch4",
+     "variant": "44mm-lte",
+     "condition": "novo",
+     "current": 1337.97,
+     "currentOfferId": "kabum:240467",
+     "min90": 1337.97,
+     "median30": 1337.97,
+     "allTimeLow": {
+      "price": 1337.97,
+      "date": "2026-10-31",
+      "store": "KaBuM!"
+     },
+     "trend7d": 0,
+     "days": 8
+    },
+    {
+     "variantKey": "galaxy-watch4|44mm-bt|novo",
+     "model": "galaxy-watch4",
+     "variant": "44mm-bt",
+     "condition": "novo",
+     "current": 1349.99,
+     "currentOfferId": "zoom:1573602746",
+     "min90": 1349.99,
+     "median30": 1349.99,
+     "allTimeLow": {
+      "price": 1349.99,
+      "date": "2026-11-03",
+      "store": "Americanas"
+     },
+     "trend7d": -0.0653,
+     "days": 8
+    },
+    {
+     "variantKey": "galaxy-watch4|40mm-bt|novo",
+     "model": "galaxy-watch4",
+     "variant": "40mm-bt",
+     "condition": "novo",
+     "current": 1545,
+     "currentOfferId": "kabum:240129",
+     "min90": 1545,
+     "median30": 1545,
+     "allTimeLow": {
+      "price": 1545,
+      "date": "2026-10-31",
+      "store": "KaBuM!"
+     },
+     "trend7d": 0,
+     "days": 8
+    },
+    {
+     "variantKey": "galaxy-watch4|40mm-lte|novo",
+     "model": "galaxy-watch4",
+     "variant": "40mm-lte",
+     "condition": "novo",
+     "min90": 1888.6,
+     "median30": 1888.6,
+     "allTimeLow": {
+      "price": 1888.6,
+      "date": "2026-10-31",
+      "store": "Amazon"
+     },
+     "days": 5
+    }
+   ]
+  },
+  {
+   "model": "xiaomi-watch2",
+   "bestOfferId": "zoom:1575950666",
+   "bestPrice": 919.59,
+   "offersCount": 6,
+   "variants": [
+    {
+     "variantKey": "xiaomi-watch2|padrao-bt|novo",
+     "model": "xiaomi-watch2",
+     "variant": "padrao-bt",
+     "condition": "novo",
+     "current": 919.59,
+     "currentOfferId": "zoom:1575950666",
+     "min90": 890.45,
+     "median30": 910.72,
+     "allTimeLow": {
+      "price": 890.45,
+      "date": "2026-10-31",
+      "store": "Magazine Luiza"
+     },
+     "trend7d": 0.0327,
+     "days": 47
+    }
+   ]
+  },
+  {
+   "model": "ticwatch-pro5",
+   "offersCount": 0,
+   "variants": [
+    {
+     "variantKey": "ticwatch-pro5|padrao-bt|novo",
+     "model": "ticwatch-pro5",
+     "variant": "padrao-bt",
+     "condition": "novo",
+     "allTimeLow": {
+      "price": 746.51,
+      "date": "2025-11-17",
+      "store": "AliExpress"
+     },
+     "days": 1
+    }
+   ]
+  },
+  {
+   "model": "ticwatch-atlas",
+   "offersCount": 0,
+   "variants": [
+    {
+     "variantKey": "ticwatch-atlas|padrao-bt|novo",
+     "model": "ticwatch-atlas",
+     "variant": "padrao-bt",
+     "condition": "novo",
+     "days": 0
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch8-classic",
+   "bestOfferId": "zoom:1508007791",
+   "bestPrice": 1889.1,
+   "offersCount": 8,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch8-classic|46mm-lte|novo",
+     "model": "galaxy-watch8-classic",
+     "variant": "46mm-lte",
+     "condition": "novo",
+     "current": 1889.1,
+     "currentOfferId": "zoom:1508007791",
+     "min90": 1628.06,
+     "median30": 1889.1,
+     "allTimeLow": {
+      "price": 1628.06,
+      "date": "2026-10-16",
+      "store": "Mercado Livre"
+     },
+     "trend7d": 0.037599999999999995,
+     "days": 47
+    },
+    {
+     "variantKey": "galaxy-watch8-classic|46mm-bt|novo",
+     "model": "galaxy-watch8-classic",
+     "variant": "46mm-bt",
+     "condition": "novo",
+     "current": 3795.61,
+     "currentOfferId": "kabum:1033084",
+     "min90": 3450.82,
+     "median30": 3652.81,
+     "allTimeLow": {
+      "price": 3450.82,
+      "date": "2026-11-04",
+      "store": "KaBuM!"
+     },
+     "days": 4
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch6-classic",
+   "bestOfferId": "amazon:B0CCQP9JB7",
+   "bestPrice": 1700.5,
+   "offersCount": 3,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch6-classic|47mm-lte|novo",
+     "model": "galaxy-watch6-classic",
+     "variant": "47mm-lte",
+     "condition": "novo",
+     "current": 1700.5,
+     "currentOfferId": "amazon:B0CCQP9JB7",
+     "min90": 1169.1,
+     "median30": 1790,
+     "allTimeLow": {
+      "price": 883.9,
+      "date": "2025-11-27",
+      "store": "Mercado Livre"
+     },
+     "trend7d": 0,
+     "days": 39
+    },
+    {
+     "variantKey": "galaxy-watch6-classic|43mm-lte|novo",
+     "model": "galaxy-watch6-classic",
+     "variant": "43mm-lte",
+     "condition": "novo",
+     "current": 3799,
+     "currentOfferId": "samsung:3385",
+     "min90": 3799,
+     "median30": 3799,
+     "allTimeLow": {
+      "price": 3799,
+      "date": "2026-10-31",
+      "store": "Samsung"
+     },
+     "trend7d": 0,
+     "days": 8
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch5-pro",
+   "bestOfferId": "zoom:1573602912",
+   "bestPrice": 1879.1,
+   "offersCount": 2,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch5-pro|45mm-bt|novo",
+     "model": "galaxy-watch5-pro",
+     "variant": "45mm-bt",
+     "condition": "novo",
+     "current": 1879.1,
+     "currentOfferId": "zoom:1573602912",
+     "min90": 1879.1,
+     "median30": 2872.67,
+     "allTimeLow": {
+      "price": 1879.1,
+      "date": "2026-11-03",
+      "store": "Americanas"
+     },
+     "trend7d": -0.34590000000000004,
+     "days": 45
+    }
+   ]
+  },
+  {
+   "model": "galaxy-watch4-classic",
+   "bestOfferId": "zoom:1368471682",
+   "bestPrice": 999,
+   "offersCount": 8,
+   "variants": [
+    {
+     "variantKey": "galaxy-watch4-classic|42mm-lte|novo",
+     "model": "galaxy-watch4-classic",
+     "variant": "42mm-lte",
+     "condition": "novo",
+     "current": 999,
+     "currentOfferId": "zoom:1368471682",
+     "min90": 999,
+     "median30": 999,
+     "allTimeLow": {
+      "price": 999,
+      "date": "2026-10-08",
+      "store": "Magazine Luiza"
+     },
+     "trend7d": 0,
+     "days": 47
+    },
+    {
+     "variantKey": "galaxy-watch4-classic|46mm-bt|novo",
+     "model": "galaxy-watch4-classic",
+     "variant": "46mm-bt",
+     "condition": "novo",
+     "current": 1196.9,
+     "currentOfferId": "amazon:B09MDRJB6M",
+     "min90": 1196.9,
+     "median30": 1196.9,
+     "allTimeLow": {
+      "price": 1196.9,
+      "date": "2026-10-31",
+      "store": "Amazon"
+     },
+     "trend7d": 0,
+     "days": 8
+    },
+    {
+     "variantKey": "galaxy-watch4-classic|42mm-bt|novo",
+     "model": "galaxy-watch4-classic",
+     "variant": "42mm-bt",
+     "condition": "novo",
+     "current": 1323.45,
+     "currentOfferId": "zoom:1577957256",
+     "min90": 1323.45,
+     "median30": 1323.45,
+     "allTimeLow": {
+      "price": 1323.45,
+      "date": "2026-09-22",
+      "store": "Magazine Luiza"
+     },
+     "trend7d": 0,
+     "days": 47
+    },
+    {
+     "variantKey": "galaxy-watch4-classic|46mm-lte|novo",
+     "model": "galaxy-watch4-classic",
+     "variant": "46mm-lte",
+     "condition": "novo",
+     "current": 2089.05,
+     "currentOfferId": "amazon:B0B27BRBTC",
+     "min90": 2089.05,
+     "median30": 2184.05,
+     "allTimeLow": {
+      "price": 2089.05,
+      "date": "2026-11-04",
+      "store": "Amazon"
+     },
+     "trend7d": -0.0834,
+     "days": 8
+    }
+   ]
+  },
+  {
+   "model": "xiaomi-watch2-pro",
+   "offersCount": 0,
+   "variants": []
+  },
+  {
+   "model": "ticwatch-pro5-enduro",
+   "offersCount": 0,
+   "variants": [
+    {
+     "variantKey": "ticwatch-pro5-enduro|padrao-bt|novo",
+     "model": "ticwatch-pro5-enduro",
+     "variant": "padrao-bt",
+     "condition": "novo",
+     "days": 0
+    }
+   ]
+  }
+ ]
+}
