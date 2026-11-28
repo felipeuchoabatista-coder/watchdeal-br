@@ -1,0 +1,71 @@
+{
+ "generatedAt": "2026-11-28T15:01:21.490Z",
+ "cycleMs": 26340,
+ "sources": [
+  {
+   "source": "samsung",
+   "status": "ok",
+   "lastRunAt": "2026-11-28T15:01:21.490Z",
+   "lastOkAt": "2026-11-28T15:01:21.490Z",
+   "durationMs": 9632,
+   "items": 112,
+   "matched": 14,
+   "consecutiveFailures": 0
+  },
+  {
+   "source": "kabum",
+   "status": "ok",
+   "lastRunAt": "2026-11-28T14:56:20.971Z",
+   "lastOkAt": "2026-11-28T14:56:20.971Z",
+   "durationMs": 9919,
+   "items": 468,
+   "matched": 25,
+   "consecutiveFailures": 0
+  },
+  {
+   "source": "amazon",
+   "status": "degradado",
+   "lastRunAt": "2026-11-28T15:01:21.490Z",
+   "lastOkAt": "2026-11-28T15:01:21.490Z",
+   "durationMs": 26304,
+   "items": 96,
+   "matched": 6,
+   "error": "galaxy watch ultra: www.amazon.com.br respondeu 503 | galaxy watch8: www.amazon.com.br respondeu 503 | galaxy watch7: www.amazon.com.br respondeu 503",
+   "consecutiveFailures": 0
+  },
+  {
+   "source": "zoom",
+   "status": "ok",
+   "lastRunAt": "2026-11-28T14:51:20.530Z",
+   "lastOkAt": "2026-11-28T14:51:20.530Z",
+   "durationMs": 29111,
+   "items": 229,
+   "matched": 45,
+   "notes": [
+    "Histórico ignorado: a página \"Smartwatch Samsung Galaxy Watch4 BT SM-R870N 44,0 mm GPS\" mistura modelos",
+    "Histórico ignorado: a página \"Smartwatch Samsung Galaxy Watch4 BT SM-R860N 40,0 mm GPS\" mistura modelos"
+   ],
+   "consecutiveFailures": 0
+  },
+  {
+   "source": "promobit",
+   "status": "ok",
+   "lastRunAt": "2026-11-28T15:01:21.490Z",
+   "lastOkAt": "2026-11-28T15:01:21.490Z",
+   "durationMs": 12506,
+   "items": 35,
+   "matched": 21,
+   "consecutiveFailures": 0
+  },
+  {
+   "source": "pelando",
+   "status": "bloqueado",
+   "lastRunAt": "2026-11-28T15:01:21.490Z",
+   "durationMs": 369,
+   "items": 0,
+   "matched": 0,
+   "error": "www.pelando.com.br respondeu 403",
+   "consecutiveFailures": 7953
+  }
+ ]
+}
